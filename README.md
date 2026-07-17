@@ -91,13 +91,8 @@ Supported header aliases include:
 - Owner: `Owner`, `Assignee`, `Responsible`, `Person`, `Lead`
 
 Recommended status values:
-- `WIP`
-- `Not yet started`
-- `Open`
-- `Done`
-- `Dropped`
-- `NA`
-- `Review Done/Closed`
+- Active (emails can be sent): `WIP`, `Not yet started`, `Open`
+- Closed (no reminder/follow-up emails): `Done`, `Dropped`, `NA`, `Review Done/Closed`
 
 Recommended ETA format:
 - `WW30`
@@ -117,6 +112,64 @@ in the script.
 - `TBD` or unparseable ETA values are logged, but no email is sent.
 - Co-owned tasks send to every mapped owner.
 - Friday summary goes to the configured team distribution list.
+
+### ETA and Status Decision Rules (Important)
+
+Email action is based on **both** Status and ETA, not ETA alone.
+
+| Status value | ETA value | Action |
+|---|---|---|
+| `WIP` / `Not yet started` / `Open` | Valid ETA and within 2 days | Reminder email is sent |
+| `WIP` / `Not yet started` / `Open` | Valid ETA and already passed | Overdue follow-up email is sent |
+| `WIP` / `Not yet started` / `Open` | `TBD` or invalid ETA | No email; logged as TBD/unparseable |
+| `Done` / `Dropped` / `NA` / `Review Done/Closed` | Any ETA (even overdue) | No reminder/follow-up email |
+
+Notes:
+- If ETA is filled but Status is a closed state, reminder/follow-up emails stop.
+- Status matching is exact after lowercasing (for example, `Done` works, but a custom value like `Done - verified` is treated as a different status unless you update code/config rules).
+
+### Example
+
+| Task | Status | ETA | Result |
+|---|---|---|---|
+| FIVR Critical setup | `WIP` | `WW30` | Reminder/overdue logic applies based on date |
+| FIVR Critical setup | `Done` | `WW30` | No reminder/follow-up email (closed task) |
+| Bring-up checklist | `Not yet started` | `TBD` | No reminder/follow-up email; logged as TBD |
+
+### Sample Tracker Rows (Copy/Paste Starter)
+
+Use this as a starter in Excel to avoid status/ETA ambiguity.
+
+| Task | Owner | Status | ETA | Remark | What the tracker does |
+|---|---|---|---|---|---|
+| PMAX voltage check | Rishi | WIP | WW30 | Running validation | Sends reminder when ETA is within 2 days; sends overdue follow-up after ETA passes |
+| DTS corner test | Shivagiri | Not yet started | WW31p3 | Waiting for setup | Sends reminder/overdue based on ETA date |
+| BGR config cleanup | Partap | Open | WW29 | In progress | Treated as active; reminder/overdue applies |
+| Session review closure | Anju | Done | WW28 | Completed and reviewed | No reminder/follow-up email even if ETA is old |
+| Legacy item dropped | Kandhan | Dropped | WW26 | Not required anymore | No reminder/follow-up email |
+| Spec clarification | Boomika | WIP | TBD | ETA not fixed yet | No reminder/follow-up email; logged as TBD/unparseable ETA |
+
+Tip:
+- If work is completed, always change Status to a closed value (`Done`, `Dropped`, `NA`, `Review Done/Closed`).
+- Keeping Status as active (`WIP`, `Not yet started`, `Open`) with any valid old ETA will continue overdue follow-ups.
+
+### Status Entry Reference (Valid vs Common Mistakes)
+
+Use one of the exact values in the Valid Status column.
+
+| Valid Status | Common Invalid Variant | What happens if invalid |
+|---|---|---|
+| `WIP` | `In Progress`, `Wip - ongoing` | Not treated as active unless code is extended |
+| `Not yet started` | `Not Started`, `Not_yet_started` | Not treated as active unless code is extended |
+| `Open` | `Opened`, `Re-opened` | Not treated as active unless code is extended |
+| `Done` | `Done - verified`, `Completed` | Not recognized as closed; task is skipped by current filter (not active) |
+| `Dropped` | `Drop`, `Cancelled` | Not recognized as closed; task is skipped by current filter (not active) |
+| `NA` | `N/A`, `Not Applicable` | Not recognized as closed; task is skipped by current filter (not active) |
+| `Review Done/Closed` | `Closed`, `Review Done` | Not recognized as closed; task is skipped by current filter (not active) |
+
+Recommendation:
+- Keep a data-validation dropdown in Excel for Status with only valid values.
+- If your team needs additional status labels, update the status rules in the script so behavior remains predictable.
 
 On the Intel network, the current SMTP relay uses port 25.
 
