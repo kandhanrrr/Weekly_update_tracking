@@ -601,15 +601,24 @@ def process_weekly_summary(
 # ---------------------------------------------------------------------------
 
 AR_SHEET_NAME = "AR_Tracking"
-AR_HEADERS = ["Date", "Task", "Owner", "Status", "ETA", "Remark", "Source"]
+AR_HEADERS = ["Date", "Channel", "Task", "Owner", "Status", "ETA", "Remark", "Source"]
 
 
 def _get_or_create_ar_sheet(wb):
-    """Return the AR_Tracking worksheet, creating it with headers if absent."""
-    if AR_SHEET_NAME in wb.sheetnames:
-        return wb[AR_SHEET_NAME]
-    ws = wb.create_sheet(AR_SHEET_NAME)
-    ws.append(AR_HEADERS)
+    """Return the AR_Tracking worksheet, creating it with headers if absent.
+    If the sheet exists but is missing the Channel column, add it.
+    """
+    if AR_SHEET_NAME not in wb.sheetnames:
+        ws = wb.create_sheet(AR_SHEET_NAME)
+        ws.append(AR_HEADERS)
+        return ws
+    ws = wb[AR_SHEET_NAME]
+    # Backfill Channel column if sheet was created before it existed
+    header = [c.value for c in ws[1]]
+    if "Channel" not in header:
+        insert_col = 2  # after Date
+        ws.insert_cols(insert_col)
+        ws.cell(row=1, column=insert_col).value = "Channel"
     return ws
 
 
@@ -666,6 +675,7 @@ def upsert_ar_rows(json_path: str | Path) -> None:
         owner = r.get("owner", "TBD")
         status = r.get("status", "Open")
         eta = r.get("eta", "TBD")
+        channel = r.get("source", "")  # "Outlook" or "Teams"
         remark = r.get("summary", "")
         if r.get("sender"):
             remark = f"{remark} | From: {r['sender']}".strip(" |")
@@ -676,9 +686,14 @@ def upsert_ar_rows(json_path: str | Path) -> None:
             continue
 
         if key and key in src_index:
-            # Update existing row
+            # Update existing row — also backfill Channel if it was empty
             row_num = src_index[key]
-            for col_name, value in [("Status", status), ("ETA", eta), ("Remark", remark)]:
+            for col_name, value in [
+                ("Channel", channel),
+                ("Status", status),
+                ("ETA", eta),
+                ("Remark", remark),
+            ]:
                 if col_name in col_idx:
                     ws.cell(row=row_num, column=col_idx[col_name]).value = value
             updated += 1
@@ -686,6 +701,7 @@ def upsert_ar_rows(json_path: str | Path) -> None:
             # Append new row in header column order
             new_row = [
                 date_str,
+                channel,
                 task,
                 owner,
                 status,
