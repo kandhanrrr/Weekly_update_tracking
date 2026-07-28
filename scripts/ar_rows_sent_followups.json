@@ -1,7 +1,8 @@
 [
   {
-    "source_key": "Outlook:2d0c5de8c883",
+    "source_key": "Outlook:Sent:2d0c5de8c883",
     "source": "Outlook",
+    "folder": "Outlook:Sent",
     "date": "2026-07-28",
     "task": "Provide GNRD XCCP A0 Efficiency FER and FSL data for review",
     "owner": "Ranganathan, Saravanann",
@@ -11,8 +12,9 @@
     "summary": "Kandhan follow-up: please provide the data by this week | Thread: GNRD XCCP A0 Efficiency FER, FSL data review"
   },
   {
-    "source_key": "Outlook:c24becca4c76",
+    "source_key": "Outlook:Sent:c24becca4c76",
     "source": "Outlook",
+    "folder": "Outlook:Sent",
     "date": "2026-07-23",
     "task": "Provide updated IA FSL S2T multiplier for 10% guard band (GNR-D XCC+ power failure improvement)",
     "owner": "Krishnan, Rohini",
@@ -22,8 +24,9 @@
     "summary": "Kandhan asked Rohini: calculate IA FSL S2T multiplier when reducing GB from 20% to 10% for GNR-D XCC+"
   },
   {
-    "source_key": "Outlook:c6b98c0d2912",
+    "source_key": "Outlook:Sent:c6b98c0d2912",
     "source": "Outlook",
+    "folder": "Outlook:Sent",
     "date": "2026-07-22",
     "task": "Share noted differences from GNR-D XCC+ Program Audit (vs GNR-D HCC and GND-SP XCC)",
     "owner": "Rivera Valverde, Pablo",
@@ -33,8 +36,9 @@
     "summary": "Kandhan asked Pablo to share noted differences from GNR-D XCC+ module-level audit review"
   },
   {
-    "source_key": "Outlook:ec6050b1d005",
+    "source_key": "Outlook:Sent:ec6050b1d005",
     "source": "Outlook",
+    "folder": "Outlook:Sent",
     "date": "2026-07-22",
     "task": "Help with 10% IA FSL S2T multiplier (1.1) calculation for GNR-D XCC+ power failure improvement path",
     "owner": "Ranganathan, Saravanann",
@@ -44,8 +48,9 @@
     "summary": "Kandhan asked Saravanan to help calculate 10% IA FSL S2T multiplier (value: 1.1) per Maji request"
   },
   {
-    "source_key": "Outlook:f3e8d099349d",
+    "source_key": "Outlook:Sent:f3e8d099349d",
     "source": "Outlook",
+    "folder": "Outlook:Sent",
     "date": "2026-07-14",
     "task": "File JIRA ticket to Prime team for Bin2719 offset calculation error (GNR-D XCC+ CLASSHOT yield)",
     "owner": "Kandhan",

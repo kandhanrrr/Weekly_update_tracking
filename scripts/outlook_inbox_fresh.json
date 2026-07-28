@@ -1,0 +1,753 @@
+{
+  "success": true,
+  "count": 33,
+  "emails": [
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAa7iWhUAAA=",
+      "subject": "Automatic reply: GNRD XCCP A0 Efficiency FER, FSL data review",
+      "from": "karumajji.srinivasa.lakshman@intel.com",
+      "receivedDateTime": "2026-07-28T06:04:30+00:00",
+      "isRead": false,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "out sick, expect delayed response,",
+      "internetMessageId": "<0549720c677d41d68fe1980daa684602@CH3PR11MB8413.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-28T06:04:28+00:00",
+      "to": [
+        "kandhan.rajakumar@intel.com"
+      ],
+      "cc": [],
+      "sender": "karumajji.srinivasa.lakshman@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAa7iWhTAAA=",
+      "subject": "Automatic reply: GNRD XCCP A0 Efficiency FER, FSL data review",
+      "from": "anil.kumar.n@intel.com",
+      "receivedDateTime": "2026-07-28T06:04:30+00:00",
+      "isRead": false,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "OOO - - Please expect a delay in my response.",
+      "internetMessageId": "<a182e01a1dbf4308930b7f3f7c4742db@SJ5PPFF8B526086.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-28T06:04:28+00:00",
+      "to": [
+        "kandhan.rajakumar@intel.com"
+      ],
+      "cc": [],
+      "sender": "anil.kumar.n@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEJAABB3q-AkIkPT4kIvFkvsKdkAAa9UzB0AAA=",
+      "subject": "Re: GNRD XCCP A0 Efficiency FER, FSL data review",
+      "from": "kandhan.rajakumar@intel.com",
+      "receivedDateTime": "2026-07-28T06:04:26+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hi Saravanan,\r\nPlease help to provide the data by this week.\r\n\r\nRegards,\r\nKandhan\r\n\r\n________________________________\r\nFrom: Rajakumar, Kandhan <kandhan.rajakumar@intel.com>\r\nSent: Wednesday, July 8, 2026 4:31 PM\r\nTo: Ranganathan, Saravanann <saravanann.r",
+      "internetMessageId": "<BL1PR11MB5525417E113E033F0C700F90FECB2@BL1PR11MB5525.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-28T06:04:25+00:00",
+      "to": [
+        "saravanann.ranganathan@intel.com",
+        "shivagiri@intel.com",
+        "harishankar.sahu@intel.com"
+      ],
+      "cc": [
+        "karumajji.srinivasa.lakshman@intel.com",
+        "krishna.sandilya.garimella@intel.com",
+        "arun.kanthimathinathan@intel.com",
+        "sheela.kashyap@intel.com",
+        "anil.kumar.n@intel.com"
+      ],
+      "sender": "kandhan.rajakumar@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAa7iWhSAAA=",
+      "subject": "RE: Request for Approval to Apply HCC Limits (5-58) on GNRD XCCp",
+      "from": "pak.kheng.chan@intel.com",
+      "receivedDateTime": "2026-07-28T06:02:47+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hi Partap,\r\n\r\nNo concern from our side. Please proceed. Thanks\r\n\r\n\r\nBest Regards,\r\nPak Kheng\r\n\r\nFrom: Singh, Partap <partap.singh@intel.com>\r\nSent: Monday, July 27, 2026 6:16 PM\r\nTo: Chan, Pak Kheng <pak.kheng.chan@intel.com>\r\nCc: Shivagiri <shivagiri@int",
+      "internetMessageId": "<BL3PR11MB6434BF1948BEF506B7BD9CC8DECB2@BL3PR11MB6434.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-28T06:02:43+00:00",
+      "to": [
+        "partap.singh@intel.com"
+      ],
+      "cc": [
+        "shivagiri@intel.com",
+        "kandhan.rajakumar@intel.com",
+        "gnrd.yield@intel.com"
+      ],
+      "sender": "pak.kheng.chan@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAa7iWhRAAA=",
+      "subject": "EC Scheduled downtime for ZSC3 and ZSC18 in Santa Clara  - Friday August 14, 2026 from 2:00 PM to Monday August 17, 2026 8:00 AM PDT",
+      "from": "ec.communications@intel.com",
+      "receivedDateTime": "2026-07-28T04:08:46+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "EC Scheduled downtime for ZSC3 and ZSC18 in Santa Clara\r\n\r\n[Friday August 14th  2026 from 2:00 PM to Monday August 17th 2026  8:00 AM PDT]\r\n\r\nSent to ZSC3 and ZSC18 users\r\n\r\nKey Takeaways:\r\n\r\n\r\n\r\nPlanned EC Scheduled downtime for ZSC3 and ZSC18  i",
+      "internetMessageId": "<DSVPR11MB9957003FA5CAD001474BDBA18ACB2@DSVPR11MB9957.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-28T04:07:41+00:00",
+      "to": [],
+      "cc": [],
+      "sender": "ec-unix-customers-zsc3-request@eclists.intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAa7iWhQAAA=",
+      "subject": "Reminder: EC Scheduled downtime for  IFS zones including ZSC12, ZSC12_2*, ZSC17, ZSC17_*  and ZSC27 in Santa Clara  - Friday July 31st 2026 from 5:00 PM to Monday August 3rd 8:00 AM PDT",
+      "from": "ec.communications@intel.com",
+      "receivedDateTime": "2026-07-28T04:05:29+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Reminder: EC Scheduled downtime for IFS zones ZSC12, ZSC12_2*, ZSC17, ZSC17_* , and ZSC27 in Santa Clara\r\n\r\n[Friday July 31st  2026 from 5:00 PM to Monday August 3rd 8:00 AM PDT]\r\n\r\nSent to ZSC12, ZSC12_2 *,  ZSC17, ZSC17_* and ZSC27 users\r\n\r\nKey ",
+      "internetMessageId": "<DSVPR11MB9957CF7F92CFE49FB55EAF738ACB2@DSVPR11MB9957.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-28T04:04:41+00:00",
+      "to": [],
+      "cc": [],
+      "sender": "ec-unix-customers-zsc12-request@eclists.intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAawvk4SAAA=",
+      "subject": "Re: [Action Required] GNR-D XCC+ Program Audit w.r.t. GNR-D HCC and GND-SP XCC – Request for Module-Level Review",
+      "from": "joseph.a.blanco.fallas@intel.com",
+      "receivedDateTime": "2026-07-28T01:24:42+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hi everyone,\r\n\r\nWe have audited FIVR and BGR modules and found some minor differences that are known and expected, and do not affect module functionality. We went over what we intercepted/learned in the middle of GNR-SP execution, and everything seemed to",
+      "internetMessageId": "<CY8PR11MB724416EFB32A8ABADD4933A193CB2@CY8PR11MB7244.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-28T01:24:40+00:00",
+      "to": [
+        "pablo.rivera.valverde@intel.com",
+        "partap.singh@intel.com",
+        "shivagiri@intel.com",
+        "kandhan.rajakumar@intel.com",
+        "anjux.babu.kumar@intel.com"
+      ],
+      "cc": [
+        "cr_pft_fivr@intel.com"
+      ],
+      "sender": "joseph.a.blanco.fallas@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAawvk4RAAA=",
+      "subject": "[HSD-ES][server][bugeco][corcbbplanar-a0][22023016772][3-medium][open] [PMR->COR] PMR (ARW CBB) TRC (Tunable Replica Circuit) Content Generation and Validation by DFX team",
+      "from": "zhuoyu.bao@intel.com",
+      "receivedDateTime": "2026-07-28T00:25:46+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "22023016772.6: [PMR->COR] PMR (ARW CBB) TRC (Tunable Replica Circuit) Content Generation and Validation by DFX team\r\nURL: https://hsdes.intel.com/resource/22023016772\r\n\r\nClick Unsubscribe to stop receiving any future updates on this article.\r\n\r\nChanged Fi",
+      "internetMessageId": "<HSD.22023016772@plxs1967.pdx.intel.com>",
+      "sentDateTime": "2026-07-28T00:25:33+00:00",
+      "to": [
+        "prabhavathy.jagadeesan@intel.com",
+        "zhuoyu.bao@intel.com",
+        "naveen.agrawal@intel.com",
+        "nitin.lulani@intel.com",
+        "ananthashayana.m.s@intel.com",
+        "hasanuzzaman.sheikh@intel.com",
+        "wei.sheng.wong@intel.com",
+        "chee.hoo.goh@intel.com",
+        "kandhan.rajakumar@intel.com",
+        "chethan.shankarnarayan.rao@intel.com",
+        "kenny.lim@intel.com",
+        "rohini.krishnan@intel.com",
+        "kar.hoo.cho@intel.com",
+        "derrick.anang@intel.com",
+        "chun.fai.goh@intel.com",
+        "robin.t.mathew@intel.com"
+      ],
+      "cc": [],
+      "sender": "zhuoyu.bao@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAawvk4QAAA=",
+      "subject": "Happy 5th Year Work Anniversary Jayson !!",
+      "from": "MPE.India_communications@intel.com",
+      "receivedDateTime": "2026-07-27T23:30:32+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hi Jayson,\r\n\r\nCongratulations on your 5th Year work anniversary.\r\n\r\n\r\n\r\nRegards\r\nMPE India Communications",
+      "internetMessageId": "<DS7PR11MB87820907BB5C5591D3626C17F7CC2@DS7PR11MB8782.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-27T23:30:29+00:00",
+      "to": [
+        "jayson.mathew@intel.com"
+      ],
+      "cc": [],
+      "sender": "MPE.India_communications@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAawvk4PAAA=",
+      "subject": "Replay MPE's July Tech Talk: QBot Platform - Extracting Clues from Data by Senthil Singaravelu",
+      "from": "MPE.Communications@intel.com",
+      "receivedDateTime": "2026-07-27T17:45:51+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Today, the Quality Bots platform is cutting analysis from days to hours / hours to minutes and saving significant engineering time. Learn how this open source platform can help you extract clues from data.\r\nReplay MPE’s July Tech Talk:\r\n\r\nQBot Platform: E",
+      "internetMessageId": "<CH8PR11MB948169C8FBA911B19B401F4E84CC2@CH8PR11MB9481.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-27T17:45:10+00:00",
+      "to": [
+        "spe.mpe.all@intel.com"
+      ],
+      "cc": [],
+      "sender": "MPE.Communications@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAawvk4OAAA=",
+      "subject": "Join the CEG Quarterly Group Sync on July 29 from 9 to 10 a.m. Pacific",
+      "from": "central.engineering.group@intel.com",
+      "receivedDateTime": "2026-07-27T17:08:29+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Tune in for a business update, execution progress and a spotlight on two areas of the business.\r\n\r\n\r\nCentral Engineering Group Q3’26 QGS\r\n\r\nJoin us on July 29 from 9 to 10 a.m. Pacific in the JFCC Auditorium and via live webcast.\r\n\r\nJoin us for the Q3 ’26",
+      "internetMessageId": "<0100019fa48c99f4-c2af1b9f-549b-4fbf-bdf8-74ee4fc06bf1-000000@email.amazonses.com>",
+      "sentDateTime": "2026-07-27T17:08:25+00:00",
+      "to": [
+        "kandhan.rajakumar@intel.com"
+      ],
+      "cc": [],
+      "sender": "central.engineering.group@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAawvk4NAAA=",
+      "subject": "GNR-D XCCp DPM Summary - WW29",
+      "from": "mohini.vinnakota@intel.com",
+      "receivedDateTime": "2026-07-27T17:00:24+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "GNR-D XCCp DPM Summary\r\n\r\n  *   Volume : 16665 (WW01–WW29)\r\n  *   Incoming DPM :\r\n     *   Cumulative DPM - 16202 (Without IM) & 17042 (With IM)\r\n     *   4.3k rolling DPM – 16113 (Without IM)\r\n  *   Outgoing DPM :\r\n     *   Cumulative DPM – 520\r\n     *",
+      "internetMessageId": "<PH7PR11MB7004326E51A380F12A5727FC8ACC2@PH7PR11MB7004.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-27T17:00:15+00:00",
+      "to": [
+        "mdna.ba.mst@intel.com",
+        "chandrashekhar.m.v@intel.com",
+        "mdna.ba.managers@intel.com",
+        "mdna.ba.staff@intel.com",
+        "mdna.ba.leads@intel.com"
+      ],
+      "cc": [
+        "yonghyun.kim@intel.com",
+        "gnrd.ppv.cmv@intel.com",
+        "ramanathan.raghavan@intel.com",
+        "giridhar.vadlamudi@intel.com",
+        "yun.ping.sung@intel.com",
+        "yik.sean.ooi@intel.com",
+        "yu.tin.cheong@intel.com",
+        "lee.seng.lim@intel.com",
+        "eddie.wong@intel.com",
+        "eng.soon.khor@intel.com",
+        "eng.hoo.leow@intel.com",
+        "vincent.g.thambiah@intel.com",
+        "huey.sin.lew@intel.com",
+        "hoi.yee.chun@intel.com",
+        "raghupathy.raja.arumugam@intel.com",
+        "teng.zhang.koay@intel.com",
+        "yin.yin.wong@intel.com",
+        "jin.keat.lim@intel.com",
+        "li.jie.chuah@intel.com",
+        "kenny.oh@intel.com",
+        "cheong.wan.lim@intel.com",
+        "lai.man.yip@intel.com",
+        "yu.ing.diow@intel.com",
+        "adrian.kheng.aun.teh@intel.com",
+        "chee.ming.tang@intel.com",
+        "nur.liyana.ishak@intel.com",
+        "carolina.olea.gutierrez@intel.com",
+        "kashif.ali@intel.com",
+        "erragunta.venkata.roop.sagar@intel.com",
+        "anshika.shankhdhar@intel.com",
+        "brenda.m.marcial.camacho@intel.com",
+        "zhen.zhao.ooi@intel.com",
+        "luis.esquivel.rios@intel.com",
+        "athreya.mukundarajan@intel.com",
+        "octavio.velazquez.aguilar@intel.com",
+        "choong.tze.teoh@intel.com",
+        "kasinatha.kalyana@intel.com",
+        "sudha.govindasamy@intel.com"
+      ],
+      "sender": "mohini.vinnakota@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAawvk4MAAA=",
+      "subject": "Intel Corporation Daily Digest",
+      "from": "noreply_intel@engage.mail.microsoft",
+      "receivedDateTime": "2026-07-27T15:41:29+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "New posts from Intel Corporation  ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏ ﻿͏",
+      "internetMessageId": "<ce6c9ccdb7f76c9fba7e9f927b9c600435ab2eb55465e7ff435c1a380f192d2f@engage.mail.microsoft>",
+      "sentDateTime": "2026-07-27T15:41:05+00:00",
+      "to": [
+        "kandhan.rajakumar@intel.com"
+      ],
+      "cc": [],
+      "sender": "noreply_intel@engage.mail.microsoft"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAawvk4LAAA=",
+      "subject": "Priority sequence for new VPOs run scheduled at tool:1839 & 2528 through loading sheet on WW31p1",
+      "from": "abdulkarimx.abdulquyyaum.khan@intel.com",
+      "receivedDateTime": "2026-07-27T13:20:21+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hi Team,\r\n\r\nHere is the sequence of execution for new VPOs created on W31p1 which are tabulated in loading sheet.\r\n\r\nVPO Priotirty in Sequence(High to Low)\r\nVPO Owner\r\nTool\r\nP630309EN\r\nSiva\r\n2528\r\nP631005RV\r\nPriyanka\r\n2528\r\nP631002RV\r\nPriyanka\r\n2528\r\nP631",
+      "internetMessageId": "<LV3PR11MB8765B44A36A4797D4CE444D8BACC2@LV3PR11MB8765.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-27T13:20:16+00:00",
+      "to": [
+        "gnrd_xccp_tpwg@intel.com",
+        "gnrd_xccp_all_cw@intel.com"
+      ],
+      "cc": [
+        "wei.lun.goh@intel.com"
+      ],
+      "sender": "abdulkarimx.abdulquyyaum.khan@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAawvk4KAAA=",
+      "subject": "tp agenda: GHCP Office Hour Session #1",
+      "from": "chin.heng.teo@intel.com",
+      "receivedDateTime": "2026-07-27T08:50:49+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Sharing on tp-dev skills\r\ntp-dev-mtpl-ccr-update\r\ntp-dev-mtpl-edc2kill2edc-switcher\r\ntp-dev-mtpl-extraction\r\ntp-dev-mtpl-update\r\n\r\nand validation skills\r\ntp-validator-ccr-vmin-setup\r\ntp-validator-quality-checks\r\n\r\n\r\n\r\n\r\nHave an idea but don’t know where t",
+      "internetMessageId": "<DM8PR11MB55909B4A52666DEB8EA1AD57B9CC2@DM8PR11MB5590.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-27T08:50:34+00:00",
+      "to": [
+        "mpe.mdna.all@intel.com"
+      ],
+      "cc": [
+        "hooi.wen.koay@intel.com",
+        "kim.huat.lee@intel.com",
+        "kong.aik.chuah@intel.com",
+        "hoong.lung.chang@intel.com",
+        "manickam.valliappan@intel.com",
+        "keng.yong.goh@intel.com",
+        "manoj.govindu@intel.com"
+      ],
+      "sender": "chin.heng.teo@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAawvk4JAAA=",
+      "subject": "F21 ARIES v14.0.0.0 General Release Description:...",
+      "from": "notifications_intel@engage.mail.microsoft",
+      "receivedDateTime": "2026-07-27T07:56:31+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Sugumaran, Vigneswary started a new conversation in the ATM ARIES NOTIFICATION community on the Intel Corporation Viva Engage network\r\n\r\nSugumaran, Vigneswary started a new conversation in ATM ARIES NOTIFICATION\r\n        Announcement Posted in ATM ARIES N",
+      "internetMessageId": "<b0454786-22cf-332d-a4c0-095f75f25a35@engage.mail.microsoft>",
+      "sentDateTime": "2026-07-27T07:53:20+00:00",
+      "to": [
+        "kandhan.rajakumar@intel.com"
+      ],
+      "cc": [],
+      "sender": "notifications_intel@engage.mail.microsoft"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEJAABB3q-AkIkPT4kIvFkvsKdkAAa3H0NjAAA=",
+      "subject": "Weekly sync + Learning session",
+      "from": "kandhan.rajakumar@intel.com",
+      "receivedDateTime": "2026-07-27T07:14:54+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Agenda:\r\n\r\n  *\r\nAny concerns on Analog, PTH tasks across the products - XCCp, HPI, MMG800, MGV800\r\n  *\r\nLearning sharing session if any\r\n\r\n________________________________________________________________________________\r\nMicrosoft Teams meeting\r\nJoin: htt",
+      "internetMessageId": "<BL1PR11MB5525BC1A6FBBCD0104EC20B6FECC2@BL1PR11MB5525.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-27T07:14:54+00:00",
+      "to": [
+        "harsh.anand@intel.com",
+        "shivagiri@intel.com",
+        "partap.singh@intel.com",
+        "aneesh.k.a@intel.com",
+        "niveditha.m.s@intel.com",
+        "sai.aditya.pabolu@intel.com",
+        "sushant.anand.anand@intel.com",
+        "sivasankaran.selvakumar@intel.com",
+        "rishix.anand@intel.com",
+        "bheemarao.mendeti@intel.com"
+      ],
+      "cc": [],
+      "sender": "kandhan.rajakumar@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAawvk4IAAA=",
+      "subject": "APT Team Skill Development Update – WW30",
+      "from": "niveditha.m.s@intel.com",
+      "receivedDateTime": "2026-07-27T06:47:24+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hi Team,\r\n\r\nBelow is the consolidated summary of skill development activities from the APT Team for WW30\r\n\r\nExecutive Summary\r\n\r\n\r\n  *   MDFI/CLK Skills: Integrated ana-data-mdfi-ctvdec-analyzer and ana-data-clk-ctvdec-analyzer with PDE Agent and availabl",
+      "internetMessageId": "<CO1PR11MB48039635ECE86B37A31132FBB5CC2@CO1PR11MB4803.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-27T06:47:20+00:00",
+      "to": [
+        "apt_deg_xne_ba@intel.com"
+      ],
+      "cc": [
+        "chethan.shankarnarayan.rao@intel.com",
+        "kandhan.rajakumar@intel.com"
+      ],
+      "sender": "niveditha.m.s@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAawvk4HAAA=",
+      "subject": "Thermal Module Bandwidth Allocation",
+      "from": "rishix.anand@intel.com",
+      "receivedDateTime": "2026-07-27T05:17:18+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hi Shivagiri/Partap,\r\n\r\nAs per Kandhan’s request I am allocating 50% of my bandwidth to Thermal module tasks for upcoming 3-4 weeks.\r\n\r\nRegards,\r\n\r\nRishi Anand",
+      "internetMessageId": "<PH7PR11MB6858AB7F96241A5D103AC87994CC2@PH7PR11MB6858.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-27T05:17:16+00:00",
+      "to": [
+        "shivagiri@intel.com",
+        "partap.singh@intel.com"
+      ],
+      "cc": [
+        "kandhan.rajakumar@intel.com",
+        "harsh.anand@intel.com"
+      ],
+      "sender": "rishix.anand@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAawvk4FAAA=",
+      "subject": "GNR-D XCC+ A0 CLASSHOT PRQ TP Rev10N02 (KUAT, Total=1.7ku) Yield Report @ww31.1",
+      "from": "pak.kheng.chan@intel.com",
+      "receivedDateTime": "2026-07-27T03:47:10+00:00",
+      "isRead": true,
+      "hasAttachments": true,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "GNR-D XCC+ A0 CLASSHOT PRQ TP Rev10N02 (KUAT, Total=1.7ku) Yield Report @ww31.1\r\nSUMMARY:\r\n• Yield: 91.3% with 1.7ku tested; (Fallout Breakdown: COMP: 5.1%, IO: 1.1% & OTHER: 2.5%)\r\n• Sort IO TP: 21N, R & T; Sort CPU TP: 2V\r\n• Top Pareto to Focus:\r\n→B14 Y",
+      "internetMessageId": "<BL3PR11MB643414779B455C2A8181DCB1DECC2@BL3PR11MB6434.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-27T03:46:58+00:00",
+      "to": [
+        "kamalesh.basavaraju@intel.com",
+        "chethan.shankarnarayan.rao@intel.com",
+        "gnrd_xccp_pde@intel.com",
+        "soo.xian.tan@intel.com",
+        "raghupathy.raja.arumugam@intel.com",
+        "megha.parameshwari@intel.com",
+        "sai.aditya.pabolu@intel.com",
+        "sivasankaran.selvakumar@intel.com",
+        "amshuman.a@intel.com",
+        "tavishi.dutt@intel.com",
+        "ayushi.ugle@intel.com",
+        "sushant.anand.anand@intel.com",
+        "sivasankaran.selvakumar@intel.com",
+        "sushant.anand.anand@intel.com",
+        "sai.aditya.pabolu@intel.com",
+        "ilamathi.u@intel.com",
+        "kushal.jain@intel.com",
+        "jigar.pankhania@intel.com",
+        "shivagiri@intel.com",
+        "farhan.hakimi.anuar@intel.com",
+        "harish.mallya.k@intel.com",
+        "debabrata.maji@intel.com",
+        "sivasankaran.selvakumar@intel.com"
+      ],
+      "cc": [
+        "gnrd.yield@intel.com",
+        "ramanathan.raghavan@intel.com",
+        "yu.tin.cheong@intel.com",
+        "chin.heng.teo@intel.com",
+        "ching.fong.su@intel.com",
+        "kim.kee.chew@intel.com",
+        "kenny.kal.vin.toh@intel.com"
+      ],
+      "sender": "pak.kheng.chan@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAawvk4EAAA=",
+      "subject": "Mallya K, Harish sent a message",
+      "from": "no-reply@teams.mail.microsoft",
+      "receivedDateTime": "2026-07-27T03:22:43+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hi All, I will be WFH today and OOO on Wednesday for personal work . ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
+      "internetMessageId": "<TeamsMissedActivityEmail-34880685-9bd4-467b-889e-d430a57691bf.rcid_dec4edd0-be9b-4772-a009-c1b7cab8ade4.r0-ioe_1-tid_46c98d88-e344-4ed4-8496-4ed7712e255d-rh_cac_notifyp-aid_9e7182cd-cd59-4153-9577-2bb8408c87a1_9d7bec55-1d49-4e25-8776-b3a3130088de@odspnotify>",
+      "sentDateTime": "2026-07-27T03:22:23+00:00",
+      "to": [
+        "kandhan.rajakumar@intel.com"
+      ],
+      "cc": [],
+      "sender": "no-reply@teams.mail.microsoft"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAawvk4DAAA=",
+      "subject": "Happy Birthday Sravanthi !!!!",
+      "from": "MPE.India_communications@intel.com",
+      "receivedDateTime": "2026-07-27T03:11:11+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hi Sravanthi,\r\n\r\nWish you a very Happy Birthday and a great year ahead.\r\n\r\n\r\n\r\nRegards\r\nMPE India Communications",
+      "internetMessageId": "<DS7PR11MB8782A39F96A6A30B7E8E9081F7CC2@DS7PR11MB8782.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-27T03:11:08+00:00",
+      "to": [
+        "sravanthi.ghanta@intel.com"
+      ],
+      "cc": [],
+      "sender": "MPE.India_communications@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAawvk4CAAA=",
+      "subject": "Teoh, Kok Heong sent a message",
+      "from": "no-reply@teams.mail.microsoft",
+      "receivedDateTime": "2026-07-27T01:43:15+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hi Tze Chuan ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌\r\nHi,\r\n\r\nTeoh, Kok Heong sent a message in ICX LCC EGD",
+      "internetMessageId": "<TeamsMissedActivityEmail-c97cc4e9-ddd8-425c-a9c4-79c71e6ed414.rcid_6bffe596-a107-47bd-ae0d-ef2155d4eed7.r0-ioe_1-tid_46c98d88-e344-4ed4-8496-4ed7712e255d-rh_cac_notifyp-aid_6d69986a-fd96-45b3-ad65-63afad490331_9d7bec55-1d49-4e25-8776-b3a3130088de@odspnotify>",
+      "sentDateTime": "2026-07-27T01:43:03+00:00",
+      "to": [
+        "kandhan.rajakumar@intel.com"
+      ],
+      "cc": [],
+      "sender": "no-reply@teams.mail.microsoft"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAawvk4BAAA=",
+      "subject": "PG12 Lab : Equipment/Tools’ Preventive Maintenance (PM) ",
+      "from": "MPE.VLE.MYS.Communication@intel.com",
+      "receivedDateTime": "2026-07-27T00:04:44+00:00",
+      "isRead": true,
+      "hasAttachments": true,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "PG12 Lab : Equipment/Tools’ Preventive Maintenance (PM)\r\n\r\nLab will perform PM for the following equipment/tools in next 2 weeks (next week & subsequent week).\r\nPOR Process: PM team will take-over the equipment/tools without further notice.\r\n\r\nWhat ",
+      "internetMessageId": "<DS0PR11MB7407C5BA85C6D425494AD0F0E1CC2@DS0PR11MB7407.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-27T00:04:06+00:00",
+      "to": [],
+      "cc": [],
+      "sender": "MPE.VLE.MYS.Communication@intel.com"
+    },
+    {
+      "id": "AQMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlAC03NjMwMzUwMWE5M2IARgAAAxnfcYfx4iBHigjLbLhMk7cHAEHer8CQiQ9PiQi8WS_wp2QAAAIBDAAAAEHer8CQiQ9PiQi8WS_wp2QABrC_TgAAAQ==",
+      "subject": "AR - Central RTL models are about to be deleted in XUCODE project in IDC site ",
+      "from": "ModelCleaner@ecsmtp.iil.intel.com",
+      "receivedDateTime": "2026-07-26T11:01:18+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hello,\r\n\r\nThis is an auto-generated mail - do not reply.\r\nPlease continue reading if you are using XUCODE CENTRAL RTL models (gatekeeper released models).\r\n\r\nGateKeeper will be deleting released models to clear space for new releases.\r\nIf you want to requ",
+      "internetMessageId": "<202607261100.66QB0PgS003987@icronl11.iil.intel.com>",
+      "sentDateTime": "2026-07-26T11:00:25+00:00",
+      "to": [],
+      "cc": [],
+      "sender": "ModelCleaner@ecsmtp.iil.intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAawvk3-AAA=",
+      "subject": "AR - Central RTL models are about to be deleted in XUCODE GK4 project in IDC site ",
+      "from": "ModelCleaner@ecsmtp.iil.intel.com",
+      "receivedDateTime": "2026-07-26T09:21:09+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hello,\r\n\r\nThis is an auto-generated mail - do not reply.\r\nPlease continue reading if you are using XUCODE GK4 CENTRAL RTL models (gatekeeper released models).\r\n\r\nGateKeeper will be deleting released models to clear space for new releases.\r\nIf you want to ",
+      "internetMessageId": "<202607260920.66Q9KMJW019066@icronl11.iil.intel.com>",
+      "sentDateTime": "2026-07-26T09:20:22+00:00",
+      "to": [],
+      "cc": [],
+      "sender": "ModelCleaner@ecsmtp.iil.intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEMAABB3q-AkIkPT4kIvFkvsKdkAAawvk3_AAA=",
+      "subject": "AR - Central RTL models are about to be deleted in CORE GK4 project in IDC site ",
+      "from": "ModelCleaner@ecsmtp.iil.intel.com",
+      "receivedDateTime": "2026-07-26T09:18:26+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hello,\r\n\r\nThis is an auto-generated mail - do not reply.\r\nPlease continue reading if you are using CORE GK4 CENTRAL RTL models (gatekeeper released models).\r\n\r\nGateKeeper will be deleting released models to clear space for new releases.\r\nIf you want to re",
+      "internetMessageId": "<202607260916.66Q9G9gP017063@icronl11.iil.intel.com>",
+      "sentDateTime": "2026-07-26T09:16:09+00:00",
+      "to": [],
+      "cc": [],
+      "sender": "ModelCleaner@ecsmtp.iil.intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEJAABB3q-AkIkPT4kIvFkvsKdkAAalBQ5cAAA=",
+      "subject": "Re: GNRD XCC+ Power failure improvement path exploration",
+      "from": "kandhan.rajakumar@intel.com",
+      "receivedDateTime": "2026-07-23T09:35:08+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "++ Rohini    \r\n\r\nHi Rohini,\r\nCould you please assist with the below request regarding GNR-D XCC+?\r\nWe are planning to reduce the IA FSL S2T multiplier from the guard band of 20% to 10% and would like to understand what the updated/respective IA FSL S2T mu",
+      "internetMessageId": "<BL1PR11MB5525418F7E6805A04174D877FEC02@BL1PR11MB5525.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-23T09:35:08+00:00",
+      "to": [
+        "debabrata.maji@intel.com",
+        "harishankar.sahu@intel.com",
+        "purna.c.nayak@intel.com",
+        "mahaveer.prasad.vaishnav@intel.com",
+        "sergio.blanco.nunez@intel.com",
+        "carlos.flores.mora@intel.com"
+      ],
+      "cc": [
+        "kamalesh.basavaraju@intel.com",
+        "saravanann.ranganathan@intel.com",
+        "rohini.krishnan@intel.com"
+      ],
+      "sender": "kandhan.rajakumar@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEJAABB3q-AkIkPT4kIvFkvsKdkAAaWdrmTAAA=",
+      "subject": "Re: [Action Required] GNR-D XCC+ Program Audit w.r.t. GNR-D HCC and GND-SP XCC – Request for Module-Level Review",
+      "from": "kandhan.rajakumar@intel.com",
+      "receivedDateTime": "2026-07-22T14:23:21+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Thank you Pablo and team. Is that possible If you can share noted differences.\r\n\r\nRegards,\r\nKandhan\r\n\r\n________________________________\r\nFrom: Rivera Valverde, Pablo <pablo.rivera.valverde@intel.com>\r\nSent: Tuesday, July 21, 2026 10:35 PM\r\nTo: B S, Somash",
+      "internetMessageId": "<BL1PR11MB55252A46B19F5B46C03441B2FEC12@BL1PR11MB5525.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-22T14:23:20+00:00",
+      "to": [
+        "pablo.rivera.valverde@intel.com",
+        "somashekar.b.s@intel.com"
+      ],
+      "cc": [
+        "aneesh.k.a@intel.com",
+        "shivagiri@intel.com",
+        "chethan.shankarnarayan.rao@intel.com",
+        "cr_pft_thermal@intel.com"
+      ],
+      "sender": "kandhan.rajakumar@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEJAABB3q-AkIkPT4kIvFkvsKdkAAaWdrmSAAA=",
+      "subject": "Re: GNRD XCC+ Power failure improvement path exploration",
+      "from": "kandhan.rajakumar@intel.com",
+      "receivedDateTime": "2026-07-22T10:19:31+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hi Saravanan,\r\n\r\nCan you please help on the 10% IA FSL S2T multiplier (1.1) based on the below request.\r\n\r\nRegards,\r\nKandhan\r\n\r\n________________________________\r\nFrom: Maji, Debabrata <debabrata.maji@intel.com>\r\nSent: Friday, July 17, 2026 2:36 PM\r\nTo: Sa",
+      "internetMessageId": "<BL1PR11MB5525C69A2AAA70FF7E04EC5CFEC12@BL1PR11MB5525.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-22T10:19:31+00:00",
+      "to": [
+        "debabrata.maji@intel.com",
+        "harishankar.sahu@intel.com",
+        "purna.c.nayak@intel.com",
+        "mahaveer.prasad.vaishnav@intel.com",
+        "sergio.blanco.nunez@intel.com",
+        "carlos.flores.mora@intel.com"
+      ],
+      "cc": [
+        "kamalesh.basavaraju@intel.com",
+        "saravanann.ranganathan@intel.com"
+      ],
+      "sender": "kandhan.rajakumar@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEJAABB3q-AkIkPT4kIvFkvsKdkAAaWdrmRAAA=",
+      "subject": "Analog_PTH_TP AI initiatives",
+      "from": "kandhan.rajakumar@intel.com",
+      "receivedDateTime": "2026-07-22T05:37:24+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": " Agenda:\r\n\r\n\r\n  *\r\nPDE Agent and skill update (Shivagiri/Niveditha)- 20mins\r\n  *\r\nSlot for demo/any new AI/ML topics - 20mins\r\n  *\r\nAny specific Training/debug sessions - 20mins\r\n\r\n__________________________________________________________________________",
+      "internetMessageId": "<BL1PR11MB5525381B516763AA4FFFC2D7FEC12@BL1PR11MB5525.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-22T05:37:24+00:00",
+      "to": [
+        "shivagiri@intel.com",
+        "partap.singh@intel.com",
+        "harsh.anand@intel.com",
+        "sushant.anand.anand@intel.com",
+        "sai.aditya.pabolu@intel.com",
+        "bheemarao.mendeti@intel.com",
+        "aneesh.k.a@intel.com"
+      ],
+      "cc": [
+        "niveditha.m.s@intel.com",
+        "rishix.anand@intel.com"
+      ],
+      "sender": "kandhan.rajakumar@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEJAABB3q-AkIkPT4kIvFkvsKdkAAaWdrmQAAA=",
+      "subject": "Re: <Action required> Corporate Mandatory Training Completion",
+      "from": "kandhan.rajakumar@intel.com",
+      "receivedDateTime": "2026-07-21T02:07:45+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hi Chandra,\r\n\r\nAll my trainings have been completed already. Thanks.\r\n\r\nRegards,\r\nKandhan\r\n\r\n________________________________\r\nFrom: M V, Chandrashekhar <chandrashekhar.m.v@intel.com>\r\nSent: Monday, July 20, 2026 8:39 PM\r\nTo: Gorantla, Venu <venu.gorantla",
+      "internetMessageId": "<BL1PR11MB55257B6818293352D660C037FEC22@BL1PR11MB5525.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-21T02:07:44+00:00",
+      "to": [
+        "chandrashekhar.m.v@intel.com"
+      ],
+      "cc": [],
+      "sender": "kandhan.rajakumar@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEJAABB3q-AkIkPT4kIvFkvsKdkAAaKzDCBAAA=",
+      "subject": "Re: Justification and Impact on participation in ITC conference",
+      "from": "kandhan.rajakumar@intel.com",
+      "receivedDateTime": "2026-07-20T01:41:59+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hi Chandra,\r\n\r\nIEEE ITC India is the world's premier conference on semiconductor test, now in its 10th edition. With 850+ attendees and speakers from Intel, Google, AMD, Qualcomm, Synopsys, and Advantest — all under one roof in Bengaluru — this is a rare ",
+      "internetMessageId": "<BL1PR11MB5525176EDC7B1F8D9B00A660FEC32@BL1PR11MB5525.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-20T01:41:57+00:00",
+      "to": [
+        "chandrashekhar.m.v@intel.com"
+      ],
+      "cc": [],
+      "sender": "kandhan.rajakumar@intel.com"
+    }
+  ]
+}

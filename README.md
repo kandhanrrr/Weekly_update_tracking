@@ -17,12 +17,14 @@ Two-part automation for any team:
 - Sheet name can be configured or auto-detected; column order can vary.
 
 ### AR Extractor (`scripts/parse_pending_from_graph_exports.py`)
-- Parses Outlook inbox + search results + Teams chats exported via Microsoft Graph API.
+- Parses Outlook inbox + search results + sent items + Teams chats exported via Microsoft Graph API.
 - Detects genuine action requests addressed to **you** — based on greeting in the email/message body (`Hi Kandhan`, `@Kandhan`, `Hi All`), not just TO-field membership.
 - Skips emails where you are CC-only and not explicitly named.
+- Skips OOO / auto-reply emails automatically (`Automatic reply`, `Out of Office`, etc.).
 - Skips Teams ARs you have already convincingly replied to (`done`, `shared`, `sent`, etc.).
-- Captures self-sent follow-ups (`can you share`, `by EOD`, etc.) and assigns them to the recipient.
+- Captures self-sent follow-ups from your **Sent Items** (`can you share`, `by EOD`, etc.) and assigns them to the recipient.
 - Outputs two separate sections: **Outlook ARs** and **Teams ARs**, each sorted newest-first.
+- Save extracted rows as JSON (`--output-json`) and upsert directly into the **AR_Tracking** sheet in Excel.
 - Fully identity-driven — zero hardcoded names; works for any user after editing `config.ini`.
 
 ---
@@ -33,10 +35,14 @@ Two-part automation for any team:
 Weekly_update+tracking/
 ├── config.ini                            # All settings — identity, email, owners, tracker
 ├── fivr_bgr_tracker.py                   # Main Excel tracker script
+├── weekly_update_tracker.py              # Excel reminder + AR upsert script
 ├── save_password.py                      # Save email password to Windows Credential Manager
 ├── setup_scheduler.bat                   # Register the daily Task Scheduler job
 ├── scripts/
-│   └── parse_pending_from_graph_exports.py  # AR extractor (Outlook + Teams → pending list)
+│   ├── parse_pending_from_graph_exports.py  # AR extractor (Outlook + Teams → pending list)
+│   ├── build_sent_ar.py                     # Build AR rows from sent-mail analysis
+│   ├── ar_rows_latest.json                  # Latest combined AR rows (Outlook inbox + Teams)
+│   └── ar_rows_sent_followups.json          # Latest sent-mail follow-up AR rows
 └── README.md                             # This file
 ```
 
@@ -96,13 +102,14 @@ Double-click `setup_scheduler.bat` to register the weekday schedule.
 
 ```bash
 # Dry run — no email sent
-python fivr_bgr_tracker.py
+python weekly_update_tracker.py
 
 # Send real emails
-python fivr_bgr_tracker.py --send
+python weekly_update_tracker.py --send
 
-# Force weekly summary on any day
-python fivr_bgr_tracker.py --send --weekly-summary
+# Upsert AR rows from JSON into AR_Tracking sheet
+python weekly_update_tracker.py --upsert-ar scripts/ar_rows_latest.json
+python weekly_update_tracker.py --upsert-ar scripts/ar_rows_sent_followups.json
 ```
 
 ### AR Extractor
@@ -114,24 +121,47 @@ Fetch your Outlook inbox, any keyword search results, and Teams chat messages, s
 #### Step 2 — Run the parser
 
 ```powershell
+# Inbox + sent + search + Teams (combined), save to JSON
 python scripts/parse_pending_from_graph_exports.py `
-  --outlook-json        "<path to inbox export>/content.json" `
-  --outlook-search-json "<path to search1>/content.json;<path to search2>/content.json" `
-  --teams-json          "scripts\t_chat1.json;scripts\t_chat2.json;scripts\t_grp.json" `
-  --lookback-days 14 `
-  --top 50 `
-  --strict
+  --outlook-json        "scripts/outlook_inbox_fresh.json" `
+  --outlook-search-json "scripts/outlook_search_ar.json;scripts/outlook_sent_followups.json" `
+  --teams-json          "scripts/t_chat1.json;scripts/t_chat2.json" `
+  --lookback-days 14 --strict `
+  --output-json scripts/ar_rows_latest.json
+
+# Upsert extracted rows into AR_Tracking sheet in Excel
+python weekly_update_tracker.py --upsert-ar scripts/ar_rows_latest.json
 ```
 
 | Flag | Description |
 |---|---|
-| `--outlook-json` | Inbox export JSON (required) |
-| `--outlook-search-json` | `;`-separated list of keyword-search result JSONs; treated as pre-filtered ARs |
-| `--teams-json` | `;`-separated list of Teams chat/channel export JSONs |
+| `--outlook-json` | Inbox export JSON (optional if `--outlook-search-json` provided) |
+| `--outlook-search-json` | `;`-separated JSONs: keyword-search exports OR sent-items exports |
+| `--teams-json` | `;`-separated Teams chat/channel export JSONs |
 | `--lookback-days` | How many days back to scan (default: 7) |
 | `--top` | Max rows per section in output (default: 15) |
-| `--strict` | Only keep high-confidence actionable asks |
+| `--strict` | Only keep high-confidence actionable asks; filters OOO/auto-replies |
 | `--exclude-owner` | Skip ARs assigned to this owner (repeatable) |
+| `--output-json` | Save extracted AR rows as JSON for Excel upsert |
+| `--send-reminders` | Preview AR reminder emails (requires `--send` to actually dispatch) |
+
+### AR_Tracking Sheet
+
+Extracted ARs are upserted into a dedicated **AR_Tracking** sheet in the configured Excel workbook.
+The sheet is created automatically on first upsert.
+
+| Column | Description |
+|---|---|
+| Date | Date the AR was detected |
+| Channel | Source folder: `Outlook:Inbox`, `Outlook:Sent`, `Outlook:Search`, or `Teams` |
+| Task | Action item description |
+| Owner | Who must complete it (or TBD) |
+| Status | Default `Open`; update manually when resolved |
+| ETA | Work-week or date if parsed; `TBD` otherwise |
+| Remark | Summary + sender context |
+| Source | Unique dedup key — `Channel:hash` (e.g. `Outlook:Sent:2d0c5de8`) |
+
+**Dedup is automatic** — re-running upsert on the same JSON updates existing rows (Status/ETA/Remark) without inserting duplicates.
 
 ---
 
@@ -164,6 +194,19 @@ email header lines (`To:`, `From:`, `Cc:`, `Sent:`) to avoid false matches.
 | You are only CC'd, not named in body | Email skipped entirely |
 | You are in `To:` but body greets someone else | Owner = that person (not you) |
 | Email retrieved via keyword search | Treated as a pre-confirmed AR; greeting still checked for ownership |
+
+### Sent Mail Follow-ups
+
+The extractor also scans your **Sent Items** to capture follow-ups you have issued to others:
+
+| Signal | Example | AR captured |
+|---|---|---|
+| You asked someone for data | `Hi Saravanan, please provide the data by this week` | Owner = Saravanan |
+| You requested a calculation | `Hi Rohini, could you assist with FSL S2T multiplier` | Owner = Rohini |
+| You committed to an action | `We have to file a JIRA ticket` | Owner = You (self-AR) |
+
+Naming files ending in `sent` or `followup` (e.g. `outlook_sent_followups.json`) in `--outlook-search-json`
+automatically tags those rows as `Channel = Outlook:Sent` in the Excel sheet.
 
 ---
 
@@ -335,17 +378,31 @@ as local setup, not shared configuration.
 
 ---
 
-## Copilot Skill
+## Copilot Skills
 
-The installed skill is:
+The following skills are installed under `.github/skills/` (callable via `/` in Copilot Chat):
 
-`~/.copilot/skills/weekly-update-tracker/SKILL.md`
+| Skill | Slash command use |
+|---|---|
+| `ar-intake-outlook` | Collect ARs from Outlook inbox + sent items |
+| `ar-intake-teams` | Collect ARs from Teams chats/channels |
+| `ar-excel-reminder-sync` | Upsert AR rows into Excel, then run reminder logic |
+| `weekly-update-tracker` | Full weekly tracker automation (overdue, reminders, summary) |
+
+### AR pipeline agent
+
+A dedicated Copilot agent file is installed at `.github/agents/ar-multisource-reminder.agent.md`.
+Invoke via `@ar-multisource-reminder` in Copilot Chat for the full end-to-end pipeline:
+1. Collect Teams ARs
+2. Collect Outlook inbox ARs (and optionally sent-items)
+3. Upsert combined rows into AR_Tracking
+4. Run reminder logic
 
 Use it by asking naturally:
+- "Collect ARs from Teams and Outlook and update Excel"
 - "Check overdue tasks"
-- "Run the weekly tracker"
-- "Show what emails would go out"
-- "Send this week's reminders"
+- "Run the weekly AR summary"
+- "Show what reminder emails would go out"
 
 ---
 

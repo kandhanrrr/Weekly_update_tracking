@@ -1,0 +1,255 @@
+{
+  "success": true,
+  "count": 11,
+  "emails": [
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEJAABB3q-AkIkPT4kIvFkvsKdkAAa9UzB0AAA=",
+      "subject": "Re: GNRD XCCP A0 Efficiency FER, FSL data review",
+      "from": "kandhan.rajakumar@intel.com",
+      "receivedDateTime": "2026-07-28T06:04:26+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hi Saravanan,\r\nPlease help to provide the data by this week.\r\n\r\nRegards,\r\nKandhan\r\n\r\n________________________________\r\nFrom: Rajakumar, Kandhan <kandhan.rajakumar@intel.com>\r\nSent: Wednesday, July 8, 2026 4:31 PM\r\nTo: Ranganathan, Saravanann <saravanann.r",
+      "internetMessageId": "<BL1PR11MB5525417E113E033F0C700F90FECB2@BL1PR11MB5525.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-28T06:04:25+00:00",
+      "to": [
+        "saravanann.ranganathan@intel.com",
+        "shivagiri@intel.com",
+        "harishankar.sahu@intel.com"
+      ],
+      "cc": [
+        "karumajji.srinivasa.lakshman@intel.com",
+        "krishna.sandilya.garimella@intel.com",
+        "arun.kanthimathinathan@intel.com",
+        "sheela.kashyap@intel.com",
+        "anil.kumar.n@intel.com"
+      ],
+      "sender": "kandhan.rajakumar@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEJAABB3q-AkIkPT4kIvFkvsKdkAAa3H0NjAAA=",
+      "subject": "Weekly sync + Learning session",
+      "from": "kandhan.rajakumar@intel.com",
+      "receivedDateTime": "2026-07-27T07:14:54+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Agenda:\r\n\r\n  *\r\nAny concerns on Analog, PTH tasks across the products - XCCp, HPI, MMG800, MGV800\r\n  *\r\nLearning sharing session if any\r\n\r\n________________________________________________________________________________\r\nMicrosoft Teams meeting\r\nJoin: htt",
+      "internetMessageId": "<BL1PR11MB5525BC1A6FBBCD0104EC20B6FECC2@BL1PR11MB5525.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-27T07:14:54+00:00",
+      "to": [
+        "harsh.anand@intel.com",
+        "shivagiri@intel.com",
+        "partap.singh@intel.com",
+        "aneesh.k.a@intel.com",
+        "niveditha.m.s@intel.com",
+        "sai.aditya.pabolu@intel.com",
+        "sushant.anand.anand@intel.com",
+        "sivasankaran.selvakumar@intel.com",
+        "rishix.anand@intel.com",
+        "bheemarao.mendeti@intel.com"
+      ],
+      "cc": [],
+      "sender": "kandhan.rajakumar@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEJAABB3q-AkIkPT4kIvFkvsKdkAAalBQ5cAAA=",
+      "subject": "Re: GNRD XCC+ Power failure improvement path exploration",
+      "from": "kandhan.rajakumar@intel.com",
+      "receivedDateTime": "2026-07-23T09:35:08+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "++ Rohini    \r\n\r\nHi Rohini,\r\nCould you please assist with the below request regarding GNR-D XCC+?\r\nWe are planning to reduce the IA FSL S2T multiplier from the guard band of 20% to 10% and would like to understand what the updated/respective IA FSL S2T mu",
+      "internetMessageId": "<BL1PR11MB5525418F7E6805A04174D877FEC02@BL1PR11MB5525.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-23T09:35:08+00:00",
+      "to": [
+        "debabrata.maji@intel.com",
+        "harishankar.sahu@intel.com",
+        "purna.c.nayak@intel.com",
+        "mahaveer.prasad.vaishnav@intel.com",
+        "sergio.blanco.nunez@intel.com",
+        "carlos.flores.mora@intel.com"
+      ],
+      "cc": [
+        "kamalesh.basavaraju@intel.com",
+        "saravanann.ranganathan@intel.com",
+        "rohini.krishnan@intel.com"
+      ],
+      "sender": "kandhan.rajakumar@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEJAABB3q-AkIkPT4kIvFkvsKdkAAaWdrmTAAA=",
+      "subject": "Re: [Action Required] GNR-D XCC+ Program Audit w.r.t. GNR-D HCC and GND-SP XCC – Request for Module-Level Review",
+      "from": "kandhan.rajakumar@intel.com",
+      "receivedDateTime": "2026-07-22T14:23:21+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Thank you Pablo and team. Is that possible If you can share noted differences.\r\n\r\nRegards,\r\nKandhan\r\n\r\n________________________________\r\nFrom: Rivera Valverde, Pablo <pablo.rivera.valverde@intel.com>\r\nSent: Tuesday, July 21, 2026 10:35 PM\r\nTo: B S, Somash",
+      "internetMessageId": "<BL1PR11MB55252A46B19F5B46C03441B2FEC12@BL1PR11MB5525.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-22T14:23:20+00:00",
+      "to": [
+        "pablo.rivera.valverde@intel.com",
+        "somashekar.b.s@intel.com"
+      ],
+      "cc": [
+        "aneesh.k.a@intel.com",
+        "shivagiri@intel.com",
+        "chethan.shankarnarayan.rao@intel.com",
+        "cr_pft_thermal@intel.com"
+      ],
+      "sender": "kandhan.rajakumar@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEJAABB3q-AkIkPT4kIvFkvsKdkAAaWdrmSAAA=",
+      "subject": "Re: GNRD XCC+ Power failure improvement path exploration",
+      "from": "kandhan.rajakumar@intel.com",
+      "receivedDateTime": "2026-07-22T10:19:31+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hi Saravanan,\r\n\r\nCan you please help on the 10% IA FSL S2T multiplier (1.1) based on the below request.\r\n\r\nRegards,\r\nKandhan\r\n\r\n________________________________\r\nFrom: Maji, Debabrata <debabrata.maji@intel.com>\r\nSent: Friday, July 17, 2026 2:36 PM\r\nTo: Sa",
+      "internetMessageId": "<BL1PR11MB5525C69A2AAA70FF7E04EC5CFEC12@BL1PR11MB5525.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-22T10:19:31+00:00",
+      "to": [
+        "debabrata.maji@intel.com",
+        "harishankar.sahu@intel.com",
+        "purna.c.nayak@intel.com",
+        "mahaveer.prasad.vaishnav@intel.com",
+        "sergio.blanco.nunez@intel.com",
+        "carlos.flores.mora@intel.com"
+      ],
+      "cc": [
+        "kamalesh.basavaraju@intel.com",
+        "saravanann.ranganathan@intel.com"
+      ],
+      "sender": "kandhan.rajakumar@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEJAABB3q-AkIkPT4kIvFkvsKdkAAaWdrmRAAA=",
+      "subject": "Analog_PTH_TP AI initiatives",
+      "from": "kandhan.rajakumar@intel.com",
+      "receivedDateTime": "2026-07-22T05:37:24+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": " Agenda:\r\n\r\n\r\n  *\r\nPDE Agent and skill update (Shivagiri/Niveditha)- 20mins\r\n  *\r\nSlot for demo/any new AI/ML topics - 20mins\r\n  *\r\nAny specific Training/debug sessions - 20mins\r\n\r\n__________________________________________________________________________",
+      "internetMessageId": "<BL1PR11MB5525381B516763AA4FFFC2D7FEC12@BL1PR11MB5525.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-22T05:37:24+00:00",
+      "to": [
+        "shivagiri@intel.com",
+        "partap.singh@intel.com",
+        "harsh.anand@intel.com",
+        "sushant.anand.anand@intel.com",
+        "sai.aditya.pabolu@intel.com",
+        "bheemarao.mendeti@intel.com",
+        "aneesh.k.a@intel.com"
+      ],
+      "cc": [
+        "niveditha.m.s@intel.com",
+        "rishix.anand@intel.com"
+      ],
+      "sender": "kandhan.rajakumar@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEJAABB3q-AkIkPT4kIvFkvsKdkAAaWdrmQAAA=",
+      "subject": "Re: <Action required> Corporate Mandatory Training Completion",
+      "from": "kandhan.rajakumar@intel.com",
+      "receivedDateTime": "2026-07-21T02:07:45+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hi Chandra,\r\n\r\nAll my trainings have been completed already. Thanks.\r\n\r\nRegards,\r\nKandhan\r\n\r\n________________________________\r\nFrom: M V, Chandrashekhar <chandrashekhar.m.v@intel.com>\r\nSent: Monday, July 20, 2026 8:39 PM\r\nTo: Gorantla, Venu <venu.gorantla",
+      "internetMessageId": "<BL1PR11MB55257B6818293352D660C037FEC22@BL1PR11MB5525.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-21T02:07:44+00:00",
+      "to": [
+        "chandrashekhar.m.v@intel.com"
+      ],
+      "cc": [],
+      "sender": "kandhan.rajakumar@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEJAABB3q-AkIkPT4kIvFkvsKdkAAaKzDCBAAA=",
+      "subject": "Re: Justification and Impact on participation in ITC conference",
+      "from": "kandhan.rajakumar@intel.com",
+      "receivedDateTime": "2026-07-20T01:41:59+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hi Chandra,\r\n\r\nIEEE ITC India is the world's premier conference on semiconductor test, now in its 10th edition. With 850+ attendees and speakers from Intel, Google, AMD, Qualcomm, Synopsys, and Advantest — all under one roof in Bengaluru — this is a rare ",
+      "internetMessageId": "<BL1PR11MB5525176EDC7B1F8D9B00A660FEC32@BL1PR11MB5525.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-20T01:41:57+00:00",
+      "to": [
+        "chandrashekhar.m.v@intel.com"
+      ],
+      "cc": [],
+      "sender": "kandhan.rajakumar@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEJAABB3q-AkIkPT4kIvFkvsKdkAAaKzDCAAAA=",
+      "subject": "form16_2026_27",
+      "from": "kandhan.rajakumar@intel.com",
+      "receivedDateTime": "2026-07-19T04:31:46+00:00",
+      "isRead": true,
+      "hasAttachments": true,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hi",
+      "internetMessageId": "<BL1PR11MB5525D265132DDBB06ADF3677FEC42@BL1PR11MB5525.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-19T04:31:45+00:00",
+      "to": [
+        "kandhan4@gmail.com"
+      ],
+      "cc": [],
+      "sender": "kandhan.rajakumar@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEJAABB3q-AkIkPT4kIvFkvsKdkAAZrkthmAAA=",
+      "subject": "1:1Mentoring session",
+      "from": "kandhan.rajakumar@intel.com",
+      "receivedDateTime": "2026-07-14T17:19:28+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "________________________________________________________________________________\r\nMicrosoft Teams meeting\r\nJoin: https://teams.microsoft.com/meet/253248454991339?p=graJJ3tBVWGUhJYeaJ\r\nMeeting ID: 253 248 454 991 339\r\nPasscode: 5es3uA9A\r\n________________",
+      "internetMessageId": "<BL1PR11MB5525661257ABBA8E331FDBBEFEF92@BL1PR11MB5525.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-14T17:19:27+00:00",
+      "to": [
+        "senthil.singaravelu@intel.com"
+      ],
+      "cc": [],
+      "sender": "kandhan.rajakumar@intel.com"
+    },
+    {
+      "id": "AAMkADhjODE0MmQwLWY2ZDYtNDU2Mi1iMGVlLTc2MzAzNTAxYTkzYgBGAAAAAAAZ33GH8eIgR4oIy2y4TJO3BwBB3q-AkIkPT4kIvFkvsKdkAAAAAAEJAABB3q-AkIkPT4kIvFkvsKdkAAZhaI1JAAA=",
+      "subject": "Re: GNR-D XCC+ A0 CLASSHOT PRQ TP Rev10M01 (KUAT, Total=3.8ku) Yield Report @ww29.1",
+      "from": "kandhan.rajakumar@intel.com",
+      "receivedDateTime": "2026-07-14T07:54:35+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hi Chethan,\r\n\r\nWe are already working on this Bin2719, it is not due to the Silicon issue. Prime template is causing this error during offset calculation.\r\n\r\nWe have to file a JIRA ticket to the prime team, and meanwhile we are continuing our DOEs.  For t",
+      "internetMessageId": "<BL1PR11MB5525070FB35168CA62B9068DFEF92@BL1PR11MB5525.namprd11.prod.outlook.com>",
+      "sentDateTime": "2026-07-14T07:54:34+00:00",
+      "to": [
+        "chethan.shankarnarayan.rao@intel.com",
+        "shivagiri@intel.com",
+        "partap.singh@intel.com"
+      ],
+      "cc": [],
+      "sender": "kandhan.rajakumar@intel.com"
+    }
+  ]
+}

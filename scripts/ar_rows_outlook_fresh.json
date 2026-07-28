@@ -1,0 +1,24 @@
+[
+  {
+    "source_key": "d18838414214",
+    "source": "Outlook",
+    "date": "2026-07-28",
+    "task": "Re: [Action Required] GNR-D XCC+ Program Audit w.r.t. GNR-D HCC and GND-SP XCC – Request for Module-Level Review",
+    "owner": "TBD",
+    "status": "Open",
+    "eta": "TBD",
+    "sender": "joseph.a.blanco.fallas@intel.com",
+    "summary": "We went over what we intercepted/learned in the middle of GNR-SP execution, and everything seemed to"
+  },
+  {
+    "source_key": "41e496aa99a3",
+    "source": "Outlook",
+    "date": "2026-07-24",
+    "task": "Collective and individual reports on takeaway, action plan based on ITC - Participation",
+    "owner": "Kandhan",
+    "status": "Open",
+    "eta": "Q3/Q4",
+    "sender": "chandrashekhar.m.v@intel.com",
+    "summary": "We need to have a Plan for Q3/Q4 realization of the takeaways and implement them and showcase."
+  }
+]

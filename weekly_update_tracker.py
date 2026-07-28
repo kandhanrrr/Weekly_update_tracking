@@ -675,7 +675,7 @@ def upsert_ar_rows(json_path: str | Path) -> None:
         owner = r.get("owner", "TBD")
         status = r.get("status", "Open")
         eta = r.get("eta", "TBD")
-        channel = r.get("source", "")  # "Outlook" or "Teams"
+        channel = r.get("folder") or r.get("source", "")  # e.g. "Outlook:Inbox", "Outlook:Sent", "Teams"
         remark = r.get("summary", "")
         if r.get("sender"):
             remark = f"{remark} | From: {r['sender']}".strip(" |")

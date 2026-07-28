@@ -5,13 +5,14 @@ from pathlib import Path
 
 def key(source, date, task):
     raw = f"{source}|{date}|{task[:80]}"
-    return "Outlook:" + hashlib.sha1(raw.encode()).hexdigest()[:12]
+    return "Outlook:Sent:" + hashlib.sha1(raw.encode()).hexdigest()[:12]
 
 
 rows = [
     {
         "source_key": key("Outlook", "2026-07-28", "Provide XCCP A0 Efficiency FER and FSL data"),
         "source": "Outlook",
+        "folder": "Outlook:Sent",
         "date": "2026-07-28",
         "task": "Provide GNRD XCCP A0 Efficiency FER and FSL data for review",
         "owner": "Ranganathan, Saravanann",
@@ -23,6 +24,7 @@ rows = [
     {
         "source_key": key("Outlook", "2026-07-23", "Provide updated IA FSL S2T multiplier for 10pct GB GNR-D XCC+"),
         "source": "Outlook",
+        "folder": "Outlook:Sent",
         "date": "2026-07-23",
         "task": "Provide updated IA FSL S2T multiplier for 10% guard band (GNR-D XCC+ power failure improvement)",
         "owner": "Krishnan, Rohini",
@@ -34,6 +36,7 @@ rows = [
     {
         "source_key": key("Outlook", "2026-07-22", "Share noted differences GNR-D XCC+ audit vs HCC SP"),
         "source": "Outlook",
+        "folder": "Outlook:Sent",
         "date": "2026-07-22",
         "task": "Share noted differences from GNR-D XCC+ Program Audit (vs GNR-D HCC and GND-SP XCC)",
         "owner": "Rivera Valverde, Pablo",
@@ -45,6 +48,7 @@ rows = [
     {
         "source_key": key("Outlook", "2026-07-22", "Help with 10pct IA FSL S2T multiplier 1.1 GNRD XCC+ Saravanan"),
         "source": "Outlook",
+        "folder": "Outlook:Sent",
         "date": "2026-07-22",
         "task": "Help with 10% IA FSL S2T multiplier (1.1) calculation for GNR-D XCC+ power failure improvement path",
         "owner": "Ranganathan, Saravanann",
@@ -56,6 +60,7 @@ rows = [
     {
         "source_key": key("Outlook", "2026-07-14", "File JIRA Prime team Bin2719 offset calculation GNR-D XCC+"),
         "source": "Outlook",
+        "folder": "Outlook:Sent",
         "date": "2026-07-14",
         "task": "File JIRA ticket to Prime team for Bin2719 offset calculation error (GNR-D XCC+ CLASSHOT yield)",
         "owner": "Kandhan",

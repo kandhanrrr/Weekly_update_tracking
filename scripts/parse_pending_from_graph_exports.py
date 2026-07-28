@@ -107,7 +107,7 @@ def _parse_greeting_name(text: str) -> str:
 
 @dataclass
 class Row:
-    source: str
+    source: str           # "Outlook" or "Teams" — used for internal filtering
     date: datetime
     task: str
     owner: str
@@ -116,6 +116,7 @@ class Row:
     sender: str
     summary: str = ""
     assigned_to: str = ""  # who must complete the task
+    folder: str = ""      # readable label: "Outlook:Inbox", "Outlook:Sent", "Outlook:Search", "Teams"
 
 
 def _load_identity() -> tuple[str, set[str], str, str, re.Pattern]:
@@ -315,6 +316,7 @@ def _extract_outlook_rows(
     last_name: str = "",
     addressed_to_self_rx: re.Pattern | None = None,
     search_mode: bool = False,
+    folder_label: str = "Outlook:Inbox",
 ) -> list[Row]:
     if addressed_to_self_rx is None:
         addressed_to_self_rx = re.compile(r"(?!)")  # never-match fallback
@@ -428,6 +430,7 @@ def _extract_outlook_rows(
         rows.append(
             Row(
                 source="Outlook",
+                folder=folder_label,
                 date=date,
                 task=subject or "(no subject)",
                 owner=owner,
@@ -558,6 +561,7 @@ def _extract_teams_rows(
         rows.append(
             Row(
                 source="Teams",
+                folder="Teams",
                 date=date,
                 task=task or "(empty message)",
                 owner=owner_final,
@@ -759,12 +763,16 @@ def main() -> int:
             first_name=first_name,
             last_name=last_name,
             addressed_to_self_rx=addressed_to_self_rx,
+            folder_label="Outlook:Inbox",
         )
     if args.outlook_search_json:
         for search_path_str in args.outlook_search_json.split(";"):
             search_path_str = search_path_str.strip()
             if not search_path_str:
                 continue
+            # Detect folder label from filename: sent/followup → Outlook:Sent, else Outlook:Search
+            fname = Path(search_path_str).stem.lower()
+            flabel = "Outlook:Sent" if any(k in fname for k in ("sent", "followup", "follow_up")) else "Outlook:Search"
             search_payload = json.loads(Path(search_path_str).read_text(encoding="utf-8"))
             outlook_rows += _extract_outlook_rows(
                 search_payload,
@@ -777,6 +785,7 @@ def main() -> int:
                 last_name=last_name,
                 addressed_to_self_rx=addressed_to_self_rx,
                 search_mode=True,
+                folder_label=flabel,
             )
 
     teams_rows: list[Row] = []
@@ -884,13 +893,15 @@ def main() -> int:
 
     if args.output_json:
         def _row_key(r: Row) -> str:
+            label = r.folder or r.source
             raw = f"{r.source}|{r.date.strftime('%Y-%m-%d')}|{r.task[:80]}"
-            return hashlib.sha1(raw.encode()).hexdigest()[:12]
+            return f"{label}:{hashlib.sha1(raw.encode()).hexdigest()[:12]}"
 
         json_rows = [
             {
                 "source_key": _row_key(r),
                 "source": r.source,
+                "folder": r.folder or r.source,
                 "date": r.date.strftime("%Y-%m-%d"),
                 "task": r.task,
                 "owner": r.assigned_to or r.owner,
