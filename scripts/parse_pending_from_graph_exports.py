@@ -134,11 +134,11 @@ def _load_identity() -> tuple[str, set[str], str, str, re.Pattern]:
 
     # Read explicit identity; fall back to deriving from email local-part.
     first_name = config.get("IDENTITY", "first_name", fallback="").strip()
-    last_name  = config.get("IDENTITY", "last_name",  fallback="").strip()
+    last_name = config.get("IDENTITY", "last_name", fallback="").strip()
     if not first_name and self_email:
         parts = self_email.split("@", 1)[0].split(".")
         first_name = parts[0].capitalize() if parts else ""
-        last_name  = parts[1].capitalize() if len(parts) > 1 else ""
+        last_name = parts[1].capitalize() if len(parts) > 1 else ""
 
     aliases: set[str] = set()
     if self_email:
@@ -237,6 +237,7 @@ _SUMMARY_STRIP = re.compile(
     re.IGNORECASE | re.MULTILINE | re.DOTALL,
 )
 
+
 def _make_summary(preview: str, max_sentences: int = 2) -> str:
     """Return a professional 2-line context summary stripped of greetings, sign-offs, and forward headers."""
     # Strip HTML tags and entities
@@ -259,7 +260,12 @@ def _make_summary(preview: str, max_sentences: int = 2) -> str:
         r"(?:From|Sent|To|Cc):\s+.*$", "", text, flags=re.IGNORECASE
     ).strip()
     text = re.sub(r"_{4,}.*$", "", text, flags=re.DOTALL).strip()
-    text = re.sub(r"Microsoft Teams meeting.*$", "", text, flags=re.IGNORECASE | re.DOTALL).strip()
+    text = re.sub(
+        r"Microsoft Teams meeting.*$",
+        "",
+        text,
+        flags=re.IGNORECASE | re.DOTALL,
+    ).strip()
     # Split on sentence boundaries
     parts = re.split(r"(?<=[.!?])\s+", text)
     sentences: list[str] = []
@@ -342,9 +348,14 @@ def _extract_outlook_rows(
             if not _looks_like_direct_request(action_text):
                 continue
         else:
-            to_recipients = {str(item).strip().lower() for item in (e.get("to", []) or [])}
-            cc_recipients = {str(item).strip().lower() for item in (e.get("cc", []) or [])}
-            all_recipients = to_recipients | cc_recipients
+            to_recipients = {
+                str(item).strip().lower()
+                for item in (e.get("to", []) or [])
+            }
+            cc_recipients = {
+                str(item).strip().lower()
+                for item in (e.get("cc", []) or [])
+            }
 
             directly_named = bool(addressed_to_self_rx.search(body_text))
             in_to = bool(self_email and self_email in to_recipients)

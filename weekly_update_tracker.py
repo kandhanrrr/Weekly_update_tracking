@@ -487,7 +487,9 @@ def load_active_tasks(sheet) -> list[dict]:
         status_idx = header_map["status"]
         has_status = status_idx < len(row) and row[status_idx]
         status_raw = str(row[status_idx]).strip() if has_status else ""
-        status_norm = STATUS_ALIASES.get(status_raw.lower(), status_raw.lower())
+        status_norm = STATUS_ALIASES.get(
+            status_raw.lower(), status_raw.lower()
+        )
 
         if status_norm not in ACTIVE_STATUSES:
             continue  # closed / dropped / NA — skip silently
