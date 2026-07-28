@@ -726,7 +726,7 @@ def _md_table(headers: list[str], data: list[list[str]]) -> str:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Parse pending AR tasks from Graph export JSON files.")
-    parser.add_argument("--outlook-json", required=True)
+    parser.add_argument("--outlook-json", default=None, help="Path to Outlook inbox Graph export JSON (optional if --outlook-search-json is provided)")
     parser.add_argument("--outlook-search-json", help="Path to a Graph email search result JSON; emails here are treated as pre-filtered ARs (no recipient check)")
     parser.add_argument("--teams-json", help="Path to a Teams export JSON file or a ';' separated list of paths")
     parser.add_argument("--lookback-days", type=int, default=7)
@@ -743,18 +743,20 @@ def main() -> int:
     exclude_owners = {o.strip().lower() for o in args.exclude_owner if o.strip()}
     self_email, self_aliases, first_name, last_name, addressed_to_self_rx = _load_identity()
 
-    outlook_payload = json.loads(Path(args.outlook_json).read_text(encoding="utf-8"))
-    outlook_rows = _extract_outlook_rows(
-        outlook_payload,
-        since,
-        exclude_owners,
-        args.strict,
-        self_email,
-        self_aliases,
-        first_name=first_name,
-        last_name=last_name,
-        addressed_to_self_rx=addressed_to_self_rx,
-    )
+    outlook_rows: list = []
+    if args.outlook_json:
+        outlook_payload = json.loads(Path(args.outlook_json).read_text(encoding="utf-8"))
+        outlook_rows = _extract_outlook_rows(
+            outlook_payload,
+            since,
+            exclude_owners,
+            args.strict,
+            self_email,
+            self_aliases,
+            first_name=first_name,
+            last_name=last_name,
+            addressed_to_self_rx=addressed_to_self_rx,
+        )
     if args.outlook_search_json:
         for search_path_str in args.outlook_search_json.split(";"):
             search_path_str = search_path_str.strip()
@@ -810,7 +812,7 @@ def main() -> int:
         _md_table(
             ["Metric", "Value"],
             [
-                ["Outlook scanned", str(outlook_payload.get("count", 0))],
+                ["Outlook scanned", str(outlook_payload.get("count", 0)) if args.outlook_json else "n/a (search only)"],
                 ["Teams scanned", str(teams_scanned)],
                 ["Outlook pending extracted", str(len(outlook_rows))],
                 ["Teams pending extracted", str(len(teams_rows))],
