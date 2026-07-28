@@ -1,5 +1,6 @@
 import argparse
 import configparser
+import hashlib
 import json
 import re
 import smtplib
@@ -736,6 +737,7 @@ def main() -> int:
     parser.add_argument("--send-reminders", action="store_true", help="Enable reminder emails for ARs older than --reminder-min-age-days (requires --send to dispatch)")
     parser.add_argument("--send", action="store_true", help="Confirm dispatch: actually send reminder emails. Without this flag no emails are ever sent.")
     parser.add_argument("--reminder-min-age-days", type=int, default=5, help="Only remind about ARs at least this many days old (default: 5 = prev WW)")
+    parser.add_argument("--output-json", default=None, help="Save extracted AR rows as JSON for upsert into Excel tracker")
     args = parser.parse_args()
 
     since = datetime.now(timezone.utc) - timedelta(days=args.lookback_days)
@@ -878,6 +880,30 @@ def main() -> int:
             ],
         )
     )
+
+    if args.output_json:
+        def _row_key(r: Row) -> str:
+            raw = f"{r.source}|{r.date.strftime('%Y-%m-%d')}|{r.task[:80]}"
+            return hashlib.sha1(raw.encode()).hexdigest()[:12]
+
+        json_rows = [
+            {
+                "source_key": _row_key(r),
+                "source": r.source,
+                "date": r.date.strftime("%Y-%m-%d"),
+                "task": r.task,
+                "owner": r.assigned_to or r.owner,
+                "status": r.status or "Open",
+                "eta": r.eta,
+                "sender": r.sender,
+                "summary": r.summary,
+            }
+            for r in all_rows
+        ]
+        out_path = Path(args.output_json)
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        out_path.write_text(json.dumps(json_rows, indent=2, ensure_ascii=False), encoding="utf-8")
+        print(f"\n[output-json] {len(json_rows)} row(s) saved to: {out_path}")
 
     if args.send_reminders:
         if not args.send:

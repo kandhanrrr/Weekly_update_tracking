@@ -31,6 +31,7 @@ from datetime import datetime, timedelta
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pathlib import Path
+from typing import Any
 
 import openpyxl  # type: ignore[import-untyped]
 
@@ -596,6 +597,119 @@ def process_weekly_summary(
 
 
 # ---------------------------------------------------------------------------
+# AR upsert — write extracted AR rows into AR_Tracking sheet
+# ---------------------------------------------------------------------------
+
+AR_SHEET_NAME = "AR_Tracking"
+AR_HEADERS = ["Date", "Task", "Owner", "Status", "ETA", "Remark", "Source"]
+
+
+def _get_or_create_ar_sheet(wb):
+    """Return the AR_Tracking worksheet, creating it with headers if absent."""
+    if AR_SHEET_NAME in wb.sheetnames:
+        return wb[AR_SHEET_NAME]
+    ws = wb.create_sheet(AR_SHEET_NAME)
+    ws.append(AR_HEADERS)
+    return ws
+
+
+def _build_source_index(ws) -> dict[str, int]:
+    """Return {source_key: row_number} for all existing rows in the AR sheet."""
+    try:
+        header_row = next(ws.iter_rows(min_row=1, max_row=1, values_only=True))
+    except StopIteration:
+        return {}
+    try:
+        src_col = list(header_row).index("Source")
+    except ValueError:
+        return {}
+    index: dict[str, int] = {}
+    for row_num, row in enumerate(ws.iter_rows(min_row=2, values_only=True), start=2):
+        if src_col < len(row) and row[src_col]:
+            index[str(row[src_col])] = row_num
+    return index
+
+
+def upsert_ar_rows(json_path: str | Path) -> None:
+    """
+    Read normalized AR rows from *json_path* and upsert into AR_Tracking sheet.
+    - Dedup key: source_key field (SHA of source+date+task).
+    - Existing key: update Status, ETA, Remark columns.
+    - New key: append row.
+    Prints a summary table on completion.
+    """
+    import json as _json
+
+    rows: list[dict[str, Any]] = _json.loads(
+        Path(json_path).read_text(encoding="utf-8")
+    )
+
+    warnings.filterwarnings(
+        "ignore",
+        message="Data Validation extension is not supported and will be removed",
+        category=UserWarning,
+    )
+    wb = openpyxl.load_workbook(EXCEL_FILE)
+    ws = _get_or_create_ar_sheet(wb)
+
+    # Column index map from current headers (1-based for openpyxl cell())
+    header = [c.value for c in ws[1]]
+    col_idx = {h: i + 1 for i, h in enumerate(header) if h}
+
+    src_index = _build_source_index(ws)
+
+    inserted = updated = skipped = 0
+
+    for r in rows:
+        key = r.get("source_key", "")
+        task = r.get("task", "")
+        owner = r.get("owner", "TBD")
+        status = r.get("status", "Open")
+        eta = r.get("eta", "TBD")
+        remark = r.get("summary", "")
+        if r.get("sender"):
+            remark = f"{remark} | From: {r['sender']}".strip(" |")
+        date_str = r.get("date", "")
+
+        if not task:
+            skipped += 1
+            continue
+
+        if key and key in src_index:
+            # Update existing row
+            row_num = src_index[key]
+            for col_name, value in [("Status", status), ("ETA", eta), ("Remark", remark)]:
+                if col_name in col_idx:
+                    ws.cell(row=row_num, column=col_idx[col_name]).value = value
+            updated += 1
+        else:
+            # Append new row in header column order
+            new_row = [
+                date_str,
+                task,
+                owner,
+                status,
+                eta,
+                remark,
+                key,
+            ]
+            ws.append(new_row)
+            if key:
+                src_index[key] = ws.max_row
+            inserted += 1
+
+    wb.save(EXCEL_FILE)
+
+    print(f"\n# AR Upsert Summary — {Path(EXCEL_FILE).name} / {AR_SHEET_NAME}")
+    print(f"| Metric | Count |")
+    print(f"|---|---|")
+    print(f"| Inserted (new) | {inserted} |")
+    print(f"| Updated (existing) | {updated} |")
+    print(f"| Skipped (no task) | {skipped} |")
+    print(f"| Total processed | {len(rows)} |")
+
+
+# ---------------------------------------------------------------------------
 # Entry point
 # ---------------------------------------------------------------------------
 
@@ -613,7 +727,18 @@ def main():
         action="store_true",
         help="Force weekly summary email regardless of day",
     )
+    parser.add_argument(
+        "--upsert-ar",
+        metavar="JSON_PATH",
+        default=None,
+        help="Path to AR rows JSON (from parse_pending_from_graph_exports.py --output-json). "
+             "Upserts rows into AR_Tracking sheet and exits.",
+    )
     args = parser.parse_args()
+
+    if args.upsert_ar:
+        upsert_ar_rows(args.upsert_ar)
+        return
 
     dry_run = not args.send
 
