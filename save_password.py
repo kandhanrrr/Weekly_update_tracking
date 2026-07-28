@@ -1,18 +1,18 @@
 """
-save_password.py - Securely store your email password in Windows Credential Manager
-====================================================================================
-Run this ONCE to save your password. After that, weekly_update_tracker.py reads it
-automatically. Your password is never stored in any file.
-
-Usage:
-    python save_password.py
+save_password.py - Securely store your email password in
+Windows Credential Manager
+========================================================
+Run this ONCE to save your password. After that,
+weekly_update_tracker.py reads it automatically.
+Your password is never stored in any file.
 """
 
 import sys
 import getpass
-import win32cred
+import win32cred  # type: ignore[import-untyped]
 
 SERVICE_NAME = "Weekly_Update_Tracker"
+
 
 def save_password():
     print("=" * 55)
@@ -24,7 +24,9 @@ def save_password():
     print("Your password will NOT be saved in any text file.")
     print()
 
-    username = input("Enter your email address (smtp_user from config.ini): ").strip()
+    username = input(
+        "Enter your email address (smtp_user from config.ini): "
+    ).strip()
     if not username:
         print("[ERROR] Email address cannot be empty.")
         sys.exit(1)
@@ -41,11 +43,11 @@ def save_password():
 
     # Store in Windows Credential Manager
     credential = {
-        "Type":           win32cred.CRED_TYPE_GENERIC,
-        "TargetName":     SERVICE_NAME,
-        "UserName":       username,
+        "Type": win32cred.CRED_TYPE_GENERIC,
+        "TargetName": SERVICE_NAME,
+        "UserName": username,
         "CredentialBlob": password,
-        "Persist":        win32cred.CRED_PERSIST_LOCAL_MACHINE,
+        "Persist": win32cred.CRED_PERSIST_LOCAL_MACHINE,
     }
     win32cred.CredWrite(credential, 0)
 
@@ -59,6 +61,7 @@ def save_password():
     print()
     print("The tracker script will now read it automatically.")
 
+
 def verify_password():
     """Check if a password is already stored."""
     try:
@@ -67,7 +70,8 @@ def verify_password():
         choice = input("Overwrite it? (y/n): ").strip().lower()
         return choice == "y"
     except Exception:
-        return True  # Nothing stored yet — proceed
+        return True  # Nothing stored yet - proceed
+
 
 if __name__ == "__main__":
     if verify_password():
