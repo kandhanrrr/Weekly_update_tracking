@@ -1,0 +1,37 @@
+{
+  "count": 8,
+  "messages": [
+    {
+      "id": "1785147803975",
+      "chatId": "19:14ea777f1ec742519edc32534b88be3f@thread.v2",
+      "fromDisplayName": "Basavaraju, Kamalesh",
+      "body": "Hello Everyone, I have listed all the open items still under active debug and implementation. Please check and update if anything missed. This will be reviewed with Yonghyun on Wednesday.",
+      "createdDateTime": "2026-07-27T10:23:23.975+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1784698137634",
+      "chatId": "19:14ea777f1ec742519edc32534b88be3f@thread.v2",
+      "fromDisplayName": "Basavaraju, Kamalesh",
+      "body": "BA Ops Meeting: Link - ...; Update latest data on this",
+      "createdDateTime": "2026-07-22T05:28:57.634+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1784653988546",
+      "chatId": "19:14ea777f1ec742519edc32534b88be3f@thread.v2",
+      "fromDisplayName": "Rao, Chethan Shankarnarayan",
+      "body": "check this article",
+      "createdDateTime": "2026-07-21T17:13:08.546+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1784646900681",
+      "chatId": "19:14ea777f1ec742519edc32534b88be3f@thread.v2",
+      "fromDisplayName": "Basavaraju, Kamalesh",
+      "body": "Need updated slides for the agenda topics by mid of tomorrow...",
+      "createdDateTime": "2026-07-21T15:15:00.681+00:00",
+      "messageType": "message"
+    }
+  ]
+}

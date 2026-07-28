@@ -1,0 +1,27 @@
+{
+  "count": 6,
+  "chatPartnerName": "Basavaraju, Kamalesh",
+  "messages": [
+    {
+      "id": "1785129862931",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "can we do the EES discussion",
+      "createdDateTime": "2026-07-27T05:24:22.931+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1785137633849",
+      "fromDisplayName": "Basavaraju, Kamalesh",
+      "body": "Hi Kandhan, I was in B47 discussion...",
+      "createdDateTime": "2026-07-27T07:33:53.849+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1785135419287",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "are you available",
+      "createdDateTime": "2026-07-27T06:56:59.287+00:00",
+      "messageType": "message"
+    }
+  ]
+}

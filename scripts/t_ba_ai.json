@@ -1,0 +1,115 @@
+{
+  "success": true,
+  "count": 10,
+  "messages": [
+    {
+      "id": "1785143697729",
+      "chatId": "19:meeting_Zjk4ZDIxMzMtOWJjMS00NmY2LTkyZGEtNjdkMDI0NDI3MzA2@thread.v2",
+      "from": "97dc89e0-ec05-4595-99fc-72b73bf0fb19",
+      "fromDisplayName": "M S, Niveditha",
+      "body": "<p>Completed</p>",
+      "bodyPreview": "<p>Completed</p>",
+      "createdDateTime": "2026-07-27T09:14:57.729+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1785143055285",
+      "chatId": "19:meeting_Zjk4ZDIxMzMtOWJjMS00NmY2LTkyZGEtNjdkMDI0NDI3MzA2@thread.v2",
+      "from": "",
+      "body": "<systemEventMessage/>",
+      "bodyPreview": "<systemEventMessage/>",
+      "createdDateTime": "2026-07-27T09:04:15.285+00:00",
+      "importance": "Normal",
+      "messageType": "UnknownFutureValue"
+    },
+    {
+      "id": "1785143053938",
+      "chatId": "19:meeting_Zjk4ZDIxMzMtOWJjMS00NmY2LTkyZGEtNjdkMDI0NDI3MzA2@thread.v2",
+      "from": "172bf4d0-2a8e-4129-87b7-f56fd4b752c0",
+      "fromDisplayName": "Kodandaramaiah, Chandrashekar",
+      "body": "<p>Dropping off</p>",
+      "bodyPreview": "<p>Dropping off</p>",
+      "createdDateTime": "2026-07-27T09:04:13.938+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1785143048225",
+      "chatId": "19:meeting_Zjk4ZDIxMzMtOWJjMS00NmY2LTkyZGEtNjdkMDI0NDI3MzA2@thread.v2",
+      "from": "172bf4d0-2a8e-4129-87b7-f56fd4b752c0",
+      "fromDisplayName": "Kodandaramaiah, Chandrashekar",
+      "body": "<p>Hi Folks, As many of you are busy with some other calls or work, I will sync with you offline. I request everyone to take a look at the tracker and update so your work will be showcased to the management. Thank you</p>",
+      "bodyPreview": "<p>Hi Folks, As many of you are busy with some other calls or work, I will sync with you offline. I ...",
+      "createdDateTime": "2026-07-27T09:04:08.225+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1785142764928",
+      "chatId": "19:meeting_Zjk4ZDIxMzMtOWJjMS00NmY2LTkyZGEtNjdkMDI0NDI3MzA2@thread.v2",
+      "from": "",
+      "body": "<systemEventMessage/>",
+      "bodyPreview": "<systemEventMessage/>",
+      "createdDateTime": "2026-07-27T08:59:24.928+00:00",
+      "importance": "Normal",
+      "messageType": "UnknownFutureValue"
+    },
+    {
+      "id": "1785141986345",
+      "chatId": "19:meeting_Zjk4ZDIxMzMtOWJjMS00NmY2LTkyZGEtNjdkMDI0NDI3MzA2@thread.v2",
+      "from": "a3d44f35-fbce-4872-936e-3b6b5a3dc7a3",
+      "fromDisplayName": "Parameshwari, Megha",
+      "body": "<p>completed&nbsp;</p>",
+      "bodyPreview": "<p>completed&nbsp;</p>",
+      "createdDateTime": "2026-07-27T08:46:26.345+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1785141751360",
+      "chatId": "19:meeting_Zjk4ZDIxMzMtOWJjMS00NmY2LTkyZGEtNjdkMDI0NDI3MzA2@thread.v2",
+      "from": "172bf4d0-2a8e-4129-87b7-f56fd4b752c0",
+      "fromDisplayName": "Kodandaramaiah, Chandrashekar",
+      "body": "<p>Hi</p>\n<p><at id=\"0\">Panigrahy,</at>&nbsp;<at id=\"1\">Bisweswar</at>,&nbsp;<at id=\"2\">Maji,</at>&nbsp;<at id=\"3\">Debabrata</at>,&nbsp;<at id=\"4\">Rajakumar,</at>&nbsp;<at id=\"5\">Kandhan</at>,&nbsp;<at id=\"6\">Mathew,</at>&nbsp;<at id=\"7\">Jayson</at>,&nbsp;<at id=\"8\">Mallya</at>&nbsp;<at id=\"9\">K,</at>&nbsp;<at id=\"10\">Harish</at>,&nbsp;<at id=\"11\">Parameshwari,</at>&nbsp;<at id=\"12\">Megha</at>,&nbsp;<at id=\"13\">M</at>&nbsp;<at id=\"14\">S,</at>&nbsp;<at id=\"15\">Niveditha</at></p>\n<p>&nbsp;</p>\n<p><a href=\"https://intel-my.sharepoint.com/:x:/r/personal/chandrashekar_kodandaramaiah_intel_com/Documents/AI_Initiative_Tracker.xlsx?d=wc768976ced114a269881aaf4f06455bd&amp;csf=1&amp;web=1&amp;e=5XSSYk\" itemtype=\"http://schema.skype.com/HyperLink/Files\" rel=\"noreferrer noopener\" title=\"https://intel-my.sharepoint.com/:x:/r/personal/chandrashekar_kodandaramaiah_intel_com/Documents/AI_Initiative_Tracker.xlsx?d=wc768976ced114a269881aaf4f06455bd&amp;csf=1&amp;web=1&amp;e=5XSSYk\" target=\"_blank\" itemid=\"C768976C-ED11-4A26-9881-AAF4F06455BD\">AI_Initiative_Tracker.xlsx</a> please update the tracker page as of today by 11AM Tomorrow. Thank you</p><attachment id=\"C768976C-ED11-4A26-9881-AAF4F06455BD\"></attachment>",
+      "bodyPreview": "<p>Hi</p>\n<p><at id=\"0\">Panigrahy,</at>&nbsp;<at id=\"1\">Bisweswar</at>,&nbsp;<at id=\"2\">Maji,</at>&n...",
+      "createdDateTime": "2026-07-27T08:42:31.36+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784712989658",
+      "chatId": "19:meeting_Zjk4ZDIxMzMtOWJjMS00NmY2LTkyZGEtNjdkMDI0NDI3MzA2@thread.v2",
+      "from": "172bf4d0-2a8e-4129-87b7-f56fd4b752c0",
+      "fromDisplayName": "Kodandaramaiah, Chandrashekar",
+      "body": "<attachment id=\"1784689874763\"></attachment>\n<p><at id=\"0\">Rajakumar,</at>&nbsp;<at id=\"1\">Kandhan</at>&nbsp;still yet to update on this.</p>",
+      "bodyPreview": "<attachment id=\"1784689874763\"></attachment>\n<p><at id=\"0\">Rajakumar,</at>&nbsp;<at id=\"1\">Kandhan</...",
+      "createdDateTime": "2026-07-22T09:36:29.658+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784712972278",
+      "chatId": "19:meeting_Zjk4ZDIxMzMtOWJjMS00NmY2LTkyZGEtNjdkMDI0NDI3MzA2@thread.v2",
+      "from": "172bf4d0-2a8e-4129-87b7-f56fd4b752c0",
+      "fromDisplayName": "Kodandaramaiah, Chandrashekar",
+      "body": "<p><a href=\"https://intel.sharepoint.com/:p:/r/sites/mpe_mdna_ba/Shared%20Documents/AI_Initiatives/BA%20AI%20initiatives-%20Summary%20-%20ww30.3.pptx?d=wa7cb0374114041e189d7474e8f0f8e92&amp;csf=1&amp;web=1&amp;e=e1pGQP\" itemtype=\"http://schema.skype.com/HyperLink/Files\" rel=\"noreferrer noopener\" title=\"https://intel.sharepoint.com/:p:/r/sites/mpe_mdna_ba/Shared%20Documents/AI_Initiatives/BA%20AI%20initiatives-%20Summary%20-%20ww30.3.pptx?d=wa7cb0374114041e189d7474e8f0f8e92&amp;csf=1&amp;web=1&amp;e=e1pGQP\" target=\"_blank\" itemid=\"A7CB0374-1140-41E1-89D7-474E8F0F8E92\">BA AI initiatives- Summary - ww30.3.pptx</a> shared to management. Please review and let us know if any inputs.</p><attachment id=\"A7CB0374-1140-41E1-89D7-474E8F0F8E92\"></attachment>",
+      "bodyPreview": "<p><a href=\"https://intel.sharepoint.com/:p:/r/sites/mpe_mdna_ba/Shared%20Documents/AI_Initiatives/B...",
+      "createdDateTime": "2026-07-22T09:36:12.278+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784689874763",
+      "chatId": "19:meeting_Zjk4ZDIxMzMtOWJjMS00NmY2LTkyZGEtNjdkMDI0NDI3MzA2@thread.v2",
+      "from": "172bf4d0-2a8e-4129-87b7-f56fd4b752c0",
+      "fromDisplayName": "Kodandaramaiah, Chandrashekar",
+      "body": "<p>Hi</p>\n<p><at id=\"0\">Panigrahy,</at>&nbsp;<at id=\"1\">Bisweswar</at>,&nbsp;<at id=\"2\">Maji,</at>&nbsp;<at id=\"3\">Debabrata</at>,&nbsp;<at id=\"4\">Rajakumar,</at>&nbsp;<at id=\"5\">Kandhan</at>,&nbsp;<at id=\"6\">Mathew,</at>&nbsp;<at id=\"7\">Jayson</at>,&nbsp;<at id=\"8\">Mallya</at>&nbsp;<at id=\"9\">K,</at>&nbsp;<at id=\"10\">Harish</at>,&nbsp;<at id=\"11\">Parameshwari,</at>&nbsp;<at id=\"12\">Megha</at>,&nbsp;<at id=\"13\">M</at>&nbsp;<at id=\"14\">S,</at>&nbsp;<at id=\"15\">Niveditha</at></p>\n<p>&nbsp;</p>\n<p><a href=\"https://intel-my.sharepoint.com/:x:/r/personal/chandrashekar_kodandaramaiah_intel_com/Documents/AI_Initiative_Tracker.xlsx?d=wc768976ced114a269881aaf4f06455bd&amp;csf=1&amp;web=1&amp;e=5XSSYk\" itemtype=\"http://schema.skype.com/HyperLink/Files\" rel=\"noreferrer noopener\" title=\"https://intel-my.sharepoint.com/:x:/r/personal/chandrashekar_kodandaramaiah_intel_com/Documents/AI_Initiative_Tracker.xlsx?d=wc768976ced114a269881aaf4f06455bd&amp;csf=1&amp;web=1&amp;e=5XSSYk\" target=\"_blank\" itemid=\"C768976C-ED11-4A26-9881-AAF4F06455BD\">AI_Initiative_Tracker.xlsx</a> please update the tracker page as of today by 11AM today. Thank you</p><attachment id=\"C768976C-ED11-4A26-9881-AAF4F06455BD\"></attachment>",
+      "bodyPreview": "<p>Hi</p>\n<p><at id=\"0\">Panigrahy,</at>&nbsp;<at id=\"1\">Bisweswar</at>,&nbsp;<at id=\"2\">Maji,</at>&n...",
+      "createdDateTime": "2026-07-22T03:11:14.763+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    }
+  ],
+  "chatPartnerName": ""
+}

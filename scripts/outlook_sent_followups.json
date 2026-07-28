@@ -1,0 +1,56 @@
+{
+  "count": 7,
+  "chatPartnerName": "",
+  "emails": [
+    {
+      "id": "sent_1",
+      "subject": "Re: GNRD XCC+ Power failure improvement path exploration",
+      "from": "kandhan.rajakumar@intel.com",
+      "sender": "kandhan.rajakumar@intel.com",
+      "receivedDateTime": "2026-07-22T10:19:31+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hi Saravanan, Can you please help on the 10% IA FSL S2T multiplier (1.1) based on the below request. Regards, Kandhan",
+      "to": [
+        "saravanann.ranganathan@intel.com"
+      ],
+      "cc": []
+    },
+    {
+      "id": "sent_2",
+      "subject": "Re: GNRD XCC+ Power failure improvement path exploration",
+      "from": "kandhan.rajakumar@intel.com",
+      "sender": "kandhan.rajakumar@intel.com",
+      "receivedDateTime": "2026-07-23T09:35:08+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Hi Rohini, Could you please assist with the below request regarding GNR-D XCC+? We are planning to reduce the IA FSL S2T multiplier from the guard band of 20% to 10%.",
+      "to": [
+        "debabrata.maji@intel.com"
+      ],
+      "cc": [
+        "rohini.krishnan@intel.com"
+      ]
+    },
+    {
+      "id": "sent_3",
+      "subject": "Re: [Action Required] GNR-D XCC+ Program Audit w.r.t. GNR-D HCC and GND-SP XCC - Request for Module-Level Review",
+      "from": "kandhan.rajakumar@intel.com",
+      "sender": "kandhan.rajakumar@intel.com",
+      "receivedDateTime": "2026-07-22T14:23:21+00:00",
+      "isRead": true,
+      "hasAttachments": false,
+      "importance": "Normal",
+      "flag": "NotFlagged",
+      "preview": "Thank you Pablo and team. Is that possible If you can share noted differences. Regards, Kandhan",
+      "to": [
+        "pablo.rivera.valverde@intel.com"
+      ],
+      "cc": []
+    }
+  ]
+}

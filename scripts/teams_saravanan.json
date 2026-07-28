@@ -1,0 +1,22 @@
+{
+  "count": 12,
+  "chatPartnerName": "Ranganathan, Saravanann",
+  "messages": [
+    {
+      "id": "1785142188238",
+      "chatId": "19:saravanan",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "can you share the CFC data by tomorrow",
+      "createdDateTime": "2026-07-27T08:49:48.238+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1784796907526",
+      "chatId": "19:saravanan",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "whether the setup is enabled",
+      "createdDateTime": "2026-07-23T08:55:07.526+00:00",
+      "messageType": "message"
+    }
+  ]
+}

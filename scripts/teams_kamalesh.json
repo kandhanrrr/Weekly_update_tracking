@@ -1,0 +1,38 @@
+{
+  "count": 6,
+  "chatPartnerName": "Basavaraju, Kamalesh",
+  "messages": [
+    {
+      "id": "1785129862931",
+      "chatId": "19:kamalesh",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "can we do the EES discussion",
+      "createdDateTime": "2026-07-27T05:24:22.931+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1785137633849",
+      "chatId": "19:kamalesh",
+      "fromDisplayName": "Basavaraju, Kamalesh",
+      "body": "Hi Kandhan, I was in B47 discussion...",
+      "createdDateTime": "2026-07-27T07:33:53.849+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1785147803975",
+      "chatId": "19:mdna",
+      "fromDisplayName": "Basavaraju, Kamalesh",
+      "body": "Hello Everyone, I have listed all the open items still under active debug and implementation. Please check and update if anything missed. This will be reviewed with Yonghyun on Wednesday.",
+      "createdDateTime": "2026-07-27T10:23:23.975+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1784698137634",
+      "chatId": "19:mdna",
+      "fromDisplayName": "Basavaraju, Kamalesh",
+      "body": "BA Ops Meeting: Update latest data on this",
+      "createdDateTime": "2026-07-22T05:28:57.634+00:00",
+      "messageType": "message"
+    }
+  ]
+}

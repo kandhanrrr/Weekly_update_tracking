@@ -1,0 +1,27 @@
+{
+  "count": 7,
+  "chatPartnerName": "Anand, Sushant Anand",
+  "messages": [
+    {
+      "id": "1785140155205",
+      "fromDisplayName": "Anand, Sushant Anand",
+      "body": "Hi Kandhan, can you please share any documents you were able to find on PCIE 5 specific to HPI. Thanks!!",
+      "createdDateTime": "2026-07-27T08:15:55.205+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1785143988752",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "this is no reference for CFC we got this [attachments shared]",
+      "createdDateTime": "2026-07-27T09:19:48.752+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1785144342976",
+      "fromDisplayName": "Anand, Sushant Anand",
+      "body": "Okay Kandhan, let me go through this",
+      "createdDateTime": "2026-07-27T09:25:42.976+00:00",
+      "messageType": "message"
+    }
+  ]
+}

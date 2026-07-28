@@ -1,0 +1,48 @@
+{
+  "count": 13,
+  "chatPartnerName": "",
+  "messages": [
+    {
+      "id": "1785148052680",
+      "fromDisplayName": "Anand, RishiX",
+      "body": "Anand, Harsh VPO - P630216MV VPO - P630217MV",
+      "createdDateTime": "2026-07-27T10:27:32.68+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1784706021023",
+      "fromDisplayName": "Anand, RishiX",
+      "body": "Rajakumar, Kandhan we will need the help of module owners",
+      "createdDateTime": "2026-07-22T07:40:21.023+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1784705853589",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "need VPO data by tomorrow worst case with fixing issues",
+      "createdDateTime": "2026-07-22T07:37:33.589+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1784705820106",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "Anand, RishiX, this is very urgent to root cause the issue ASAP why temp read is not happening, and we have no progress have been questioned so take it very high priority",
+      "createdDateTime": "2026-07-22T07:37:00.106+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1784702547945",
+      "fromDisplayName": "Anand, RishiX",
+      "body": "Hi Anand, Harsh Rajakumar, Kandhan i want to have a short call are you both available?",
+      "createdDateTime": "2026-07-22T06:42:27.945+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1784706582333",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "Anand, Harsh can you figure out the issue",
+      "createdDateTime": "2026-07-22T07:49:42.333+00:00",
+      "messageType": "message"
+    }
+  ]
+}

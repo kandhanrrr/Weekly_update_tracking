@@ -1,0 +1,27 @@
+{
+  "count": 4,
+  "chatPartnerName": "Goh, Chee Hoo",
+  "messages": [
+    {
+      "id": "1784864856168",
+      "fromDisplayName": "Goh, Chee Hoo",
+      "body": "Rajakumar, Kandhan who are the PTH tech lead in BA currently?",
+      "createdDateTime": "2026-07-24T03:47:36.168+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1784865047914",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "you can add Myself and Shivagiri Chee Hoo",
+      "createdDateTime": "2026-07-24T03:50:47.914+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1784865467160",
+      "fromDisplayName": "Goh, Chee Hoo",
+      "body": "i will send names to CS Teo first.",
+      "createdDateTime": "2026-07-24T03:57:47.16+00:00",
+      "messageType": "message"
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "success": true,
+  "count": 17,
+  "messages": [
+    {
+      "id": "1785125893966",
+      "chatId": "19:8c1196aa-de05-4ece-b96c-aaed470d6bbb_9d7bec55-1d49-4e25-8776-b3a3130088de@unq.gbl.spaces",
+      "from": "9d7bec55-1d49-4e25-8776-b3a3130088de",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "<p>can you discuss with me while in office</p>",
+      "bodyPreview": "<p>can you discuss with me while in office</p>",
+      "createdDateTime": "2026-07-27T04:18:13.966+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784908153278",
+      "chatId": "19:8c1196aa-de05-4ece-b96c-aaed470d6bbb_9d7bec55-1d49-4e25-8776-b3a3130088de@unq.gbl.spaces",
+      "from": "8c1196aa-de05-4ece-b96c-aaed470d6bbb",
+      "fromDisplayName": "Balakrishnan, SankkaraX Naarayanan",
+      "body": "<p>Hi, this is the update for this week.</p>\n<p>HDMT microservice is being developed and we could able to get the whether the test is running some test or not. once it is done we could able to get the complete detail on the log which has ran.</p>\n<p>but the difficulty we are facing is getting the unit while testing the unit.</p>\n<p><img itemid=\"0-cus-d5-c4cdab9cd08d8541056bb6bd09030b28\" src=\"https://graph.microsoft.com/v1.0/chats/19:8c1196aa-de05-4ece-b96c-aaed470d6bbb_9d7bec55-1d49-4e25-8776-b3a3130088de@unq.gbl.spaces/messages/1784908153278/hostedContents/aWQ9eF8wLWN1cy1kNS1jNGNkYWI5Y2QwOGQ4NTQxMDU2YmI2YmQwOTAzMGIyOCx0eXBlPTEsdXJsPWh0dHBzOi8vdXMtYXBpLmFzbS5za3lwZS5jb20vdjEvb2JqZWN0cy8wLWN1cy1kNS1jNGNkYWI5Y2QwOGQ4NTQxMDU2YmI2YmQwOTAzMGIyOC92aWV3cy9pbWdv/$value\" alt=\"image\" width=\"738.0073800738007\" height=\"250\"></p>",
+      "bodyPreview": "<p>Hi, this is the update for this week.</p>\n<p>HDMT microservice is being developed and we could ab...",
+      "createdDateTime": "2026-07-24T15:49:13.278+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784716477551",
+      "chatId": "19:8c1196aa-de05-4ece-b96c-aaed470d6bbb_9d7bec55-1d49-4e25-8776-b3a3130088de@unq.gbl.spaces",
+      "from": "8c1196aa-de05-4ece-b96c-aaed470d6bbb",
+      "fromDisplayName": "Balakrishnan, SankkaraX Naarayanan",
+      "body": "<p>sure</p>",
+      "bodyPreview": "<p>sure</p>",
+      "createdDateTime": "2026-07-22T10:34:37.551+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784716469410",
+      "chatId": "19:8c1196aa-de05-4ece-b96c-aaed470d6bbb_9d7bec55-1d49-4e25-8776-b3a3130088de@unq.gbl.spaces",
+      "from": "9d7bec55-1d49-4e25-8776-b3a3130088de",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "<p>can you setup meeting tomorrow</p>",
+      "bodyPreview": "<p>can you setup meeting tomorrow</p>",
+      "createdDateTime": "2026-07-22T10:34:29.41+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784716453531",
+      "chatId": "19:8c1196aa-de05-4ece-b96c-aaed470d6bbb_9d7bec55-1d49-4e25-8776-b3a3130088de@unq.gbl.spaces",
+      "from": "8c1196aa-de05-4ece-b96c-aaed470d6bbb",
+      "fromDisplayName": "Balakrishnan, SankkaraX Naarayanan",
+      "body": "<p>informed the same to chandra sir he said he will get some POC for it</p>",
+      "bodyPreview": "<p>informed the same to chandra sir he said he will get some POC for it</p>",
+      "createdDateTime": "2026-07-22T10:34:13.531+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784716418698",
+      "chatId": "19:8c1196aa-de05-4ece-b96c-aaed470d6bbb_9d7bec55-1d49-4e25-8776-b3a3130088de@unq.gbl.spaces",
+      "from": "8c1196aa-de05-4ece-b96c-aaed470d6bbb",
+      "fromDisplayName": "Balakrishnan, SankkaraX Naarayanan",
+      "body": "<p>they said they dont have any idea</p>",
+      "bodyPreview": "<p>they said they dont have any idea</p>",
+      "createdDateTime": "2026-07-22T10:33:38.698+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784716406913",
+      "chatId": "19:8c1196aa-de05-4ece-b96c-aaed470d6bbb_9d7bec55-1d49-4e25-8776-b3a3130088de@unq.gbl.spaces",
+      "from": "8c1196aa-de05-4ece-b96c-aaed470d6bbb",
+      "fromDisplayName": "Balakrishnan, SankkaraX Naarayanan",
+      "body": "<attachment id=\"1784716351479\"></attachment>\n<p>he asked to TP team</p>",
+      "bodyPreview": "<attachment id=\"1784716351479\"></attachment>\n<p>he asked to TP team</p>",
+      "createdDateTime": "2026-07-22T10:33:26.913+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784716351479",
+      "chatId": "19:8c1196aa-de05-4ece-b96c-aaed470d6bbb_9d7bec55-1d49-4e25-8776-b3a3130088de@unq.gbl.spaces",
+      "from": "9d7bec55-1d49-4e25-8776-b3a3130088de",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "<attachment id=\"1784715902162\"></attachment>\n<p>what is the response</p>",
+      "bodyPreview": "<attachment id=\"1784715902162\"></attachment>\n<p>what is the response</p>",
+      "createdDateTime": "2026-07-22T10:32:31.479+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784716220782",
+      "chatId": "19:8c1196aa-de05-4ece-b96c-aaed470d6bbb_9d7bec55-1d49-4e25-8776-b3a3130088de@unq.gbl.spaces",
+      "from": "9d7bec55-1d49-4e25-8776-b3a3130088de",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "<p>no updates or we are checking with somebody</p>",
+      "bodyPreview": "<p>no updates or we are checking with somebody</p>",
+      "createdDateTime": "2026-07-22T10:30:20.782+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784716210880",
+      "chatId": "19:8c1196aa-de05-4ece-b96c-aaed470d6bbb_9d7bec55-1d49-4e25-8776-b3a3130088de@unq.gbl.spaces",
+      "from": "9d7bec55-1d49-4e25-8776-b3a3130088de",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "<p>weekly update excel what we will enter</p>",
+      "bodyPreview": "<p>weekly update excel what we will enter</p>",
+      "createdDateTime": "2026-07-22T10:30:10.88+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784716193105",
+      "chatId": "19:8c1196aa-de05-4ece-b96c-aaed470d6bbb_9d7bec55-1d49-4e25-8776-b3a3130088de@unq.gbl.spaces",
+      "from": "8c1196aa-de05-4ece-b96c-aaed470d6bbb",
+      "fromDisplayName": "Balakrishnan, SankkaraX Naarayanan",
+      "body": "<attachment id=\"1784716123149\"></attachment>\n<p>i didn't get you</p>",
+      "bodyPreview": "<attachment id=\"1784716123149\"></attachment>\n<p>i didn't get you</p>",
+      "createdDateTime": "2026-07-22T10:29:53.105+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784716123149",
+      "chatId": "19:8c1196aa-de05-4ece-b96c-aaed470d6bbb_9d7bec55-1d49-4e25-8776-b3a3130088de@unq.gbl.spaces",
+      "from": "9d7bec55-1d49-4e25-8776-b3a3130088de",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "<p>what to enter</p>",
+      "bodyPreview": "<p>what to enter</p>",
+      "createdDateTime": "2026-07-22T10:28:43.149+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784715902162",
+      "chatId": "19:8c1196aa-de05-4ece-b96c-aaed470d6bbb_9d7bec55-1d49-4e25-8776-b3a3130088de@unq.gbl.spaces",
+      "from": "8c1196aa-de05-4ece-b96c-aaed470d6bbb",
+      "fromDisplayName": "Balakrishnan, SankkaraX Naarayanan",
+      "body": "<p>i have asked Chandrashekar from fuse team to check what can be done to print the unit details in the console log</p>",
+      "bodyPreview": "<p>i have asked Chandrashekar from fuse team to check what can be done to print the unit details in ...",
+      "createdDateTime": "2026-07-22T10:25:02.162+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784715847831",
+      "chatId": "19:8c1196aa-de05-4ece-b96c-aaed470d6bbb_9d7bec55-1d49-4e25-8776-b3a3130088de@unq.gbl.spaces",
+      "from": "8c1196aa-de05-4ece-b96c-aaed470d6bbb",
+      "fromDisplayName": "Balakrishnan, SankkaraX Naarayanan",
+      "body": "<p>no update from skyline team</p>",
+      "bodyPreview": "<p>no update from skyline team</p>",
+      "createdDateTime": "2026-07-22T10:24:07.831+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784715384028",
+      "chatId": "19:8c1196aa-de05-4ece-b96c-aaed470d6bbb_9d7bec55-1d49-4e25-8776-b3a3130088de@unq.gbl.spaces",
+      "from": "9d7bec55-1d49-4e25-8776-b3a3130088de",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "<p>have we got it</p>",
+      "bodyPreview": "<p>have we got it</p>",
+      "createdDateTime": "2026-07-22T10:16:24.028+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784714480067",
+      "chatId": "19:8c1196aa-de05-4ece-b96c-aaed470d6bbb_9d7bec55-1d49-4e25-8776-b3a3130088de@unq.gbl.spaces",
+      "from": "9d7bec55-1d49-4e25-8776-b3a3130088de",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "<p>what is this week update on class lab watch</p>",
+      "bodyPreview": "<p>what is this week update on class lab watch</p>",
+      "createdDateTime": "2026-07-22T10:01:20.067+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784714466037",
+      "chatId": "19:8c1196aa-de05-4ece-b96c-aaed470d6bbb_9d7bec55-1d49-4e25-8776-b3a3130088de@unq.gbl.spaces",
+      "from": "9d7bec55-1d49-4e25-8776-b3a3130088de",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "<p>any progress we made&nbsp;</p>",
+      "bodyPreview": "<p>any progress we made&nbsp;</p>",
+      "createdDateTime": "2026-07-22T10:01:06.037+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    }
+  ],
+  "chatPartnerName": ""
+}

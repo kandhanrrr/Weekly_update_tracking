@@ -1,0 +1,30 @@
+{
+  "count": 40,
+  "chatPartnerName": "Anand, RishiX",
+  "messages": [
+    {
+      "id": "1784893598119",
+      "chatId": "19:rishi",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "rishi give the aqua data",
+      "createdDateTime": "2026-07-24T11:46:38.119+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1784886016530",
+      "chatId": "19:rishi",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "by EOD can you able to share",
+      "createdDateTime": "2026-07-24T09:40:16.530+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1784886044615",
+      "chatId": "19:rishi",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "if it takes time atleast share the pre/post data",
+      "createdDateTime": "2026-07-24T09:40:44.615+00:00",
+      "messageType": "message"
+    }
+  ]
+}

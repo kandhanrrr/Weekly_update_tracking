@@ -1,0 +1,27 @@
+{
+  "count": 5,
+  "chatPartnerName": "Anand, Harsh",
+  "messages": [
+    {
+      "id": "1785128184680",
+      "fromDisplayName": "Anand, Harsh",
+      "body": "Hi Kandhan",
+      "createdDateTime": "2026-07-27T04:56:24.68+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1785126888338",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "Hi Harsh",
+      "createdDateTime": "2026-07-27T04:34:48.338+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1785147393851",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "are you available now",
+      "createdDateTime": "2026-07-27T10:16:33.851+00:00",
+      "messageType": "message"
+    }
+  ]
+}

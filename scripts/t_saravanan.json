@@ -1,0 +1,27 @@
+{
+  "count": 12,
+  "chatPartnerName": "Ranganathan, Saravanann",
+  "messages": [
+    {
+      "id": "1785142188238",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "can you share the CFC data by tomorrow",
+      "createdDateTime": "2026-07-27T08:49:48.238+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1784797127671",
+      "fromDisplayName": "Ranganathan, Saravanann",
+      "body": "Enabled setup and collecting data or 4 phase now.",
+      "createdDateTime": "2026-07-23T08:58:47.671+00:00",
+      "messageType": "message"
+    },
+    {
+      "id": "1784797318423",
+      "fromDisplayName": "Ranganathan, Saravanann",
+      "body": "I am planning to collect data of 4ph and 2ph from single silicon. may not be the one which is highlighted above.",
+      "createdDateTime": "2026-07-23T09:01:58.423+00:00",
+      "messageType": "message"
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "success": true,
+  "count": 16,
+  "messages": [
+    {
+      "id": "1784902912013",
+      "chatId": "19:3b889561ecc34f69bc22f27f8dbf6998@thread.v2",
+      "from": "4e6964f3-db82-4687-9352-5aca8c5b9ebf",
+      "fromDisplayName": "Rao, Chethan Shankarnarayan",
+      "body": "<attachment id=\"1784875989468\"></attachment>\n<p>yes</p>",
+      "bodyPreview": "<attachment id=\"1784875989468\"></attachment>\n<p>yes</p>",
+      "createdDateTime": "2026-07-24T14:21:52.013+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784894632561",
+      "chatId": "19:3b889561ecc34f69bc22f27f8dbf6998@thread.v2",
+      "from": "468fdee0-4b88-4f2f-8b43-c1529d65f1de",
+      "fromDisplayName": "Jayapandi, Pandikumar",
+      "body": "<p>Minor changes done,.&nbsp;</p>",
+      "bodyPreview": "<p>Minor changes done,.&nbsp;</p>",
+      "createdDateTime": "2026-07-24T12:03:52.561+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784894629114",
+      "chatId": "19:3b889561ecc34f69bc22f27f8dbf6998@thread.v2",
+      "from": "468fdee0-4b88-4f2f-8b43-c1529d65f1de",
+      "fromDisplayName": "Jayapandi, Pandikumar",
+      "body": "<p><img src=\"https://graph.microsoft.com/v1.0/chats/19:3b889561ecc34f69bc22f27f8dbf6998@thread.v2/messages/1784894629114/hostedContents/aWQ9eF8wLWN1cy1kMTQtOTNhMjlhZjkyMmI5OWY2ZTIyMjhlMGEzNTFhYWE0NTksdHlwZT0xLHVybD1odHRwczovL3VzLWFwaS5hc20uc2t5cGUuY29tL3YxL29iamVjdHMvMC1jdXMtZDE0LTkzYTI5YWY5MjJiOTlmNmUyMjI4ZTBhMzUxYWFhNDU5L3ZpZXdzL2ltZ28=/$value\" width=\"444.44444444444446\" height=\"250\" alt=\"image\" itemid=\"0-cus-d14-93a29af922b99f6e2228e0a351aaa459\"></p>",
+      "bodyPreview": "<p><img src=\"https://graph.microsoft.com/v1.0/chats/19:3b889561ecc34f69bc22f27f8dbf6998@thread.v2/me...",
+      "createdDateTime": "2026-07-24T12:03:49.114+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784890612236",
+      "chatId": "19:3b889561ecc34f69bc22f27f8dbf6998@thread.v2",
+      "from": "468fdee0-4b88-4f2f-8b43-c1529d65f1de",
+      "fromDisplayName": "Jayapandi, Pandikumar",
+      "body": "<attachment id=\"1784873814458\"></attachment>\n<p>r u updating this or this is final ?</p>",
+      "bodyPreview": "<attachment id=\"1784873814458\"></attachment>\n<p>r u updating this or this is final ?</p>",
+      "createdDateTime": "2026-07-24T10:56:52.236+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784876144789",
+      "chatId": "19:3b889561ecc34f69bc22f27f8dbf6998@thread.v2",
+      "from": "7c8fe2ba-62ed-4ab4-aab2-d9e4d60ac7c6",
+      "fromDisplayName": "Mallya K, Harish",
+      "body": "Unique debug and TTR from digital also missing",
+      "bodyPreview": "Unique debug and TTR from digital also missing",
+      "createdDateTime": "2026-07-24T06:55:44.789+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784876140864",
+      "chatId": "19:3b889561ecc34f69bc22f27f8dbf6998@thread.v2",
+      "from": "468fdee0-4b88-4f2f-8b43-c1529d65f1de",
+      "fromDisplayName": "Jayapandi, Pandikumar",
+      "body": "TTR, let\u2019s update the overall TTR wordings with module info in few words \u00a0instead of MDFI, so that the bottom right TTR graphics can be explained in a better way",
+      "bodyPreview": "TTR, let\u2019s update the overall TTR wordings with module info in few words \u00a0instead of MDFI, so that t...",
+      "createdDateTime": "2026-07-24T06:55:40.864+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784875989468",
+      "chatId": "19:3b889561ecc34f69bc22f27f8dbf6998@thread.v2",
+      "from": "a3d44f35-fbce-4872-936e-3b6b5a3dc7a3",
+      "fromDisplayName": "Parameshwari, Megha",
+      "body": "Did we include sample cost avoidance ?",
+      "bodyPreview": "Did we include sample cost avoidance ?",
+      "createdDateTime": "2026-07-24T06:53:09.468+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784875903900",
+      "chatId": "19:3b889561ecc34f69bc22f27f8dbf6998@thread.v2",
+      "from": "468fdee0-4b88-4f2f-8b43-c1529d65f1de",
+      "fromDisplayName": "Jayapandi, Pandikumar",
+      "body": "PEGA missing",
+      "bodyPreview": "PEGA missing",
+      "createdDateTime": "2026-07-24T06:51:43.9+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784875850128",
+      "chatId": "19:3b889561ecc34f69bc22f27f8dbf6998@thread.v2",
+      "from": "468fdee0-4b88-4f2f-8b43-c1529d65f1de",
+      "fromDisplayName": "Jayapandi, Pandikumar",
+      "body": "<div>\n<attachment id=\"1784873814458\"></attachment>\nNo digital updates in 1st slide</div>",
+      "bodyPreview": "<div>\n<attachment id=\"1784873814458\"></attachment>\nNo digital updates in 1st slide</div>",
+      "createdDateTime": "2026-07-24T06:50:50.128+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784873814458",
+      "chatId": "19:3b889561ecc34f69bc22f27f8dbf6998@thread.v2",
+      "from": "4e6964f3-db82-4687-9352-5aca8c5b9ebf",
+      "fromDisplayName": "Rao, Chethan Shankarnarayan",
+      "body": "<attachment id=\"e68bccf3-1d23-412a-ac45-b0d43f7be1d9\"></attachment>",
+      "bodyPreview": "<attachment id=\"e68bccf3-1d23-412a-ac45-b0d43f7be1d9\"></attachment>",
+      "createdDateTime": "2026-07-24T06:16:54.458+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784789384427",
+      "chatId": "19:3b889561ecc34f69bc22f27f8dbf6998@thread.v2",
+      "from": "468fdee0-4b88-4f2f-8b43-c1529d65f1de",
+      "fromDisplayName": "Jayapandi, Pandikumar",
+      "body": "<p><at id=\"0\">Rao,</at>&nbsp;<at id=\"1\">Chethan</at>&nbsp;<at id=\"2\">Shankarnarayan</at>&nbsp;PEGA update: <span style=\"font-size:inherit\">Power Management C-state content enablement with new VVAR register settings in CHOT with 12s TTA to improve 20DPM in PPV</span></p>",
+      "bodyPreview": "<p><at id=\"0\">Rao,</at>&nbsp;<at id=\"1\">Chethan</at>&nbsp;<at id=\"2\">Shankarnarayan</at>&nbsp;PEGA u...",
+      "createdDateTime": "2026-07-23T06:49:44.427+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784787799490",
+      "chatId": "19:3b889561ecc34f69bc22f27f8dbf6998@thread.v2",
+      "from": "fc23424c-54b1-4657-85c7-4be3ead20f54",
+      "fromDisplayName": "B S, Somashekar",
+      "body": "<p>we are in B47 discussion with QRE..</p>",
+      "bodyPreview": "<p>we are in B47 discussion with QRE..</p>",
+      "createdDateTime": "2026-07-23T06:23:19.49+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784787024038",
+      "chatId": "19:3b889561ecc34f69bc22f27f8dbf6998@thread.v2",
+      "from": "4e6964f3-db82-4687-9352-5aca8c5b9ebf",
+      "fromDisplayName": "Rao, Chethan Shankarnarayan",
+      "body": "<p>118 room kamalesh</p>",
+      "bodyPreview": "<p>118 room kamalesh</p>",
+      "createdDateTime": "2026-07-23T06:10:24.038+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784786913272",
+      "chatId": "19:3b889561ecc34f69bc22f27f8dbf6998@thread.v2",
+      "from": "",
+      "body": "<systemEventMessage/>",
+      "bodyPreview": "<systemEventMessage/>",
+      "createdDateTime": "2026-07-23T06:08:33.272+00:00",
+      "importance": "Normal",
+      "messageType": "UnknownFutureValue"
+    },
+    {
+      "id": "1784783959810",
+      "chatId": "19:3b889561ecc34f69bc22f27f8dbf6998@thread.v2",
+      "from": "d3453ad1-a66f-4d59-94d2-584a822ee647",
+      "fromDisplayName": "Basavaraju, Kamalesh",
+      "body": "<p><a href=\"https://intel-my.sharepoint.com/:p:/r/personal/kamalesh_basavaraju_intel_com/Documents/BA%20Site%20Activities/BA%20Ops%20Meeting/XCC+_Improvements.pptx?d=w8d4cdf7fbf4947da9da428602d153e97&amp;csf=1&amp;web=1&amp;e=zIpgBK\" itemtype=\"http://schema.skype.com/HyperLink/Files\" rel=\"noreferrer noopener\" title=\"https://intel-my.sharepoint.com/:p:/r/personal/kamalesh_basavaraju_intel_com/Documents/BA%20Site%20Activities/BA%20Ops%20Meeting/XCC+_Improvements.pptx?d=w8d4cdf7fbf4947da9da428602d153e97&amp;csf=1&amp;web=1&amp;e=zIpgBK\" target=\"_blank\" itemid=\"8D4CDF7F-BF49-47DA-9DA4-28602D153E97\">XCC+_Improvements.pptx</a></p><attachment id=\"8D4CDF7F-BF49-47DA-9DA4-28602D153E97\"></attachment>",
+      "bodyPreview": "<p><a href=\"https://intel-my.sharepoint.com/:p:/r/personal/kamalesh_basavaraju_intel_com/Documents/B...",
+      "createdDateTime": "2026-07-23T05:19:19.81+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784710754192",
+      "chatId": "19:3b889561ecc34f69bc22f27f8dbf6998@thread.v2",
+      "from": "d3453ad1-a66f-4d59-94d2-584a822ee647",
+      "fromDisplayName": "Basavaraju, Kamalesh",
+      "body": "<attachment id=\"1783498476907\"></attachment>\n<ol>\n<li>Elastomer</li><li>Primecode template parser</li><li>PPV PCIe ITRIM</li><li>B54 Controller Loopback</li><li>MDFI TTR - F1 to F4 frequencies</li><li>BS - Smart Die pairing</li></ol>",
+      "bodyPreview": "<attachment id=\"1783498476907\"></attachment>\n<ol>\n<li>Elastomer</li><li>Primecode template parser</l...",
+      "createdDateTime": "2026-07-22T08:59:14.192+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    }
+  ],
+  "chatPartnerName": ""
+}

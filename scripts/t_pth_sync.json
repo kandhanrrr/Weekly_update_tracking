@@ -1,0 +1,154 @@
+{
+  "success": true,
+  "count": 14,
+  "messages": [
+    {
+      "id": "1785149480690",
+      "chatId": "19:meeting_ZGFkYjExZDktNTE4NS00Zjk1LTgyZDYtNDk2ZjRkNjVhZTc4@thread.v2",
+      "from": "9d7bec55-1d49-4e25-8776-b3a3130088de",
+      "fromDisplayName": "Rajakumar, Kandhan",
+      "body": "<p><a href=\"https://intel.sharepoint.com/:x:/r/sites/gnr-dxccmpe/Shared%20Documents/General/XCC_PLUS/ProgramManagement/Post-PRQ/GNRD_XCCp_PendingTasks_W31.xlsx?d=wc5a3ab6e2464494ead670f4578047f8f&amp;csf=1&amp;web=1&amp;e=Y9ddLm\" itemtype=\"http://schema.skype.com/HyperLink/Files\" rel=\"noreferrer noopener\" title=\"https://intel.sharepoint.com/:x:/r/sites/gnr-dxccmpe/Shared%20Documents/General/XCC_PLUS/ProgramManagement/Post-PRQ/GNRD_XCCp_PendingTasks_W31.xlsx?d=wc5a3ab6e2464494ead670f4578047f8f&amp;csf=1&amp;web=1&amp;e=Y9ddLm\" target=\"_blank\" itemid=\"C5A3AB6E-2464-494E-AD67-0F4578047F8F\">GNRD_XCCp_PendingTasks_W31.xlsx</a></p><attachment id=\"C5A3AB6E-2464-494E-AD67-0F4578047F8F\"></attachment>",
+      "bodyPreview": "<p><a href=\"https://intel.sharepoint.com/:x:/r/sites/gnr-dxccmpe/Shared%20Documents/General/XCC_PLUS...",
+      "createdDateTime": "2026-07-27T10:51:20.69+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1785125825497",
+      "chatId": "19:meeting_ZGFkYjExZDktNTE4NS00Zjk1LTgyZDYtNDk2ZjRkNjVhZTc4@thread.v2",
+      "from": "",
+      "body": "<systemEventMessage/>",
+      "bodyPreview": "<systemEventMessage/>",
+      "createdDateTime": "2026-07-27T04:17:05.497+00:00",
+      "importance": "Normal",
+      "messageType": "UnknownFutureValue"
+    },
+    {
+      "id": "1785124854455",
+      "chatId": "19:meeting_ZGFkYjExZDktNTE4NS00Zjk1LTgyZDYtNDk2ZjRkNjVhZTc4@thread.v2",
+      "from": "",
+      "body": "<systemEventMessage/>",
+      "bodyPreview": "<systemEventMessage/>",
+      "createdDateTime": "2026-07-27T04:00:54.455+00:00",
+      "importance": "Normal",
+      "messageType": "UnknownFutureValue"
+    },
+    {
+      "id": "1784875510236",
+      "chatId": "19:meeting_ZGFkYjExZDktNTE4NS00Zjk1LTgyZDYtNDk2ZjRkNjVhZTc4@thread.v2",
+      "from": "bb438a13-1393-44ca-9cdd-41ce92ab0d42",
+      "fromDisplayName": "Singh, Partap",
+      "body": "<p><a href=\"https://intel-my.sharepoint.com/:x:/r/personal/partap_singh_intel_com/Documents/CW_Daily_Task_Tracker_Simple.xlsx?d=w653667eb3a724b3bb9799f530a95e064&amp;csf=1&amp;web=1&amp;e=yjYdOH\" itemtype=\"http://schema.skype.com/HyperLink/Files\" rel=\"noreferrer noopener\" title=\"https://intel-my.sharepoint.com/:x:/r/personal/partap_singh_intel_com/Documents/CW_Daily_Task_Tracker_Simple.xlsx?d=w653667eb3a724b3bb9799f530a95e064&amp;csf=1&amp;web=1&amp;e=yjYdOH\" target=\"_blank\" itemid=\"653667EB-3A72-4B3B-B979-9F530A95E064\">CW_Daily_Task_Tracker_Simple.xlsx</a></p><attachment id=\"653667EB-3A72-4B3B-B979-9F530A95E064\"></attachment>",
+      "bodyPreview": "<p><a href=\"https://intel-my.sharepoint.com/:x:/r/personal/partap_singh_intel_com/Documents/CW_Daily...",
+      "createdDateTime": "2026-07-24T06:45:10.236+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784875259086",
+      "chatId": "19:meeting_ZGFkYjExZDktNTE4NS00Zjk1LTgyZDYtNDk2ZjRkNjVhZTc4@thread.v2",
+      "from": "bb438a13-1393-44ca-9cdd-41ce92ab0d42",
+      "fromDisplayName": "Singh, Partap",
+      "body": "<p><at id=\"0\">Everyone</at>&nbsp;MO's please fill you CW's tasks in sheet daily basis</p>",
+      "bodyPreview": "<p><at id=\"0\">Everyone</at>&nbsp;MO's please fill you CW's tasks in sheet daily basis</p>",
+      "createdDateTime": "2026-07-24T06:40:59.086+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784875206272",
+      "chatId": "19:meeting_ZGFkYjExZDktNTE4NS00Zjk1LTgyZDYtNDk2ZjRkNjVhZTc4@thread.v2",
+      "from": "",
+      "body": "<systemEventMessage/>",
+      "bodyPreview": "<systemEventMessage/>",
+      "createdDateTime": "2026-07-24T06:40:06.272+00:00",
+      "importance": "Normal",
+      "messageType": "UnknownFutureValue"
+    },
+    {
+      "id": "1784779814752",
+      "chatId": "19:meeting_ZGFkYjExZDktNTE4NS00Zjk1LTgyZDYtNDk2ZjRkNjVhZTc4@thread.v2",
+      "from": "",
+      "body": "<systemEventMessage/>",
+      "bodyPreview": "<systemEventMessage/>",
+      "createdDateTime": "2026-07-23T04:10:14.752+00:00",
+      "importance": "Normal",
+      "messageType": "UnknownFutureValue"
+    },
+    {
+      "id": "1784779572944",
+      "chatId": "19:meeting_ZGFkYjExZDktNTE4NS00Zjk1LTgyZDYtNDk2ZjRkNjVhZTc4@thread.v2",
+      "from": "bb438a13-1393-44ca-9cdd-41ce92ab0d42",
+      "fromDisplayName": "Singh, Partap",
+      "body": "",
+      "bodyPreview": "",
+      "createdDateTime": "2026-07-23T04:06:12.944+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784779257871",
+      "chatId": "19:meeting_ZGFkYjExZDktNTE4NS00Zjk1LTgyZDYtNDk2ZjRkNjVhZTc4@thread.v2",
+      "from": "",
+      "body": "<systemEventMessage/>",
+      "bodyPreview": "<systemEventMessage/>",
+      "createdDateTime": "2026-07-23T04:00:57.871+00:00",
+      "importance": "Normal",
+      "messageType": "UnknownFutureValue"
+    },
+    {
+      "id": "1784694004727",
+      "chatId": "19:meeting_ZGFkYjExZDktNTE4NS00Zjk1LTgyZDYtNDk2ZjRkNjVhZTc4@thread.v2",
+      "from": "",
+      "body": "<systemEventMessage/>",
+      "bodyPreview": "<systemEventMessage/>",
+      "createdDateTime": "2026-07-22T04:20:04.727+00:00",
+      "importance": "Normal",
+      "messageType": "UnknownFutureValue"
+    },
+    {
+      "id": "1784693037610",
+      "chatId": "19:meeting_ZGFkYjExZDktNTE4NS00Zjk1LTgyZDYtNDk2ZjRkNjVhZTc4@thread.v2",
+      "from": "bbd9c19c-37fd-4164-9429-1319d524f2b8",
+      "fromDisplayName": "Aneesh K A",
+      "body": "<p>Will join in 10min</p>",
+      "bodyPreview": "<p>Will join in 10min</p>",
+      "createdDateTime": "2026-07-22T04:03:57.61+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784693031521",
+      "chatId": "19:meeting_ZGFkYjExZDktNTE4NS00Zjk1LTgyZDYtNDk2ZjRkNjVhZTc4@thread.v2",
+      "from": "bbd9c19c-37fd-4164-9429-1319d524f2b8",
+      "fromDisplayName": "Aneesh K A",
+      "body": "<p>On my way to office </p>",
+      "bodyPreview": "<p>On my way to office </p>",
+      "createdDateTime": "2026-07-22T04:03:51.521+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784693014078",
+      "chatId": "19:meeting_ZGFkYjExZDktNTE4NS00Zjk1LTgyZDYtNDk2ZjRkNjVhZTc4@thread.v2",
+      "from": "bb438a13-1393-44ca-9cdd-41ce92ab0d42",
+      "fromDisplayName": "Singh, Partap",
+      "body": "<p><at id=\"0\">Aneesh</at>&nbsp;<at id=\"1\">K</at>&nbsp;<at id=\"2\">A</at><at id=\"3\">Babu</at>&nbsp;<at id=\"4\">Kumar,</at>&nbsp;<at id=\"5\">AnjuX</at>&nbsp;please join</p>",
+      "bodyPreview": "<p><at id=\"0\">Aneesh</at>&nbsp;<at id=\"1\">K</at>&nbsp;<at id=\"2\">A</at><at id=\"3\">Babu</at>&nbsp;<at...",
+      "createdDateTime": "2026-07-22T04:03:34.078+00:00",
+      "importance": "Normal",
+      "messageType": "Message"
+    },
+    {
+      "id": "1784692859267",
+      "chatId": "19:meeting_ZGFkYjExZDktNTE4NS00Zjk1LTgyZDYtNDk2ZjRkNjVhZTc4@thread.v2",
+      "from": "",
+      "body": "<systemEventMessage/>",
+      "bodyPreview": "<systemEventMessage/>",
+      "createdDateTime": "2026-07-22T04:00:59.267+00:00",
+      "importance": "Normal",
+      "messageType": "UnknownFutureValue"
+    }
+  ],
+  "chatPartnerName": ""
+}

@@ -1,3 +1,4 @@
+# pyright: reportMissingTypeStubs=false
 """
 Weekly Update Tracker — Automated Reminder & Follow-up System
 ==============================================================
@@ -12,9 +13,12 @@ All settings (Excel file, sheet name, SMTP, owners) are in config.ini.
 No code changes are needed for normal team setup.
 
 Usage:
-  python weekly_update_tracker.py                  # dry-run (print actions, no emails)
-  python weekly_update_tracker.py --send           # send real emails via SMTP
-  python weekly_update_tracker.py --weekly-summary # force weekly summary regardless of day
+    python weekly_update_tracker.py
+            # dry-run (print actions, no emails)
+    python weekly_update_tracker.py --send
+            # send real emails via SMTP
+    python weekly_update_tracker.py --weekly-summary
+            # force weekly summary regardless of day
 """
 
 import argparse
@@ -22,27 +26,36 @@ import configparser
 import re
 import smtplib
 import sys
+import warnings
 from datetime import datetime, timedelta
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pathlib import Path
 
-import openpyxl
+import openpyxl  # type: ignore[import-untyped]
 
 # ---------------------------------------------------------------------------
 # Load configuration from config.ini (same folder as this script)
 # Password is read from Windows Credential Manager — never stored in a file
 # ---------------------------------------------------------------------------
 
-BASE_DIR    = Path(__file__).parent
+BASE_DIR = Path(__file__).parent
 CONFIG_FILE = BASE_DIR / "config.ini"
 
 # Read tracker-specific settings from config.ini [TRACKER] section
 _raw_cfg = configparser.ConfigParser()
 _raw_cfg.read(CONFIG_FILE)
-_excel_rel = _raw_cfg.get("TRACKER", "excel_file", fallback="PTH_progress_tracking.xlsx")
+_excel_rel = _raw_cfg.get(
+    "TRACKER",
+    "excel_file",
+    fallback="PTH_progress_tracking.xlsx",
+)
 _sheet = _raw_cfg.get("TRACKER", "sheet_name", fallback="auto")
-CRED_SERVICE = _raw_cfg.get("TRACKER", "credential_service", fallback="Weekly_Update_Tracker")
+CRED_SERVICE = _raw_cfg.get(
+    "TRACKER",
+    "credential_service",
+    fallback="Weekly_Update_Tracker",
+)
 
 EXCEL_FILE = (BASE_DIR / _excel_rel).resolve()
 SHEET_NAME = _sheet
@@ -54,11 +67,15 @@ def _load_password_from_credential_manager(username: str) -> str:
     Returns empty string if not found (will fall back to config.ini smtp_pass).
     """
     try:
-        import win32cred
+        import win32cred  # type: ignore[import-untyped]
+
         cred = win32cred.CredRead(CRED_SERVICE, win32cred.CRED_TYPE_GENERIC)
         return cred["CredentialBlob"]
     except ImportError:
-        print("[WARN] win32cred not available - falling back to config.ini smtp_pass")
+        print(
+            "[WARN] win32cred not available - "
+            "falling back to config.ini smtp_pass"
+        )
         return ""
     except Exception:
         return ""
@@ -110,18 +127,23 @@ SMTP_PASS = _SMTP_CFG["pass"]
 # Build owner map — configparser lowercases keys, so re-read preserving case
 def _build_owner_map(team_email: str) -> dict:
     """Re-read config.ini preserving original casing for owner names."""
-    cfg = configparser.RawConfigParser()
-    cfg.optionxform = str  # preserve case
+
+    class _CaseConfigParser(configparser.RawConfigParser):
+        def optionxform(self, optionstr: str) -> str:
+            return optionstr
+
+    cfg = _CaseConfigParser()
     cfg.read(CONFIG_FILE)
     owner_map = {}
     if cfg.has_section("OWNERS"):
         for name, email in cfg.items("OWNERS"):
             owner_map[name.strip()] = email.strip() if email.strip() else None
     # Fallback for generic entries
-    owner_map.setdefault("All",  team_email)
+    owner_map.setdefault("All", team_email)
     owner_map.setdefault("Team", team_email)
-    owner_map.setdefault("TBD",  None)
+    owner_map.setdefault("TBD", None)
     return owner_map
+
 
 OWNER_EMAIL_MAP = _build_owner_map(TEAM_EMAIL)
 
@@ -131,6 +153,56 @@ OWNER_EMAIL_MAP = _build_owner_map(TEAM_EMAIL)
 
 ACTIVE_STATUSES = {"wip", "not yet started", "open"}
 CLOSED_STATUSES = {"done", "dropped", "na", "review done/closed"}
+
+# Auto-normalise common informal/variant status labels to canonical values.
+# Teams often use mixed phrasing; this avoids rejecting valid rows.
+STATUS_ALIASES: dict[str, str] = {
+    # → WIP
+    "in progress":       "wip",
+    "in-progress":       "wip",
+    "inprogress":        "wip",
+    "active":            "wip",
+    "ongoing":           "wip",
+    "started":           "wip",
+    "in review":         "wip",
+    # → Not yet started
+    "not started":       "not yet started",
+    "not_yet_started":   "not yet started",
+    "todo":              "not yet started",
+    "to do":             "not yet started",
+    "to-do":             "not yet started",
+    "backlog":           "not yet started",
+    "planned":           "not yet started",
+    # → Open
+    "pending":           "open",
+    "new":               "open",
+    "reopened":          "open",
+    "re-opened":         "open",
+    "re opened":         "open",
+    # → Done
+    "completed":         "done",
+    "complete":          "done",
+    "finished":          "done",
+    "done - verified":   "done",
+    "done/closed":       "done",
+    "closed":            "done",
+    "resolved":          "done",
+    # → Dropped
+    "cancel":            "dropped",
+    "cancelled":         "dropped",
+    "canceled":          "dropped",
+    "not required":      "dropped",
+    "deferred":          "dropped",
+    # → NA
+    "n/a":               "na",
+    "not applicable":    "na",
+    "no action":         "na",
+    "not needed":        "na",
+    # → Review Done/Closed
+    "review done":       "review done/closed",
+    "review complete":   "review done/closed",
+    "review closed":     "review done/closed",
+}
 
 HEADER_ALIASES = {
     "module": {"module", "area", "functional area", "team"},
@@ -154,6 +226,7 @@ HEADER_ALIASES = {
 # Work-week helpers
 # ---------------------------------------------------------------------------
 
+
 def ww_to_date(ww_str: str, year: int | None = None) -> datetime | None:
     """
     Convert an Intel/ISO work-week string to the Friday (end of week) datetime.
@@ -168,7 +241,7 @@ def ww_to_date(ww_str: str, year: int | None = None) -> datetime | None:
         return None
 
     ww_num = int(match.group(1))
-    part   = int(match.group(2)) if match.group(2) else 5  # default to Friday
+    part = int(match.group(2)) if match.group(2) else 5  # default to Friday
 
     if year is None:
         year = datetime.today().year
@@ -195,15 +268,22 @@ def _normalize_header(value) -> str:
 
 def _build_header_map(sheet) -> tuple[dict[str, int], int]:
     """
-    Find the best header row in a sheet and map expected logical fields to column indices.
+    Find the best header row in a sheet and map expected logical fields
+    to column indices.
 
-    Returns (header_map, header_row_index). The map contains only the keys that were found.
+    Returns (header_map, header_row_index). The map contains only
+    the keys that were found.
     """
     best_map: dict[str, int] = {}
     best_row = 1
     best_score = 0
 
-    for row_idx, row in enumerate(sheet.iter_rows(min_row=1, max_row=min(sheet.max_row, 15), values_only=True), start=1):
+    rows = sheet.iter_rows(
+        min_row=1,
+        max_row=min(sheet.max_row, 15),
+        values_only=True,
+    )
+    for row_idx, row in enumerate(rows, start=1):
         header_map: dict[str, int] = {}
         for col_idx, cell in enumerate(row):
             if cell is None:
@@ -221,7 +301,8 @@ def _build_header_map(sheet) -> tuple[dict[str, int], int]:
 
     if best_score < 2:
         raise ValueError(
-            "Could not detect a usable header row. Expected at least Task/Status/ETA columns."
+            "Could not detect a usable header row. "
+            "Expected at least Task/Status/ETA columns."
         )
 
     return best_map, best_row
@@ -231,14 +312,17 @@ def _select_sheet(workbook):
     """
     Return the worksheet to process.
 
-    If a sheet name is configured and exists, use it. Otherwise search all sheets for one
-    with a recognizable header row.
+    If a sheet name is configured and exists, use it.
+    Otherwise search all sheets for one with a recognizable header row.
     """
     configured = str(SHEET_NAME).strip()
     if configured and configured.lower() not in {"auto", "*", "any"}:
         if configured in workbook.sheetnames:
             return workbook[configured]
-        print(f"[WARN] Sheet '{configured}' not found — auto-detecting from workbook tabs.")
+        print(
+            f"[WARN] Sheet '{configured}' not found — "
+            "auto-detecting from workbook tabs."
+        )
 
     for ws in workbook.worksheets:
         try:
@@ -247,7 +331,9 @@ def _select_sheet(workbook):
         except ValueError:
             continue
 
-    raise ValueError("No sheet with recognizable Task/Status/ETA headers was found.")
+    raise ValueError(
+        "No sheet with recognizable Task/Status/ETA headers was found."
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -286,8 +372,8 @@ def _send_email(to: list[str], subject: str, body: str, dry_run: bool = True):
         return
 
     msg = MIMEMultipart("alternative")
-    msg["From"]    = SMTP_USER
-    msg["To"]      = ", ".join(to)
+    msg["From"] = SMTP_USER
+    msg["To"] = ", ".join(to)
     msg["Subject"] = subject
     msg.attach(MIMEText(body, "plain"))
 
@@ -308,10 +394,14 @@ def _send_email(to: list[str], subject: str, body: str, dry_run: bool = True):
 # ---------------------------------------------------------------------------
 
 def _remind_email(task: dict, days_left: int) -> tuple[str, str]:
-    subject = f"[Weekly Update Reminder] ETA in {days_left} day(s): {task['task'][:60]}"
+    subject = (
+        "[Weekly Update Reminder] "
+        f"ETA in {days_left} day(s): {task['task'][:60]}"
+    )
     body = (
         f"Hi {task['owner']},\n\n"
-        f"This is a friendly reminder that the following task is due in {days_left} day(s).\n\n"
+        "This is a friendly reminder that the following task "
+        f"is due in {days_left} day(s).\n\n"
         f"  Task    : {task['task']}\n"
         f"  Status  : {task['status']}\n"
         f"  ETA     : {task['eta']}\n"
@@ -326,13 +416,15 @@ def _overdue_email(task: dict, days_overdue: int) -> tuple[str, str]:
     subject = f"[Weekly Update Overdue] Action needed: {task['task'][:60]}"
     body = (
         f"Hi {task['owner']},\n\n"
-        f"The following task has exceeded its ETA by {days_overdue} day(s) and is still open.\n\n"
+        "The following task has exceeded its ETA by "
+        f"{days_overdue} day(s) and is still open.\n\n"
         f"  Task     : {task['task']}\n"
         f"  Status   : {task['status']}\n"
         f"  ETA      : {task['eta']}\n"
         f"  Remarks  : {task['remark'] or 'N/A'}\n\n"
         f"Please update the status in the tracker immediately.\n"
-        f"If this task is complete/dropped, change the status so reminders stop.\n\n"
+        "If this task is complete/dropped, "
+        "change the status so reminders stop.\n\n"
         f"Regards,\nWeekly Update Tracker"
     )
     return subject, body
@@ -342,8 +434,10 @@ def _weekly_summary_email(tasks: list[dict]) -> tuple[str, str]:
     today_str = datetime.today().strftime("%Y-%m-%d")
     subject = f"[Weekly Update Summary] Open Tasks as of {today_str}"
 
-    wip_tasks      = [t for t in tasks if t["status"].lower() == "wip"]
-    pending_tasks  = [t for t in tasks if t["status"].lower() == "not yet started"]
+    wip_tasks = [t for t in tasks if t["status"].lower() == "wip"]
+    pending_tasks = [
+        t for t in tasks if t["status"].lower() == "not yet started"
+    ]
 
     def fmt_tasks(lst):
         if not lst:
@@ -358,7 +452,8 @@ def _weekly_summary_email(tasks: list[dict]) -> tuple[str, str]:
 
     body = (
         f"Hi Team,\n\n"
-        f"Here is the weekly status of open items in the tracker ({today_str}).\n\n"
+        "Here is the weekly status of open items in "
+        f"the tracker ({today_str}).\n\n"
         f"--- WIP ({len(wip_tasks)} tasks) ---\n"
         f"{fmt_tasks(wip_tasks)}\n"
         f"--- Not Yet Started ({len(pending_tasks)} tasks) ---\n"
@@ -390,8 +485,9 @@ def load_active_tasks(sheet) -> list[dict]:
 
     for row in sheet.iter_rows(min_row=header_row + 1, values_only=True):
         status_idx = header_map["status"]
-        status_raw = str(row[status_idx]).strip() if status_idx < len(row) and row[status_idx] else ""
-        status_norm = status_raw.lower()
+        has_status = status_idx < len(row) and row[status_idx]
+        status_raw = str(row[status_idx]).strip() if has_status else ""
+        status_norm = STATUS_ALIASES.get(status_raw.lower(), status_raw.lower())
 
         if status_norm not in ACTIVE_STATUSES:
             continue  # closed / dropped / NA — skip silently
@@ -409,13 +505,14 @@ def load_active_tasks(sheet) -> list[dict]:
             value = row[idx]
             return value if value is not None else default
 
+        owner_val = _cell(owner_idx, "TBD")
         tasks.append({
-            "module":  _cell(module_idx, ""),
-            "task":    str(_cell(task_idx, "(no task name)")).strip(),
-            "owner":   str(_cell(owner_idx, "TBD")).strip() if _cell(owner_idx, "TBD") else "TBD",
-            "status":  status_raw,
-            "eta":     str(_cell(eta_idx, "")).strip(),
-            "remark":  str(_cell(remark_idx, "")).strip(),
+            "module": _cell(module_idx, ""),
+            "task": str(_cell(task_idx, "(no task name)")).strip(),
+            "owner": str(owner_val).strip() if owner_val else "TBD",
+            "status": status_raw,
+            "eta": str(_cell(eta_idx, "")).strip(),
+            "remark": str(_cell(remark_idx, "")).strip(),
             "priority": str(_cell(prio_idx, "")).strip(),
         })
     return tasks
@@ -429,18 +526,20 @@ def process_reminders(tasks: list[dict], dry_run: bool = True):
       - If ETA is TBD / unparseable            → log a warning
     """
     today = datetime.today().replace(hour=0, minute=0, second=0, microsecond=0)
-    two_days_later = today + timedelta(days=2)
 
-    reminders_sent  = 0
-    overdue_sent    = 0
-    tbd_count       = 0
+    reminders_sent = 0
+    overdue_sent = 0
+    tbd_count = 0
 
     for task in tasks:
         eta_date = ww_to_date(task["eta"])
 
         if eta_date is None:
             tbd_count += 1
-            print(f"  [TBD ETA] '{task['task'][:55]}' (owner: {task['owner']})")
+            print(
+                f"  [TBD ETA] '{task['task'][:55]}' "
+                f"(owner: {task['owner']})"
+            )
             continue
 
         eta_date = eta_date.replace(hour=0, minute=0, second=0, microsecond=0)
@@ -461,22 +560,33 @@ def process_reminders(tasks: list[dict], dry_run: bool = True):
             overdue_sent += 1
 
         else:
-            print(f"  [OK] '{task['task'][:55]}' | ETA: {task['eta']} ({delta} days away)")
+            print(
+                f"  [OK] '{task['task'][:55]}' | "
+                f"ETA: {task['eta']} ({delta} days away)"
+            )
 
-    print(f"\n--- Summary ---")
+    print("\n--- Summary ---")
     print(f"  Active tasks processed  : {len(tasks)}")
     print(f"  Reminders queued (<=2d) : {reminders_sent}")
     print(f"  Overdue follow-ups      : {overdue_sent}")
     print(f"  TBD/unparseable ETAs    : {tbd_count}")
 
 
-def process_weekly_summary(tasks: list[dict], dry_run: bool = True, force: bool = False):
+def process_weekly_summary(
+    tasks: list[dict],
+    dry_run: bool = True,
+    force: bool = False,
+):
+
     """Send weekly summary every Friday (or on --weekly-summary flag)."""
     today = datetime.today()
     is_friday = (today.weekday() == 4)  # 4 = Friday
 
     if not is_friday and not force:
-        print("\n[INFO] Today is not Friday - skipping weekly summary. Use --weekly-summary to force.")
+        print(
+            "\n[INFO] Today is not Friday - skipping weekly summary. "
+            "Use --weekly-summary to force."
+        )
         return
 
     subject, body = _weekly_summary_email(tasks)
@@ -488,7 +598,9 @@ def process_weekly_summary(tasks: list[dict], dry_run: bool = True, force: bool 
 # ---------------------------------------------------------------------------
 
 def main():
-    parser = argparse.ArgumentParser(description="Weekly Update Task Reminder Automation")
+    parser = argparse.ArgumentParser(
+        description="Weekly Update Task Reminder Automation"
+    )
     parser.add_argument(
         "--send",
         action="store_true",
@@ -503,14 +615,28 @@ def main():
 
     dry_run = not args.send
 
-    print(f"Weekly Update Tracker - {datetime.today().strftime('%Y-%m-%d %H:%M')}")
-    print(f"Mode: {'LIVE (sending emails)' if not dry_run else 'DRY-RUN (no emails sent)'}")
+    now_str = datetime.today().strftime("%Y-%m-%d %H:%M")
+    mode_str = (
+        "LIVE (sending emails)"
+        if not dry_run
+        else "DRY-RUN (no emails sent)"
+    )
+    print(f"Weekly Update Tracker - {now_str}")
+    print(f"Mode: {mode_str}")
     print(f"File: {EXCEL_FILE}\n")
 
     if not EXCEL_FILE.exists():
         print(f"[ERROR] Excel file not found: {EXCEL_FILE}")
         sys.exit(1)
 
+    # Suppress openpyxl data-validation extension warning from some workbooks.
+    warnings.filterwarnings(
+        "ignore",
+        message=(
+            "Data Validation extension is not supported and will be removed"
+        ),
+        category=UserWarning,
+    )
     wb = openpyxl.load_workbook(EXCEL_FILE)
     try:
         ws = _select_sheet(wb)
@@ -526,7 +652,11 @@ def main():
     process_reminders(tasks, dry_run=dry_run)
 
     print("\n=== Processing Weekly Summary ===")
-    process_weekly_summary(tasks, dry_run=dry_run, force=args.send and args.weekly_summary)
+    process_weekly_summary(
+        tasks,
+        dry_run=dry_run,
+        force=args.send and args.weekly_summary,
+    )
 
 
 if __name__ == "__main__":
