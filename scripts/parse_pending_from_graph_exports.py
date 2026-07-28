@@ -54,7 +54,8 @@ NOISE_SENDER = re.compile(
     re.IGNORECASE,
 )
 OUTLOOK_NOISE_SUBJECT = re.compile(
-    r"\b(MM:|Weekly Review|Internal Sync|Office Hour|Heads up notification|The Download|INTEL TEST Notification|Pharmacy Refund Initiated|Meeting Minutes|meeting minutes|your access has been|access has been removed)\b",
+    r"\b(MM:|Weekly Review|Internal Sync|Office Hour|Heads up notification|The Download|INTEL TEST Notification|Pharmacy Refund Initiated|Meeting Minutes|meeting minutes|your access has been|access has been removed)\b"
+    r"|^(Automatic reply|Auto:|Out of Office|OOO:|Autosvar|Automatisch antwoord|Abwesenheitsnotiz|Risposta automatica)\b",
     re.IGNORECASE,
 )
 OWNER_RX = re.compile(r"(?im)Owner\s*[:\-]\s*([^\r\n,;]+)")
