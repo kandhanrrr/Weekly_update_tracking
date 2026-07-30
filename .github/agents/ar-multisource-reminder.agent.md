@@ -86,6 +86,11 @@ python scripts/ar/create_ar_workbook.py `
   --lookback-days 7
 ```
 
+### Step 7 — Generate HTML tab view report
+```powershell
+python scripts/weekly/generate_weekly_html_report.py
+```
+
 Expected artifact:
 - `artifacts/ar/AR_Tracking_Auto.xlsx`
 
@@ -125,3 +130,17 @@ Expected artifact:
 - Must produce `artifacts/ar/AR_Tracking_Auto.xlsx` as final AR artifact.
 - Must include extraction + upsert + reminder outcome outputs per workflow.
 - Must include README output tables: source scan summary, pending tasks by owner, upsert summary, reminder outcome, and overdue owners (if any).
+- Must generate HTML tab report at `artifacts/weekly/weekly_tracker_report.html`.
+
+## Output format contract (tab-style)
+- Always present output with these sections in order:
+  - `Tab: Overview`
+  - `Tab: Source Scan Summary`
+  - `Tab: Pending Tasks by Owner`
+  - `Tab: Upsert Summary`
+  - `Tab: Reminder Outcome`
+  - `Tab: Overdue Owners`
+- Each tab must include concise tables/metrics, aligned to `docs/ar-tracking/AR_TRACKING_README.md`.
+- Hover requirement: when visuals are rendered, cursor hover must show detail fields:
+  - Category labels, type/status context, Max, Upper fence, Q3, Median, Mean, Q1, Lower fence.
+- For non-chart tabs, provide the same details in expanded row/detail panels.

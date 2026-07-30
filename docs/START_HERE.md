@@ -21,7 +21,9 @@ Use this file first. Do not choose a README at random.
 ## Output files by task
 
 - Weekly task output path: `[TRACKER] excel_file` configured in `config.ini` (updated in place; no auto-generated artifact file)
+- Weekly HTML tab report: artifacts/weekly/weekly_tracker_report.html
 - AR task auto workbook: artifacts/ar/AR_Tracking_Auto.xlsx
+- AR workflow also refreshes shared HTML tab report: artifacts/weekly/weekly_tracker_report.html
 
 ## Grouped file map
 

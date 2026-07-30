@@ -52,6 +52,8 @@ Equivalent wording examples that must work:
    - `python scripts/weekly/run_weekly_tracker.py --send`
 4. If user explicitly requests weekly summary now:
    - `python scripts/weekly/run_weekly_tracker.py --send --weekly-summary`
+5. Generate HTML tab view report:
+   - `python scripts/weekly/generate_weekly_html_report.py`
 
 ## Accuracy rules
 - Start reminders 2 days before ETA.
@@ -64,3 +66,15 @@ Equivalent wording examples that must work:
 - Weekly task must use user-provided workbook from `config.ini`.
 - Weekly task output must include the module-wise status summary table:
    - Module, Completed, Open, WIP, Not yet started, Dropped, Total
+- Weekly task must generate HTML tab report at `artifacts/weekly/weekly_tracker_report.html`.
+
+## Output format contract (tab-style)
+- Always present output with these sections in order:
+   - `Tab: Overview`
+   - `Tab: Module-wise Status Summary`
+   - `Tab: Overdue Owners`
+   - `Tab: Dispatch Summary`
+- Each tab must include concise tables/metrics, aligned to `docs/weekly-tracking/WEEKLY_TRACKING_README.md`.
+- Hover requirement: when visuals are rendered, cursor hover must show detail fields:
+   - Category labels, type/status context, Max, Upper fence, Q3, Median, Mean, Q1, Lower fence.
+- For non-chart tabs, provide the same details in expanded row/detail panels.

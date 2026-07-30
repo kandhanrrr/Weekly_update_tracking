@@ -65,3 +65,39 @@ python weekly_update_tracker.py --upsert-ar scripts/ar_rows_sent_followups.json
 - AR workbook is always created by the pipeline.
 - Data is strictly from last 1WW Teams + Outlook exports.
 - Standard output workbook is `artifacts/ar/AR_Tracking_Auto.xlsx`.
+- HTML tab view report is generated at `artifacts/weekly/weekly_tracker_report.html`.
+
+## Output format (tab-style, mandatory)
+
+Use this output structure when presenting AR run results:
+
+- Tab: Overview
+  - Lookback window
+  - Source files used
+  - Total pending extracted
+  - Final artifact path
+- Tab: Source Scan Summary
+  - Teams scanned, Outlook scanned, pending extracted counts
+- Tab: Pending Tasks by Owner
+  - Owner-wise count table
+- Tab: Upsert Summary
+  - Inserted, Updated, Skipped, Total processed
+- Tab: Reminder Outcome
+  - Due soon, Overdue, TBD ETA counts
+- Tab: Overdue Owners
+  - Owner-wise overdue counts (if any)
+
+Hover tooltip details (mandatory for tab visuals):
+
+- On cursor hover, show detailed stats for the selected point/row.
+- Minimum fields to show:
+  - Category labels (Module/Subflow/Owner context)
+  - Type context (for example TEST_TYPE or Status bucket, where available)
+  - Max
+  - Upper fence
+  - Q3
+  - Median
+  - Mean
+  - Q1
+  - Lower fence
+- If a tab is rendered as a plain table (non-chart), provide the same details as an expanded row/details panel.

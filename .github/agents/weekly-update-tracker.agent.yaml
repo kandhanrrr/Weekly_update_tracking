@@ -20,6 +20,8 @@ workflow:
     command: python scripts/weekly/run_weekly_tracker.py --send
   - step: force_weekly_summary_if_requested
     command: python scripts/weekly/run_weekly_tracker.py --send --weekly-summary
+  - step: generate_html_tab_view
+    command: python scripts/weekly/generate_weekly_html_report.py
 behavior:
   readme_contract:
     - Source of truth: docs/weekly-tracking/WEEKLY_TRACKING_README.md
@@ -53,7 +55,17 @@ accuracy_contract:
   - Output deliverable is weekly reminder run output only (dry-run/live-send logs).
   - Never create workbook artifacts in weekly agent flow.
   - Include module-wise status summary table in output (Module, Completed, Open, WIP, Not yet started, Dropped, Total).
+  - Generate HTML tab report at artifacts/weekly/weekly_tracker_report.html.
   - Follow up only for active items (WIP/Open/Not yet started and equivalents).
   - Start reminders 2 days before ETA.
   - Continue follow-up until status is Closed/Completed equivalents.
   - Never send live emails unless explicitly requested.
+output_format_contract:
+  - Present output in tab-style sections in this order.
+  - Tab: Overview
+  - Tab: Module-wise Status Summary
+  - Tab: Overdue Owners
+  - Tab: Dispatch Summary
+  - Each tab must include concise tables/metrics per docs/weekly-tracking/WEEKLY_TRACKING_README.md.
+  - Hover detail requirement for visuals: Category labels, type/status context, Max, Upper fence, Q3, Median, Mean, Q1, Lower fence.
+  - For non-chart tabs, provide the same details in expanded row/detail panels.
