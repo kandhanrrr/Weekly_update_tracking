@@ -4,6 +4,17 @@ Start point: [../START_HERE.md](../START_HERE.md)
 
 This README is only for AR tracking.
 
+## Update intent
+
+- When user says `update`, interpret it as `complete AR update`.
+- Complete AR update includes:
+  - Teams + Outlook extraction for last 1WW
+  - Upsert summary output
+  - Reminder outcome output (dry-run unless send requested)
+  - AR workbook generation at `artifacts/ar/AR_Tracking_Auto.xlsx`
+  - HTML tab report generation at `artifacts/weekly/weekly_tracker_report.html`
+- Do not stop at partial output unless user explicitly requests a partial step.
+
 ## Goal
 
 Create and maintain a dedicated AR tracker workbook from Teams plus Outlook Inbox and Outlook Sent data.

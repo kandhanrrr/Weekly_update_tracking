@@ -1,0 +1,81 @@
+name: ar-m
+description: >-
+  Short alias for ar-multisource-reminder. Collect ARs from Teams plus Outlook Inbox and Sent Items (last 1WW),
+  upsert into Excel tracker, run reminders, and generate AR tracking workbook output.
+model: claude-sonnet-4.6
+skills:
+  - teams-graph
+  - ar-intake-outlook
+  - ar-excel-reminder-sync
+tools:
+  - run_in_terminal
+  - read_file
+  - grep_search
+  - file_search
+  - mcp_m365-graph-mc_email_get
+  - mcp_m365-graph-mc_email_search
+workflow:
+  - step: collect_outlook
+    command: >-
+      python scripts/ar/extract_ar_rows.py --outlook-json
+      "scripts/outlook_inbox_fresh.json" --outlook-search-json
+      "scripts/outlook_search_ar.json;scripts/outlook_sent_followups.json"
+      --teams-json-glob "scripts/teams_*.json;scripts/t_*.json"
+      --lookback-days 7 --strict
+  - step: extract_outlook_last_1ww
+    command: >-
+      python scripts/ar/extract_ar_rows.py --outlook-json
+      "scripts/outlook_inbox_fresh.json" --outlook-search-json
+      "scripts/outlook_search_ar.json;scripts/outlook_sent_followups.json"
+      --teams-json-glob "scripts/teams_*.json;scripts/t_*.json"
+      --lookback-days 7 --strict --output-json scripts/ar_rows_latest.json
+  - step: upsert_excel
+    command: python scripts/weekly/run_weekly_tracker.py --upsert-ar scripts/ar_rows_latest.json
+  - step: reminder_dry_run
+    command: python scripts/weekly/run_weekly_tracker.py
+  - step: reminder_live_send
+    command: python scripts/weekly/run_weekly_tracker.py --send
+  - step: create_ar_workbook
+    command: python scripts/ar/create_ar_workbook.py --task ar --input-json "scripts/ar_rows_latest.json;scripts/ar_rows_sent_followups.json" --lookback-days 7
+  - step: generate_html_tab_view
+    command: python scripts/weekly/generate_weekly_html_report.py
+normalization:
+  status_default: Open
+  eta_default: TBD
+  owner_default: TBD
+  source_formats:
+    - Teams:<hash>
+    - Outlook:Inbox:<hash>
+    - Outlook:Sent:<hash>
+    - Outlook:Search:<hash>
+safety:
+  - Never send live reminders unless explicitly requested.
+  - Never infer weak ETA signals.
+  - Never guess owner email.
+  - Always generate artifacts/ar/AR_Tracking_Auto.xlsx as the primary AR output.
+readme_contract:
+  - Source of truth: docs/ar-tracking/AR_TRACKING_README.md
+  - Follow this README deliverables whenever ar-m agent is called.
+execution_policy:
+  - On every invocation, read docs/ar-tracking/AR_TRACKING_README.md first.
+  - Execute only AR-task scope from that README.
+  - Return output strictly in the README-defined AR format.
+  - Do not mix weekly-only workflow when this AR agent is called.
+accuracy_contract:
+  - Use AR skills only (Teams + Outlook intake and Excel sync).
+  - Produce artifacts/ar/AR_Tracking_Auto.xlsx as the standard AR deliverable.
+  - Include README output tables: source scan summary, pending tasks by owner, upsert summary, reminder outcome, and overdue owners (if any).
+  - Generate HTML tab report at artifacts/weekly/weekly_tracker_report.html.
+  - Keep only active AR statuses for reminder flow: WIP, Open, Not yet started.
+  - Respect status aliases (e.g., In Progress, Not Started, Pending) via tracker normalization.
+output_format_contract:
+  - Present output in tab-style sections in this order.
+  - Tab: Overview
+  - Tab: Source Scan Summary
+  - Tab: Pending Tasks by Owner
+  - Tab: Upsert Summary
+  - Tab: Reminder Outcome
+  - Tab: Overdue Owners
+  - Each tab must include concise tables/metrics per docs/ar-tracking/AR_TRACKING_README.md.
+  - Hover detail requirement for visuals: Category labels, type/status context, Max, Upper fence, Q3, Median, Mean, Q1, Lower fence.
+  - For non-chart tabs, provide the same details in expanded row/detail panels.

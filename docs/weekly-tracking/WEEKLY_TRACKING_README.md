@@ -4,6 +4,16 @@ Start point: [../START_HERE.md](../START_HERE.md)
 
 This file is only for weekly tracking.
 
+## Update intent
+
+- When user says `update`, interpret it as `complete weekly update`.
+- Complete weekly update includes:
+	- Weekly tracker run (dry-run or send, based on user request)
+	- Module-wise status summary output
+	- Overdue owners and dispatch summary output
+	- HTML tab report generation at `artifacts/weekly/weekly_tracker_report.html`
+- Do not stop at partial output unless user explicitly requests a partial step.
+
 ## Scope
 
 - Use a user-provided workbook.

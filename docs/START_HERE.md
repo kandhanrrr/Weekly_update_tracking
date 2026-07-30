@@ -2,6 +2,12 @@
 
 Use this file first. Do not choose a README at random.
 
+## Update intent (mandatory)
+
+- If user says `update`, treat it as `complete update` by default.
+- Complete update means run the full workflow for the selected task and produce all README-defined outputs/deliverables.
+- Do not run partial update unless user explicitly asks for a partial step.
+
 ## Pick one task
 
 | If your goal is... | Follow this file only |
