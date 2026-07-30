@@ -12,8 +12,14 @@ This README is only for AR tracking.
   - Upsert summary output
   - Reminder outcome output (dry-run unless send requested)
   - AR workbook generation at `artifacts/ar/AR_Tracking_Auto.xlsx`
-  - HTML tab report generation at `artifacts/weekly/weekly_tracker_report.html`
+  - HTML tab report generation at `artifacts/ar/ar_tracking_report.html`
 - Do not stop at partial output unless user explicitly requests a partial step.
+
+## Enhancement expectation
+
+- Apply practical reporting and UX enhancements by default during AR updates.
+- Do not wait for micro-level prompts for obvious quality improvements.
+- Keep enhancements aligned with this README output contract.
 
 ## Goal
 
@@ -71,12 +77,18 @@ python weekly_update_tracker.py --upsert-ar scripts/ar_rows_latest.json
 python weekly_update_tracker.py --upsert-ar scripts/ar_rows_sent_followups.json
 ```
 
+## Step D - Generate AR HTML tab view report
+
+```powershell
+python scripts/ar/generate_ar_html_report.py
+```
+
 ## Expected result
 
 - AR workbook is always created by the pipeline.
 - Data is strictly from last 1WW Teams + Outlook exports.
 - Standard output workbook is `artifacts/ar/AR_Tracking_Auto.xlsx`.
-- HTML tab view report is generated at `artifacts/weekly/weekly_tracker_report.html`.
+- HTML tab view report is generated at `artifacts/ar/ar_tracking_report.html`.
 
 ## Output format (tab-style, mandatory)
 

@@ -14,6 +14,12 @@ This file is only for weekly tracking.
 	- HTML tab report generation at `artifacts/weekly/weekly_tracker_report.html`
 - Do not stop at partial output unless user explicitly requests a partial step.
 
+## Enhancement expectation
+
+- Apply practical reporting and UX enhancements by default during weekly updates.
+- Do not wait for micro-level prompts for obvious quality improvements.
+- Keep enhancements aligned with this README output contract.
+
 ## Scope
 
 - Use a user-provided workbook.

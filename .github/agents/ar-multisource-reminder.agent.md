@@ -88,7 +88,7 @@ python scripts/ar/create_ar_workbook.py `
 
 ### Step 7 — Generate HTML tab view report
 ```powershell
-python scripts/weekly/generate_weekly_html_report.py
+python scripts/ar/generate_ar_html_report.py
 ```
 
 Expected artifact:
@@ -130,7 +130,7 @@ Expected artifact:
 - Must produce `artifacts/ar/AR_Tracking_Auto.xlsx` as final AR artifact.
 - Must include extraction + upsert + reminder outcome outputs per workflow.
 - Must include README output tables: source scan summary, pending tasks by owner, upsert summary, reminder outcome, and overdue owners (if any).
-- Must generate HTML tab report at `artifacts/weekly/weekly_tracker_report.html`.
+- Must generate HTML tab report at `artifacts/ar/ar_tracking_report.html`.
 
 ## Output format contract (tab-style)
 - Always present output with these sections in order:

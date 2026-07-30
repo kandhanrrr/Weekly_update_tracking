@@ -8,6 +8,12 @@ Use this file first. Do not choose a README at random.
 - Complete update means run the full workflow for the selected task and produce all README-defined outputs/deliverables.
 - Do not run partial update unless user explicitly asks for a partial step.
 
+## Default enhancement policy
+
+- Apply meaningful workflow and reporting enhancements by default when implementing updates.
+- Do not wait for micro-level direction for obvious UX, quality, and output improvements.
+- Keep enhancements aligned to each task README and output contracts.
+
 ## Pick one task
 
 | If your goal is... | Follow this file only |
@@ -29,7 +35,7 @@ Use this file first. Do not choose a README at random.
 - Weekly task output path: `[TRACKER] excel_file` configured in `config.ini` (updated in place; no auto-generated artifact file)
 - Weekly HTML tab report: artifacts/weekly/weekly_tracker_report.html
 - AR task auto workbook: artifacts/ar/AR_Tracking_Auto.xlsx
-- AR workflow also refreshes shared HTML tab report: artifacts/weekly/weekly_tracker_report.html
+- AR HTML tab report: artifacts/ar/ar_tracking_report.html
 
 ## Grouped file map
 
