@@ -730,11 +730,38 @@ def _md_table(headers: list[str], data: list[list[str]]) -> str:
     return "\n".join(out)
 
 
+def _expand_path_args(path_list: str | None) -> list[Path]:
+    """Expand ';' separated file paths and glob patterns into existing paths."""
+    if not path_list:
+        return []
+    expanded: list[Path] = []
+    for token in [t.strip() for t in path_list.split(";") if t.strip()]:
+        matches = sorted(Path().glob(token))
+        if matches:
+            expanded.extend(matches)
+        else:
+            expanded.append(Path(token))
+    # Keep order while de-duplicating by normalized absolute path.
+    seen: set[str] = set()
+    unique: list[Path] = []
+    for p in expanded:
+        key = str(p.resolve()) if p.exists() else str(p)
+        if key in seen:
+            continue
+        seen.add(key)
+        unique.append(p)
+    return unique
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Parse pending AR tasks from Graph export JSON files.")
     parser.add_argument("--outlook-json", default=None, help="Path to Outlook inbox Graph export JSON (optional if --outlook-search-json is provided)")
     parser.add_argument("--outlook-search-json", help="Path to a Graph email search result JSON; emails here are treated as pre-filtered ARs (no recipient check)")
     parser.add_argument("--teams-json", help="Path to a Teams export JSON file or a ';' separated list of paths")
+    parser.add_argument(
+        "--teams-json-glob",
+        help="';' separated glob patterns for Teams export JSON files (example: scripts/teams_*.json;scripts/t_*.json)",
+    )
     parser.add_argument("--lookback-days", type=int, default=7)
     parser.add_argument("--top", type=int, default=15)
     parser.add_argument("--exclude-owner", action="append", default=[], help="Owner/display name to exclude; can be passed multiple times")
@@ -790,8 +817,8 @@ def main() -> int:
 
     teams_rows: list[Row] = []
     teams_scanned = 0
-    if args.teams_json:
-        team_paths = [Path(p.strip()) for p in args.teams_json.split(";") if p.strip()]
+    team_paths = _expand_path_args(args.teams_json) + _expand_path_args(args.teams_json_glob)
+    if team_paths:
         for p in team_paths:
             if not p.exists():
                 continue
@@ -819,17 +846,26 @@ def main() -> int:
         deduped_rows.append(r)
     all_rows = deduped_rows
 
+    has_teams_input = bool(team_paths)
+
     print("# Source scan summary")
+    summary_rows = [
+        ["Outlook scanned", str(outlook_payload.get("count", 0)) if args.outlook_json else "n/a (search only)"],
+        ["Outlook pending extracted", str(len(outlook_rows))],
+    ]
+    if has_teams_input:
+        summary_rows.extend(
+            [
+                ["Teams scanned", str(teams_scanned)],
+                ["Teams pending extracted", str(len(teams_rows))],
+            ]
+        )
+    summary_rows.append(["Total pending extracted", str(len(all_rows))])
+
     print(
         _md_table(
             ["Metric", "Value"],
-            [
-                ["Outlook scanned", str(outlook_payload.get("count", 0)) if args.outlook_json else "n/a (search only)"],
-                ["Teams scanned", str(teams_scanned)],
-                ["Outlook pending extracted", str(len(outlook_rows))],
-                ["Teams pending extracted", str(len(teams_rows))],
-                ["Total pending extracted", str(len(all_rows))],
-            ],
+            summary_rows,
         )
     )
     print()
@@ -871,12 +907,13 @@ def main() -> int:
     print(_md_table(COLS, ot_rows))
     print()
 
-    print(f"# Teams Action Items ({len(teams_sorted)})")
-    tm_rows = _rows_to_table(teams_sorted)
-    if not tm_rows:
-        tm_rows = [["-", "No pending Teams tasks", "—", "-", "—", "-"]]
-    print(_md_table(COLS, tm_rows))
-    print()
+    if has_teams_input:
+        print(f"# Teams Action Items ({len(teams_sorted)})")
+        tm_rows = _rows_to_table(teams_sorted)
+        if not tm_rows:
+            tm_rows = [["-", "No pending Teams tasks", "—", "-", "—", "-"]]
+        print(_md_table(COLS, tm_rows))
+        print()
 
     with_eta = [r for r in all_rows if r.eta != "TBD"]
     without_eta = [r for r in all_rows if r.eta == "TBD"]

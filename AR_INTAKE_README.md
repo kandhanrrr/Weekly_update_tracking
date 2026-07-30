@@ -64,8 +64,8 @@ Notes:
 | Source traceability | Save source id in Source/Remark |
 
 Expected source tags:
-- Teams source format: Teams:<chat-or-channel>:<message-id>
-- Outlook source format: Outlook:<message-id>
+- Teams source format: Teams:<hash>
+- Outlook source formats: Outlook:Inbox:<hash>, Outlook:Sent:<hash>, Outlook:Search:<hash>
 
 ---
 
@@ -113,6 +113,12 @@ Once AR rows are in Excel, reminder behavior is identical to the main tracker.
 | Dry-run | python weekly_update_tracker.py | No emails sent; actions printed |
 | Live send | python weekly_update_tracker.py --send | Sends reminder/follow-up emails |
 | Force summary | python weekly_update_tracker.py --send --weekly-summary | Sends weekly summary even on non-Friday |
+
+### Summary in Excel format
+
+| Mode | Command | Result |
+|---|---|---|
+| AR workbook output | python scripts/ar/create_ar_workbook.py --task ar --input-json "scripts/ar_rows_latest.json;scripts/ar_rows_sent_followups.json" --lookback-days 7 | Creates artifacts/ar/AR_Tracking_Auto.xlsx |
 
 ---
 
@@ -164,10 +170,11 @@ Use this format when reporting AR intake and reminder run results.
 
 | Type | File |
 |---|---|
-| Teams intake skill | .copilot/skills/ar-intake-teams/SKILL.md |
-| Outlook intake skill | .copilot/skills/ar-intake-outlook/SKILL.md |
-| Excel/reminder sync skill | .copilot/skills/ar-excel-reminder-sync/SKILL.md |
-| AR orchestration agent | .copilot/ar-multisource-reminder.agent.yaml |
+| Teams + Outlook intake parser | scripts/parse_pending_from_graph_exports.py |
+| Outlook intake skill | .github/skills/ar-intake-outlook/SKILL.md |
+| Excel/reminder sync skill | .github/skills/ar-excel-reminder-sync/SKILL.md |
+| AR orchestration agent (primary) | .github/agents/ar-multisource-reminder.agent.md |
+| AR orchestration agent (YAML companion) | .github/agents/ar-multisource-reminder.agent.yaml |
 
 ---
 

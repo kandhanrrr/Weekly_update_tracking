@@ -36,6 +36,18 @@
     "summary": "can you share the CFC data by tomorrow"
   },
   {
+    "source_key": "Teams:1c30fcf5bda9",
+    "source": "Teams",
+    "folder": "Teams",
+    "date": "2026-07-27",
+    "task": "Hi Panigrahy, Bisweswar, Maji, Debabrata, Rajakumar, Kandhan, Mathew, Jayson, Mallya K, Harish, Parameshwari, Megha, ...",
+    "owner": "Kandhan",
+    "status": "Open",
+    "eta": "TBD",
+    "sender": "Kodandaramaiah, Chandrashekar",
+    "summary": "xlsx please update the tracker page as of today by 11AM Tomorrow."
+  },
+  {
     "source_key": "Teams:9a623f95a832",
     "source": "Teams",
     "folder": "Teams",
@@ -108,6 +120,18 @@
     "summary": "We need to have a Plan for Q3/Q4 realization of the takeaways and implement them and showcase."
   },
   {
+    "source_key": "Teams:4bca5f91a2d5",
+    "source": "Teams",
+    "folder": "Teams",
+    "date": "2026-07-24",
+    "task": "Everyone MOs please fill you CWs tasks in sheet daily basis",
+    "owner": "Kandhan",
+    "status": "Open",
+    "eta": "TBD",
+    "sender": "Singh, Partap",
+    "summary": "Everyone MOs please fill you CWs tasks in sheet daily basis"
+  },
+  {
     "source_key": "Teams:ba27a4baf121",
     "source": "Teams",
     "folder": "Teams",
@@ -118,65 +142,5 @@
     "eta": "TBD",
     "sender": "Singh, Partap",
     "summary": "Everyone MO's please fill you CW's tasks in sheet daily basis"
-  },
-  {
-    "source_key": "Teams:fe9e248d1bfa",
-    "source": "Teams",
-    "folder": "Teams",
-    "date": "2026-07-22",
-    "task": "can you setup meeting tomorrow",
-    "owner": "Balakrishnan, SankkaraX Naarayanan",
-    "status": "Open",
-    "eta": "TBD",
-    "sender": "Rajakumar, Kandhan",
-    "summary": "can you setup meeting tomorrow"
-  },
-  {
-    "source_key": "Teams:644c96a29f54",
-    "source": "Teams",
-    "folder": "Teams",
-    "date": "2026-07-22",
-    "task": "BA AI initiatives- Summary - ww30.3.pptx shared to management. Please review and let us know if any inputs.",
-    "owner": "Kandhan",
-    "status": "Open",
-    "eta": "WW30.3",
-    "sender": "Kodandaramaiah, Chandrashekar",
-    "summary": "BA AI initiatives- Summary - ww30.3.pptx shared to management. Please review and let us know if any inputs."
-  },
-  {
-    "source_key": "Teams:2af3f93e4cfa",
-    "source": "Teams",
-    "folder": "Teams",
-    "date": "2026-07-22",
-    "task": "Anand, Harsh can you figure out the issue",
-    "owner": "Anand, RishiX",
-    "status": "Open",
-    "eta": "TBD",
-    "sender": "Rajakumar, Kandhan",
-    "summary": "Anand, Harsh can you figure out the issue"
-  },
-  {
-    "source_key": "Teams:e8955967df12",
-    "source": "Teams",
-    "folder": "Teams",
-    "date": "2026-07-22",
-    "task": "Aneesh K A Babu Kumar, AnjuX please join",
-    "owner": "Kandhan",
-    "status": "Open",
-    "eta": "TBD",
-    "sender": "Singh, Partap",
-    "summary": "Aneesh K A Babu Kumar, AnjuX please join"
-  },
-  {
-    "source_key": "Teams:c4d7f79dfdfa",
-    "source": "Teams",
-    "folder": "Teams",
-    "date": "2026-07-22",
-    "task": "Hi Panigrahy, Bisweswar , Maji, Debabrata , Rajakumar, Kandhan , Mathew, Jayson , Mallya K, Harish , Parameshwari, Me...",
-    "owner": "Kandhan",
-    "status": "Open",
-    "eta": "TBD",
-    "sender": "Kodandaramaiah, Chandrashekar",
-    "summary": "xlsx please update the tracker page as of today by 11AM today."
   }
 ]

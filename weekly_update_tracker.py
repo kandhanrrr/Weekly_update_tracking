@@ -27,6 +27,7 @@ import re
 import smtplib
 import sys
 import warnings
+from collections import defaultdict
 from datetime import datetime, timedelta
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -204,6 +205,17 @@ STATUS_ALIASES: dict[str, str] = {
     "review complete":   "review done/closed",
     "review closed":     "review done/closed",
 }
+
+SUMMARY_STATUS_ORDER = [
+    "completed",
+    "open",
+    "wip",
+    "not yet started",
+    "dropped",
+    "na",
+    "review done/closed",
+    "other",
+]
 
 HEADER_ALIASES = {
     "module": {"module", "area", "functional area", "team"},
@@ -521,6 +533,96 @@ def load_active_tasks(sheet) -> list[dict]:
     return tasks
 
 
+def _status_for_summary(status_raw: str) -> str:
+    """Normalize status into summary buckets."""
+    norm = STATUS_ALIASES.get(status_raw.lower(), status_raw.lower())
+    if norm == "done":
+        return "completed"
+    if norm in {
+        "open",
+        "wip",
+        "not yet started",
+        "dropped",
+        "na",
+        "review done/closed",
+    }:
+        return norm
+    return "other"
+
+
+def build_module_status_summary(sheet) -> list[dict[str, int | str]]:
+    """Build module-wise status counts across all task rows in the sheet."""
+    header_map, header_row = _build_header_map(sheet)
+    task_idx = header_map.get("task")
+    status_idx = header_map.get("status")
+    module_idx = header_map.get("module")
+
+    if task_idx is None or status_idx is None:
+        return []
+
+    by_module: dict[str, dict[str, int]] = defaultdict(
+        lambda: {k: 0 for k in SUMMARY_STATUS_ORDER}
+    )
+
+    for row in sheet.iter_rows(min_row=header_row + 1, values_only=True):
+        if task_idx >= len(row):
+            continue
+        task_val = row[task_idx]
+        if task_val is None or str(task_val).strip() == "":
+            continue
+
+        status_raw = ""
+        if status_idx < len(row) and row[status_idx] is not None:
+            status_raw = str(row[status_idx]).strip()
+        status_bucket = _status_for_summary(status_raw)
+
+        module = "Unassigned"
+        if module_idx is not None and module_idx < len(row) and row[module_idx]:
+            module = str(row[module_idx]).strip() or "Unassigned"
+
+        by_module[module][status_bucket] += 1
+
+    out: list[dict[str, int | str]] = []
+    for module in sorted(by_module):
+        counts = by_module[module]
+        total = sum(counts.values())
+        out.append(
+            {
+                "module": module,
+                "completed": counts["completed"],
+                "open": counts["open"],
+                "wip": counts["wip"],
+                "not_yet_started": counts["not yet started"],
+                "dropped": counts["dropped"],
+                "total": total,
+            }
+        )
+    return out
+
+
+def print_module_status_summary(sheet) -> None:
+    """Print module-wise status table for weekly reporting output."""
+    rows = build_module_status_summary(sheet)
+    print("\n=== Module-wise Status Summary ===")
+    print("| Module | Completed | Open | WIP | Not yet started | Dropped | Total |")
+    print("|---|---:|---:|---:|---:|---:|---:|")
+    if not rows:
+        print("| (none) | 0 | 0 | 0 | 0 | 0 | 0 |")
+        return
+    for r in rows:
+        print(
+            "| {module} | {completed} | {open} | {wip} | {not_yet_started} | {dropped} | {total} |".format(
+                module=r["module"],
+                completed=r["completed"],
+                open=r["open"],
+                wip=r["wip"],
+                not_yet_started=r["not_yet_started"],
+                dropped=r["dropped"],
+                total=r["total"],
+            )
+        )
+
+
 def process_reminders(tasks: list[dict], dry_run: bool = True):
     """
     For each active task:
@@ -717,8 +819,8 @@ def upsert_ar_rows(json_path: str | Path) -> None:
     wb.save(EXCEL_FILE)
 
     print(f"\n# AR Upsert Summary — {Path(EXCEL_FILE).name} / {AR_SHEET_NAME}")
-    print(f"| Metric | Count |")
-    print(f"|---|---|")
+    print("| Metric | Count |")
+    print("|---|---|")
     print(f"| Inserted (new) | {inserted} |")
     print(f"| Updated (existing) | {updated} |")
     print(f"| Skipped (no task) | {skipped} |")
@@ -793,6 +895,7 @@ def main():
     print(f"Loaded {len(tasks)} active task(s) from '{ws.title}'.\n")
     print("=== Processing ETA Reminders ===")
     process_reminders(tasks, dry_run=dry_run)
+    print_module_status_summary(ws)
 
     print("\n=== Processing Weekly Summary ===")
     process_weekly_summary(

@@ -1,0 +1,59 @@
+name: weekly-update-tracker
+description: >-
+  Runs weekly tracker follow-up and reminder flow on a user-provided Excel
+  workbook. Weekly task does not auto-create a workbook.
+model: claude-sonnet-4.6
+skills:
+  - weekly-tracker-reminder
+tools:
+  - run_in_terminal
+  - read_file
+  - grep_search
+  - file_search
+workflow:
+  - step: validate_tracker_config
+    command: >-
+      python -c "import configparser, pathlib; p=pathlib.Path('config.ini'); c=configparser.ConfigParser(); c.read(p); print('excel_file=', c.get('TRACKER','excel_file',fallback='')); print('sheet_name=', c.get('TRACKER','sheet_name',fallback='auto'))"
+  - step: dry_run
+    command: python scripts/weekly/run_weekly_tracker.py
+  - step: live_send_only_if_requested
+    command: python scripts/weekly/run_weekly_tracker.py --send
+  - step: force_weekly_summary_if_requested
+    command: python scripts/weekly/run_weekly_tracker.py --send --weekly-summary
+behavior:
+  readme_contract:
+    - Source of truth: docs/weekly-tracking/WEEKLY_TRACKING_README.md
+    - Follow this README deliverables whenever weekly-update-tracker agent is called.
+  execution_policy:
+    - On every invocation, read docs/weekly-tracking/WEEKLY_TRACKING_README.md first.
+    - Execute only weekly-task scope from that README.
+    - Return output strictly in the README-defined weekly format.
+    - Do not mix AR workflow when this weekly agent is called.
+  workbook_policy:
+    - User-provided workbook is required for weekly tracking.
+    - Do not auto-create weekly workbook in this agent.
+  status_scope:
+    include:
+      - WIP
+      - Open
+      - Not yet started
+    equivalent_wording_supported:
+      - In Progress
+      - In-Progress
+      - Active
+      - Ongoing
+      - Not Started
+      - Todo
+      - To Do
+      - Planned
+      - Pending
+      - New
+      - Reopened
+accuracy_contract:
+  - Output deliverable is weekly reminder run output only (dry-run/live-send logs).
+  - Never create workbook artifacts in weekly agent flow.
+  - Include module-wise status summary table in output (Module, Completed, Open, WIP, Not yet started, Dropped, Total).
+  - Follow up only for active items (WIP/Open/Not yet started and equivalents).
+  - Start reminders 2 days before ETA.
+  - Continue follow-up until status is Closed/Completed equivalents.
+  - Never send live emails unless explicitly requested.
