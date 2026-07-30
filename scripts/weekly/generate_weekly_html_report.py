@@ -215,6 +215,21 @@ def _dispatch_summary() -> dict[str, str]:
 
 
 def _render_html(overview: dict, module_rows: list[dict], stats_map: dict, overdue_rows: list[dict], dispatch: dict) -> str:
+    def _hover_payload(label: str, type_context: str, **extra: str | int | float) -> str:
+        payload: dict[str, str | int | float] = {
+            "label": label,
+            "type": type_context,
+            "max": "N/A",
+            "upper_fence": "N/A",
+            "q3": "N/A",
+            "median": "N/A",
+            "mean": "N/A",
+            "q1": "N/A",
+            "lower_fence": "N/A",
+        }
+        payload.update(extra)
+        return html.escape(json.dumps(payload))
+
     mod_rows_html = []
     for r in module_rows:
         stats = stats_map.get(r["module"], {})
@@ -235,16 +250,57 @@ def _render_html(overview: dict, module_rows: list[dict], stats_map: dict, overd
             )
         )
 
+    overview_rows_html = "".join(
+        "<tr class='hover-row' data-hover='{hover}'><td>{k}</td><td>{v}</td></tr>".format(
+            hover=_hover_payload(
+                str(k),
+                "Overview metric",
+                median=v,
+                mean=v,
+            ),
+            k=html.escape(str(k)),
+            v=html.escape(str(v)),
+        )
+        for k, v in [
+            ("Run mode", overview["run_mode"]),
+            ("Workbook", overview["workbook"]),
+            ("Sheet", overview["sheet"]),
+        ]
+    )
+
     overdue_html = "".join(
-        "<tr><td>{}</td><td>{}</td><td>{}</td></tr>".format(
-            html.escape(str(r["owner"])),
-            r["count"],
-            html.escape(str(r["task"])),
+        "<tr class='hover-row' data-hover='{hover}'><td>{owner}</td><td>{count}</td><td>{task}</td></tr>".format(
+            hover=_hover_payload(
+                str(r["owner"]),
+                "Overdue owner summary",
+                max=r["count"],
+                q3=r["count"],
+                median=r["count"],
+                mean=r["count"],
+                q1=r["count"],
+                task=str(r["task"]),
+            ),
+            owner=html.escape(str(r["owner"])),
+            count=r["count"],
+            task=html.escape(str(r["task"])),
         )
         for r in overdue_rows
     )
     if not overdue_html:
         overdue_html = "<tr><td colspan='3'>No overdue owners</td></tr>"
+
+    dispatch_rows_html = "".join(
+        "<tr class='hover-row' data-hover='{hover}'><td>{item}</td><td>{status}</td></tr>".format(
+            hover=_hover_payload(str(item), "Dispatch status", median=status, mean=status),
+            item=html.escape(str(item)),
+            status=html.escape(str(status)),
+        )
+        for item, status in [
+            ("Dispatch", dispatch["dispatch"]),
+            ("Weekly summary", dispatch["weekly_summary"]),
+            ("Force option", dispatch["force_hint"]),
+        ]
+    )
 
     return f"""<!doctype html>
 <html lang=\"en\">
@@ -270,9 +326,49 @@ def _render_html(overview: dict, module_rows: list[dict], stats_map: dict, overd
     table {{ border-collapse:collapse; width:100%; }}
     th, td {{ border:1px solid var(--line); padding:8px; text-align:left; font-size:14px; }}
     th {{ background:#f1f5f9; }}
-    .hint {{ font-size:12px; color:var(--muted); margin-top:8px; }}
-    #hoverBox {{ margin-top:10px; border:1px dashed var(--line); border-radius:8px; padding:10px; background:#f8fafc; }}
-    #hoverBox code {{ font-family: Consolas, monospace; }}
+        .hover-row {{ cursor: crosshair; }}
+        #hoverTooltip {{
+            position: fixed;
+            display: none;
+            z-index: 9999;
+            min-width: 280px;
+            max-width: 360px;
+            background: rgba(11, 107, 203, 0.96);
+            color: #fff;
+            border-radius: 10px;
+            padding: 10px 12px;
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.24);
+            font-size: 13px;
+            line-height: 1.45;
+            pointer-events: none;
+            transform: translate(18px, 18px);
+        }}
+        #hoverTooltip code {{ font-family: Consolas, monospace; color:#fff; background:rgba(255,255,255,0.16); padding:0 4px; border-radius:4px; }}
+        #cursorPlus {{
+            position: fixed;
+            display: none;
+            width: 28px;
+            height: 28px;
+            border: 2px solid #0b6bcb;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.82);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.22);
+            pointer-events: none;
+            z-index: 10000;
+            transform: translate(-50%, -50%);
+        }}
+        #cursorPlus::before {{
+            content: '+';
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0b6bcb;
+            font-size: 20px;
+            font-weight: 800;
+            line-height: 1;
+        }}
   </style>
 </head>
 <body>
@@ -297,9 +393,7 @@ def _render_html(overview: dict, module_rows: list[dict], stats_map: dict, overd
       </div>
       <table>
         <tr><th>Metric</th><th>Value</th></tr>
-        <tr><td>Run mode</td><td>{html.escape(str(overview['run_mode']))}</td></tr>
-        <tr><td>Workbook</td><td>{html.escape(str(overview['workbook']))}</td></tr>
-        <tr><td>Sheet</td><td>{html.escape(str(overview['sheet']))}</td></tr>
+                {overview_rows_html}
       </table>
     </section>
 
@@ -308,8 +402,6 @@ def _render_html(overview: dict, module_rows: list[dict], stats_map: dict, overd
         <tr><th>Module</th><th>Completed</th><th>Open</th><th>WIP</th><th>Not yet started</th><th>Dropped</th><th>Total</th></tr>
         {''.join(mod_rows_html)}
       </table>
-      <div id=\"hoverBox\"><strong>Hover details:</strong> move cursor over a module row.</div>
-      <div class=\"hint\">Hover details include label, type, max, upper fence, Q3, median, mean, Q1, and lower fence.</div>
     </section>
 
     <section id=\"overdue\" class=\"tab\">
@@ -322,12 +414,12 @@ def _render_html(overview: dict, module_rows: list[dict], stats_map: dict, overd
     <section id=\"dispatch\" class=\"tab\">
       <table>
         <tr><th>Item</th><th>Status</th></tr>
-        <tr><td>Dispatch</td><td>{html.escape(dispatch['dispatch'])}</td></tr>
-        <tr><td>Weekly summary</td><td>{html.escape(dispatch['weekly_summary'])}</td></tr>
-        <tr><td>Force option</td><td><code>{html.escape(dispatch['force_hint'])}</code></td></tr>
+                {dispatch_rows_html}
       </table>
     </section>
   </div>
+    <div id="hoverTooltip"></div>
+    <div id="cursorPlus"></div>
 
   <script>
     const buttons = document.querySelectorAll('.tab-btn');
@@ -339,23 +431,59 @@ def _render_html(overview: dict, module_rows: list[dict], stats_map: dict, overd
       document.getElementById(btn.dataset.tab).classList.add('active');
     }}));
 
-    const hoverBox = document.getElementById('hoverBox');
+        const hoverTooltip = document.getElementById('hoverTooltip');
+        const cursorPlus = document.getElementById('cursorPlus');
+        let activeHover = null;
+
+        function renderHoverContent(d) {{
+            return `
+                <strong>Details</strong><br/>
+                Label: <code>${{d.label ?? 'N/A'}}</code><br/>
+                Type: <code>${{d.type ?? 'N/A'}}</code><br/>
+                Max: <code>${{d.max ?? 'N/A'}}</code><br/>
+                Upper fence: <code>${{d.upper_fence ?? 'N/A'}}</code><br/>
+                Q3: <code>${{d.q3 ?? 'N/A'}}</code><br/>
+                Median: <code>${{d.median ?? 'N/A'}}</code><br/>
+                Mean: <code>${{d.mean ?? 'N/A'}}</code><br/>
+                Q1: <code>${{d.q1 ?? 'N/A'}}</code><br/>
+                Lower fence: <code>${{d.lower_fence ?? 'N/A'}}</code>
+            `;
+        }}
+
+        function moveFloaters(evt) {{
+            if (!activeHover) return;
+            const x = evt.clientX;
+            const y = evt.clientY;
+            cursorPlus.style.left = `${{x}}px`;
+            cursorPlus.style.top = `${{y}}px`;
+
+            const pad = 16;
+            const ttRect = hoverTooltip.getBoundingClientRect();
+            let left = x + 18;
+            let top = y + 18;
+            if (left + ttRect.width + pad > window.innerWidth) left = x - ttRect.width - 18;
+            if (top + ttRect.height + pad > window.innerHeight) top = y - ttRect.height - 18;
+            hoverTooltip.style.left = `${{Math.max(pad, left)}}px`;
+            hoverTooltip.style.top = `${{Math.max(pad, top)}}px`;
+        }}
+
     document.querySelectorAll('.hover-row').forEach(row => {{
-      row.addEventListener('mouseenter', () => {{
+            row.addEventListener('mouseenter', (evt) => {{
+                activeHover = row;
         const d = JSON.parse(row.dataset.hover || '{{}}');
-        hoverBox.innerHTML = `
-          <strong>Hover details</strong><br/>
-          Label: <code>${{d.label ?? 'N/A'}}</code><br/>
-          Type: <code>${{d.type ?? 'N/A'}}</code><br/>
-          Max: <code>${{d.max ?? 'N/A'}}</code><br/>
-          Upper fence: <code>${{d.upper_fence ?? 'N/A'}}</code><br/>
-          Q3: <code>${{d.q3 ?? 'N/A'}}</code><br/>
-          Median: <code>${{d.median ?? 'N/A'}}</code><br/>
-          Mean: <code>${{d.mean ?? 'N/A'}}</code><br/>
-          Q1: <code>${{d.q1 ?? 'N/A'}}</code><br/>
-          Lower fence: <code>${{d.lower_fence ?? 'N/A'}}</code>
-        `;
+                hoverTooltip.innerHTML = renderHoverContent(d);
+                hoverTooltip.style.display = 'block';
+                cursorPlus.style.display = 'block';
+                moveFloaters(evt);
       }});
+
+            row.addEventListener('mousemove', (evt) => moveFloaters(evt));
+
+            row.addEventListener('mouseleave', () => {{
+                activeHover = null;
+                hoverTooltip.style.display = 'none';
+                cursorPlus.style.display = 'none';
+            }});
     }});
   </script>
 </body>
